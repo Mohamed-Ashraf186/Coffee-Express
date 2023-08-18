@@ -1,0 +1,45 @@
+@import '../helper';
+
+header{
+ .free-shipping-header{
+    padding: 11px 0px; 
+    display: flex;
+    justify-content: center;
+    background-color: $primary;
+ }
+ nav{
+    .navbar{
+        justify-content: space-between;
+        align-items: center;
+        padding: em(11,16) 0 1em;
+        .logo{
+            width: 83px;
+            height: 72px;
+            flex-shrink: 0;
+        }
+        .icons{
+            gap: 12px;
+            .icon:last-of-type{
+                margin-left: 9px;
+            }
+            .cart-wrapper{
+                position: relative;
+                .badge{
+                    font-size: root(10,16);
+                    position: absolute;
+                    width: 13px;
+                    height: 13px;
+                    background-color: $primary;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center; 
+                    border-radius: 50%;
+                    top: 52%;
+                    left: 8%;
+                }
+            }
+        }
+    }
+ }
+ 
+}

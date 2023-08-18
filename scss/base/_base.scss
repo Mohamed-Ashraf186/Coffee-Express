@@ -1,0 +1,52 @@
+html {
+    box-sizing: border-box;
+}
+  
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    color: #000000;
+    text-decoration: none;
+    background: none;
+    outline: none;
+}
+
+
+
+.container{
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1800px;
+}
+
+.flex{
+    display: flex;
+}
+
+img,picture,svg, video{
+    display: block;
+    max-width: 100%;
+}
+
+input, textarea,button,select{
+    font: inherit;
+}
+
+table,
+th,
+td {
+    border-collapse: initial;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: unset;
+    border: none;
+}
+
+a,button{
+    cursor: pointer;
+}

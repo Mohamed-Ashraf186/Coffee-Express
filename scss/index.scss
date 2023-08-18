@@ -1,14 +1,24 @@
-// variables & functions
-@import 'variables';
-@import 'functions';
+// abstracts
+@import './abstracts/variables';
+@import './abstracts/functions';
+@import './abstracts/breakpoints';
+@import './abstracts/mixins';
+@import './abstracts/placeholders';
+@import './abstracts/helper-classes';
+
+// vendors
 
 
-// base & layout
-@import 'base';
+
+// base 
+@import './base/base';
+@import './base/typography';
 
 
-// colors
 
+// layout
+@import './layout/footer';
+@import './layout/header';
 
 
 
@@ -16,5 +26,8 @@
 
 
 
+// pages
+@import './pages/homepage'
 
-// utilities (margin, padding, opacity)
+
+// themes

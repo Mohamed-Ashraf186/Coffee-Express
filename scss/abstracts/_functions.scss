@@ -1,0 +1,12 @@
+@use 'sass:math';
+
+
+@function root($pixel,$base: 16){
+    // divide $pixel by base to return ems
+    @return math.div($pixel,$base) + rem;
+}
+
+@function em($pixel,$base: 16){
+    // divide $pixel by base to return ems
+    @return math.div($pixel,$base) + em;
+}

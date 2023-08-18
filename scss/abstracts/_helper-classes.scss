@@ -1,0 +1,84 @@
+
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+.text-icon-hover__effect {
+  transition: color 0.3s ease-in-out;
+  color: inherit;
+  display: block;
+  svg path {
+    transition: fill 0.3s ease-in-out;
+  }
+  &:hover {
+    color: #d4550c ;
+    svg path {
+      fill: #d4550c;
+    }
+  }
+}
+
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+  }
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+ 
+
+.b {
+    border: 1px solid #FAD9A7;
+}
+  
+.b-t {
+    border-top: 1px solid #FAD9A7;
+}
+  
+.b-b {
+    border-bottom: 1px solid #FAD9A7;
+}
+
+.b-l {
+    border-left: 1px solid #FAD9A7;
+}
+
+.b-r {
+    border-right: 1px solid #FAD9A7;
+}
+  
+.mx-h-unset {
+    max-height: unset;
+}
+  
+.mx-h-0 {
+    max-height: 0;
+}
+
+
+.discounted {
+	text-decoration: line-through;
+	color: grey ;
+}
+
+
+.hidden {
+	display:none ;
+}
+
+
+.none {
+    display: none ;
+}
+
+
+.button-disabled {
+    pointer-events: none;
+}
