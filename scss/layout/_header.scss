@@ -1,0 +1,162 @@
+@import '../helper';
+
+body{
+    position: relative;
+
+    .layer{
+        position: absolute;
+        background-color: $bg-layer;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    header{
+        position: relative;
+        z-index: 2;
+     .free-shipping-header{
+        padding: 11px 0px; 
+        display: flex;
+        justify-content: center;
+        background-color: $primary;
+     }
+     
+     nav{
+        background-color: white;
+        border-bottom: $border-secondary;
+        @include flex(center,center);
+        max-width: 1800px;
+        .navbar{
+            @include flex(space-between,center);
+            padding: em(11) 0 1em;
+            .search-container{
+                .searchbar-wrapper{
+                    @include flex(unset, center, row,em(15));
+                    @include margin-auto();
+                    .exit-btn,.search-btn{
+                        cursor: pointer;
+                    }
+                   .searchbar{
+                       border: $border-primary;
+                       @include flex(unset, center, row, em(56));
+                       @include padding(em(11), em(14), em(12), em(20));
+                       input{
+                           font-family: 'Itim', cursive;
+                       }
+                   }
+               }
+    
+            }
+
+    
+            
+    
+            .logo{
+                width: 83px;
+                height: 72px;
+                flex-shrink: 0;
+            }
+            .icons{
+                gap: 12px;
+                .icon{
+                    cursor: pointer;
+                }
+                .icon:last-of-type{
+                    margin-left: 9px;
+                    cursor: pointer;
+                }
+            
+    
+                .cart-wrapper{
+                    position: relative;
+                    .badge{
+                        font-size: root(10);
+                        position: absolute;
+                        width: 13px;
+                        height: 13px;
+                        background-color: $primary;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center; 
+                        border-radius: 50%;
+                        top: 52%;
+                        left: 8%;
+                    }
+                }
+            }
+        }
+    
+        .navbar.searching{
+            position: relative;
+            width: 100%;
+            @include padding(em(20),unset,em(34),unset);
+            @include flex(center,center,row,em(15));        
+            .search-container{
+                .searchbar-wrapper{
+                    @include flex(unset, center, row,em(15));
+                    @include margin-auto();
+                    .exit-btn,.search-btn{
+                        cursor: pointer;
+                    }
+                   .searchbar{
+                       border: $border-primary;
+                       @include flex(unset, center, row, em(56));
+                       @include padding(em(11), em(14), em(12), em(20));
+                       input{
+                           font-family: 'Itim', cursive;
+                       }
+                   }
+               }
+    
+            }
+    
+            .dropdown{
+                position: absolute;
+                width: 100%;
+                background-color: white;
+                top: 101%;
+                padding-bottom: 30px;
+                padding-top: 20px;
+                .dropdown-wrapper{
+                    max-width: em(370);
+                    @include margin-auto();
+                    .dropdown-header{
+                        font-size:$card-font-size-md;
+                        line-height: 1.5;
+                        margin-bottom: em(36,20);
+                    }
+                    .dropdown-card{
+                        @include flex(unset,center,row,17px);
+                        .product-img-wrapper{
+                            height: 146px;
+                            width: fit-content;
+                            img{
+                                height: 100%;
+                            }
+                        }
+        
+                        .product-desc{
+                            .product-name{
+                                h4{
+                                    font-family: 'Itim', cursive;
+                                }
+                                p{
+                                    color:$gray-primary;
+                                }
+                            }
+                            .product-info{
+                                p{
+                                    display: inline-block;
+                                }
+                            }
+                        }
+        
+                    }
+                }
+            }
+    
+            
+        }
+     }
+     
+    }
+}
