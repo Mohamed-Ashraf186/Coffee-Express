@@ -10,7 +10,8 @@
     <title>Coffee Express</title>
 </head>
 <body>
-
+    
+    <div class="layer hidden"></div>
     <header>
         <!--  H E A D E R   S E C T I O N   S T A R T  -->
         <div class="free-shipping-header ">
@@ -18,9 +19,49 @@
         </div>
         <!--  H E A D E R   S E C T I O N   E N D  -->
         <!--  N A V B A R   S E C T I O N   S T A R T  -->
-        <nav class="container">
-            <div class="navbar flex">
-                <div class="logo">
+        <nav>
+            <div class="navbar container flex">
+                <div class="search-container hidden">
+                    <div class="searchbar-wrapper">
+                        <div class="searchbar">
+                            <input type="text" name="search" class="bodytext--md" id="search" placeholder="What are you looking for?">
+                            <img class="search-btn" src="./assets/Group 2440.svg" alt="Search">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown hidden">
+                    <div class="dropdown-wrapper">
+                        <h2 class="dropdown-header">Are you looking for...</h2>
+                        <div class="dropdown-card">
+                            <div class="product-img-wrapper">
+                                <img src="./assets/search-product.png" alt="product Img">
+                            </div>
+            
+                            <div class="product-desc">
+                                <div class="product-name">
+                                    <h4 class="bodytext--xl">CLASSIC</h4>
+                                    <p class="bodytext">premium quality roasters</p>
+                                </div>
+                                
+                                <div class="product-info">
+                                    <p class="product-weight bodytext">From</p>
+                                    <p class="product-price bodytext--xl">£9.55</p>
+                                </div>
+            
+                                <div class="product-reviews">
+                                    <div class="product-ratings">
+                                        <img src="./assets/Stars.png" alt="star-reviews">
+                                    </div>
+                                </div>
+            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="logo ">
                     <img src="./assets/Logo.svg" alt="Logo">
                 </div>
 
@@ -29,8 +70,8 @@
                         <img class="user" src="./assets/user.svg" alt="user icon">
                     </div>
 
-                    <div class="icon">
-                        <img class="search" src="./assets/Group 2440.svg" alt="Search">
+                    <div class="icon search-wrapper">
+                        <img class="search-btn" src="./assets/Group 2440.svg" alt="Search">
                     </div>
 
                     <div class="icon cart-wrapper">
@@ -42,14 +83,22 @@
                         <img class="burger-btn" src="./assets/Header Icons.svg" alt="Burger Button">
                     </div>
                 </div>
+
+                                        
+                <div class="exit-btn hidden">
+                    <img src="./assets/exit.svg" alt="exit">
+                </div>
             </div>
+
+
         </nav>
+
         <!--  N A V B A R   S E C T I O N   E N D  -->
     </header>
 
 
     <main>
-        
+
         <!--  H E R O   S E C T I O N   S T A R T  -->
         <section class="hero">
             <h1>Grind your coffee with precision and ease</h1>
@@ -104,7 +153,6 @@
 
 
         <!--  N E W   A R R I V A L S   S E C T I O N   E N D  -->
-
 
         <!--  O U R  S T O R Y   S E C T I O N   S T A R T  -->
 
@@ -212,72 +260,66 @@
         <section class="instagram-grid"></section>
 
         <!--  I N S T A G R A M   G R I D   S E C T I O N   E N D  -->
-
-
-
-
-
-        
-        <!--  FOOTER   S E C T I O N   S T A R T  -->
-            <footer>
-                <div class="newsletter-wrapper">
-                    <h2 class="header--xl">Keep in touch</h2>
-                    <p class="bodytext">Get 15% off your first order, the latest news and new product alerts… No junk, we promise!</p>
-                    <div class="newsletter-input">
-                        <input type="email" name="email" class="bodytext" id="newsletter-email" placeholder="Email address">
-                        <button class="newsletter-signup bodytext--md">Sign up</button>
-                    </div>
-                </div>
-
-                <div class="payment-methods">
-                    <img src="./assets/payment-methods.svg" alt="payment-methods">
-                </div>
-
-
-                <div class="quick-links">
-                    <div class="about">
-                        <h3 class="bodytext--xl">About</h3>
-                        <ul>
-                            <li><a href="#" class="bodytext">About us</a></li>
-                            <li><a href="#" class="bodytext">Brew Guides</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="visit">
-                        <h3 class="bodytext--xl">Visit</h3>
-                        <p class="address bodytext">
-                            2717 Howell St, Dallas, Texas 75204
-                            (214) 754-9911
-                            United States
-                        </p>
-                    </div>
-
-                    <div class="help">
-                        <h3 class="bodytext--xl">Help</h3>
-                        <ul>
-                            <li><a href="#" class="bodytext">FAQ</a></li>
-                            <li><a href="#" class="bodytext">Contact</a></li>
-                            <li><a href="#" class="bodytext">Roasting My Order</a></li>
-                            <li><a href="#" class="bodytext">Delivery & Returns</a></li>
-                            <li><a href="#" class="bodytext">Terms & Conditions</a></li>
-                            <li><a href="#" class="bodytext">Rewards & Referrals</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="copyright">
-                    <p class="bodytext--sm">
-                        © Coffee Express 2023. All Rights Reserved. 
-                        Powered by Lexmodo.
-                    </p>
-                </div>
-
-            </footer>
-        <!--  FOOTER   S E C T I O N   E N D  -->
-
-
-
     </main>
+
+    <!--  FOOTER   S E C T I O N   S T A R T  -->
+    <footer>
+        <div class="newsletter-wrapper">
+            <h2 class="header--xl">Keep in touch</h2>
+            <p class="bodytext">Get 15% off your first order, the latest news and new product alerts… No junk, we promise!</p>
+            <div class="newsletter-input">
+                <input type="email" name="email" class="bodytext" id="newsletter-email" placeholder="Email address">
+                <button class="newsletter-signup bodytext--md">Sign up</button>
+            </div>
+        </div>
+
+        <div class="payment-methods">
+            <img src="./assets/payment-methods.svg" alt="payment-methods">
+        </div>
+
+
+        <div class="quick-links">
+            <div class="about">
+                <h3 class="bodytext--xl">About</h3>
+                <ul>
+                    <li><a href="#" class="bodytext">About us</a></li>
+                    <li><a href="#" class="bodytext">Brew Guides</a></li>
+                </ul>
+            </div>
+                
+            <div class="visit">
+                <h3 class="bodytext--xl">Visit</h3>
+                <p class="address bodytext">
+                        2717 Howell St, Dallas, Texas 75204
+                        (214) 754-9911
+                        United States
+                </p>
+            </div>
+
+            <div class="help">
+                <h3 class="bodytext--xl">Help</h3>
+                <ul>
+                    <li><a href="#" class="bodytext">FAQ</a></li>
+                    <li><a href="#" class="bodytext">Contact</a></li>
+                    <li><a href="#" class="bodytext">Roasting My Order</a></li>
+                    <li><a href="#" class="bodytext">Delivery & Returns</a></li>
+                    <li><a href="#" class="bodytext">Terms & Conditions</a></li>
+                    <li><a href="#" class="bodytext">Rewards & Referrals</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p class="bodytext--sm">
+                    © Coffee Express 2023. All Rights Reserved. 
+                    Powered by Lexmodo.
+            </p>
+        </div>
+
+    </footer>
+    <!--  FOOTER   S E C T I O N   E N D  -->
+
     
+    <script src="./js/index.js"></script>
 </body>
 </html>
