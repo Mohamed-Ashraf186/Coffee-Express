@@ -32,7 +32,7 @@ body{
                 .searchbar-wrapper{
                     @include flex(unset, center, row,em(15));
                     @include margin-auto();
-                    .exit-btn,.search-btn{
+                    .exit-search-btn,.search-btn{
                         cursor: pointer;
                     }
                    .searchbar{
@@ -94,7 +94,7 @@ body{
                 .searchbar-wrapper{
                     @include flex(unset, center, row,em(15));
                     @include margin-auto();
-                    .exit-btn,.search-btn{
+                    .exit-search-btn,.search-btn{
                         cursor: pointer;
                     }
                    .searchbar{
@@ -154,6 +154,84 @@ body{
                 }
             }
     
+            
+        }
+
+        .navbar.browsing{
+            width: 100%;
+            padding-bottom: em(26);
+            @include flex(center,center);
+            position: relative;
+            .browsing-wrapper{
+                width: 85%;
+                @include flex(space-between,center)
+            }
+            
+            .menu{
+                    position: absolute;
+                    background-color: white;
+                    width: 100%;
+                    top: 101%;
+                    .menu-wrapper{
+                        @include padding (em(29), unset,em(26),unset);
+                        width: 85%;
+                        margin: 0 auto;
+                        h2{
+                            line-height: 1.5;
+                            margin-bottom: em(11);
+                        }
+                        
+                        .nav-links{
+                            li{
+                                padding: em(10) 0;
+                                a{
+                                    width: 100%;
+                                    display: block;
+                                    position: relative;
+                                    &::after{
+                                        content: "";
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 95%;
+                                        transform: translateY(-50%);
+                                        width: 24px;
+                                        height: 24px;
+                                        background-image: url('../../assets/chevron-right.svg');
+                                        background-size: cover;
+                                        background-color: white;                                
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+
+                    .seperator{
+                        height: 1px;
+                        background-color: #DBDBDB;
+                    }
+                    .create-acc{
+                        padding: em(21) 0 em(34);
+                        width: 85%;
+                        margin: 0 auto;
+                        h2{
+                            font-size: root(22);
+                            line-height: 1.45455;
+                        }
+                        p{
+                            color:$gray-primary;
+                        }
+                        .create-btn-wrapper{
+                            margin-top: em(24);
+                            @include flex(space-between,center);
+                            .create-btn{
+                                position: relative;
+                                border: 1px solid #131313;
+                                border-bottom: 4px solid #131313;
+                            }
+                        }
+                    }
+                }
             
         }
      }

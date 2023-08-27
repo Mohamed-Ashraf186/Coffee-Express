@@ -1,0 +1,45 @@
+main{
+    .hero{
+        background-image: url(../../assets/hero-bg.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        .hero-wrapper{
+            @include flex(center,center,column,unset,em(12));
+            padding: em(130) 0 em(100);
+            h1{
+                color: white;
+                padding: em(43.5,40) 0; 
+                text-align: center;
+            }
+            .hero-desc{
+                color: white;
+                text-align: center;
+            }
+        }
+    }
+
+    .new-arrivals{
+        max-width: em(367);
+        padding-top: em(67.3);
+        h2{
+            position: relative;
+            padding-bottom: em(20,32);
+            &::after{
+                content: '';
+                position: absolute;
+                width: 206px;
+                height: 9px;
+                background-image: url(../../assets/Vector.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                flex-shrink: 0;
+                top: 85%;
+                right: 45%;
+            }
+        }
+
+        .product-card{
+            margin-top: em(65);
+        }
+    }
+}

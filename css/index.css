@@ -98,9 +98,14 @@ html {
 }
 
 .container {
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
   max-width: 1800px;
+}
+@media (min-width: 720px) {
+  .container {
+    width: 85%;
+  }
 }
 
 .flex {
@@ -134,12 +139,21 @@ a, button {
   cursor: pointer;
 }
 
-p, a, button {
+.btn {
+  padding: 10px 26px;
+  height: 56px;
+}
+
+.btn-primary {
+  background-color: #FFB800;
+}
+
+h4, p, a, button, li {
   font-family: "Itim", cursive;
   font-weight: 400;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
   font-family: "Lilita One", cursive;
 }
 
@@ -315,7 +329,7 @@ body header nav .navbar .search-container .searchbar-wrapper {
   margin-right: auto;
   margin-left: auto;
 }
-body header nav .navbar .search-container .searchbar-wrapper .exit-btn, body header nav .navbar .search-container .searchbar-wrapper .search-btn {
+body header nav .navbar .search-container .searchbar-wrapper .exit-search-btn, body header nav .navbar .search-container .searchbar-wrapper .search-btn {
   cursor: pointer;
 }
 body header nav .navbar .search-container .searchbar-wrapper .searchbar {
@@ -389,7 +403,7 @@ body header nav .navbar.searching .search-container .searchbar-wrapper {
   margin-right: auto;
   margin-left: auto;
 }
-body header nav .navbar.searching .search-container .searchbar-wrapper .exit-btn, body header nav .navbar.searching .search-container .searchbar-wrapper .search-btn {
+body header nav .navbar.searching .search-container .searchbar-wrapper .exit-search-btn, body header nav .navbar.searching .search-container .searchbar-wrapper .search-btn {
   cursor: pointer;
 }
 body header nav .navbar.searching .search-container .searchbar-wrapper .searchbar {
@@ -449,4 +463,139 @@ body header nav .navbar.searching .dropdown .dropdown-wrapper .dropdown-card .pr
 }
 body header nav .navbar.searching .dropdown .dropdown-wrapper .dropdown-card .product-desc .product-info p {
   display: inline-block;
+}
+body header nav .navbar.browsing {
+  width: 100%;
+  padding-bottom: 1.625em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  column-gap: unset;
+  row-gap: unset;
+  position: relative;
+}
+body header nav .navbar.browsing .browsing-wrapper {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  column-gap: unset;
+  row-gap: unset;
+}
+body header nav .navbar.browsing .menu {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  top: 101%;
+}
+body header nav .navbar.browsing .menu .menu-wrapper {
+  padding-top: 1.8125em;
+  padding-right: unset;
+  padding-bottom: 1.625em;
+  padding-left: unset;
+  width: 85%;
+  margin: 0 auto;
+}
+body header nav .navbar.browsing .menu .menu-wrapper h2 {
+  line-height: 1.5;
+  margin-bottom: 0.6875em;
+}
+body header nav .navbar.browsing .menu .menu-wrapper .nav-links li {
+  padding: 0.625em 0;
+}
+body header nav .navbar.browsing .menu .menu-wrapper .nav-links li a {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+body header nav .navbar.browsing .menu .menu-wrapper .nav-links li a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 95%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-image: url("../../assets/chevron-right.svg");
+  background-size: cover;
+  background-color: white;
+}
+body header nav .navbar.browsing .menu .seperator {
+  height: 1px;
+  background-color: #DBDBDB;
+}
+body header nav .navbar.browsing .menu .create-acc {
+  padding: 1.3125em 0 2.125em;
+  width: 85%;
+  margin: 0 auto;
+}
+body header nav .navbar.browsing .menu .create-acc h2 {
+  font-size: 1.375rem;
+  line-height: 1.45455;
+}
+body header nav .navbar.browsing .menu .create-acc p {
+  color: #717171;
+}
+body header nav .navbar.browsing .menu .create-acc .create-btn-wrapper {
+  margin-top: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  column-gap: unset;
+  row-gap: unset;
+}
+body header nav .navbar.browsing .menu .create-acc .create-btn-wrapper .create-btn {
+  position: relative;
+  border: 1px solid #131313;
+  border-bottom: 4px solid #131313;
+}
+
+main .hero {
+  background-image: url(../../assets/hero-bg.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .hero .hero-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  column-gap: unset;
+  row-gap: 0.75em;
+  padding: 8.125em 0 6.25em;
+}
+main .hero .hero-wrapper h1 {
+  color: white;
+  padding: 1.0875em 0;
+  text-align: center;
+}
+main .hero .hero-wrapper .hero-desc {
+  color: white;
+  text-align: center;
+}
+main .new-arrivals {
+  max-width: 22.9375em;
+  padding-top: 4.20625em;
+}
+main .new-arrivals h2 {
+  position: relative;
+  padding-bottom: 0.625em;
+}
+main .new-arrivals h2::after {
+  content: "";
+  position: absolute;
+  width: 206px;
+  height: 9px;
+  background-image: url(../../assets/Vector.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+  top: 85%;
+  right: 45%;
+}
+main .new-arrivals .product-card {
+  margin-top: 4.0625em;
 }

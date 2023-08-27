@@ -27,6 +27,10 @@
                             <input type="text" name="search" class="bodytext--md" id="search" placeholder="What are you looking for?">
                             <img class="search-btn" src="./assets/Group 2440.svg" alt="Search">
                         </div>
+                        
+                        <div class="exit-search-btn">
+                            <img src="./assets/exit.svg" alt="exit">
+                        </div>
                     </div>
                 </div>
 
@@ -60,8 +64,41 @@
                     </div>
                 </div>
 
+                <div class="browsing-wrapper hidden">
+                    <div class="logo-browsing">
+                        <img src="./assets/Logo.svg" alt="Logo">
+                    </div>
 
-                <div class="logo ">
+                    <div class="exit-browsing-btn">
+                        <img src="./assets/exit.svg" alt="exit">
+                    </div>
+                </div>
+
+                    <div class="menu hidden">
+                        <div class="menu-wrapper">
+                            <h2 class="bodytext--lg">Browse</h2>
+                            <ul class="nav-links">
+                                <li><a href="#" class="bodytext--md">New Arrivals</a></li>
+                                <li><a href="#" class="bodytext--md">Best Sellers</a></li>
+                                <li><a href="#" class="bodytext--md">Learn</a></li>
+                                <li><a href="#" class="bodytext--md">About Us</a></li>
+                                <li><a href="#" class="bodytext--md">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="seperator"></div>
+                        <div class="create-acc">
+                            <h2>Good Day!</h2>
+                            <p class="bodytext--md">Sign in for a more personalized experience</p>
+
+                            <div class="create-btn-wrapper">
+                                <button class="create-btn btn">Create an account</button>
+                                <button class="login-btn btn-primary btn">Log In</button>
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="logo">
                     <img src="./assets/Logo.svg" alt="Logo">
                 </div>
 
@@ -84,10 +121,6 @@
                     </div>
                 </div>
 
-                                        
-                <div class="exit-btn hidden">
-                    <img src="./assets/exit.svg" alt="exit">
-                </div>
             </div>
 
 
@@ -101,19 +134,20 @@
 
         <!--  H E R O   S E C T I O N   S T A R T  -->
         <section class="hero">
-            <h1>Grind your coffee with precision and ease</h1>
-            <p class="hero-desc bodytext--md">Best Quality roasted and ground beans are here.
-                The aroma of freshly brewed coffee fills the air, as the dark rich liquid is carefully poured into a mug.
-            </p>
-            <button class="shop-now bodytext--md">Shop now</button>
-            
+            <div class="hero-wrapper container">
+                <h1>Grind your coffee with precision and ease</h1>
+                <p class="hero-desc bodytext--md">Best Quality roasted and ground beans are here.
+                    The aroma of freshly brewed coffee fills the air, as the dark rich liquid is carefully poured into a mug.
+                </p>
+                <button class="shop-now btn-primary bodytext--md btn">Shop now</button>
+            </div>
         </section>    
         
         <!--  H E R O   S E C T I O N   E N D  -->
 
         
         <!--  N E W   A R R I V A L S   S E C T I O N   S T A R T  -->
-        <section class="new-arrivals">
+        <section class="new-arrivals container">
             <h2>New Arrivals...</h2>
             <div class="product-card">
                 <div class="product-img-wrapper">
@@ -143,7 +177,7 @@
                     </div>
 
                     <div class="quick-add">
-                        <button class="quick-add-btn bodytext--md">Quick add +</button>
+                        <button class="quick-add-btn btn-primary bodytext--md btn">Quick add +</button>
                     </div>
 
                 </div>
@@ -163,7 +197,7 @@
                 In the early 2000s, two friends, Alex and Ben, were working at a large corporate coffee company. They were both passionate about coffee but felt that the company was more focused on profit than on quality. They dreamed of starting their own coffee company that would prioritize the sourcing of high-quality beans and ethical business practices.
             </p>
             
-            <button class="read-more bodytext--md">read more</button>
+            <button class="read-more btn-primary btn bodytext--md">read more</button>
         </section>
 
         <!--  O U R  S T O R Y   S E C T I O N   E N D  -->
@@ -177,7 +211,7 @@
             <p class="bodytext--md">
                 Today, Mountain View Coffee Co. is a well-respected and successful company, known for its dedication to quality, ethics, and education. Alex and Ben are proud to be making a positive impact on the coffee industry and the world.
             </p>
-            <button class="read-more bodytext--md">read more</button>
+            <button class="read-more btn-primary btn bodytext--md">read more</button>
         </section>
 
 
@@ -186,7 +220,7 @@
             <p class="bodytext--md">
                 Our beans are sourced directly from farmers, who are paid fair prices for their crops. This helps to improve their lives and communities, and ensures that the beans are of the highest quality. We also provide training and education programs to help farmers improve their techniques and yields.
             </p>
-            <button class="read-more bodytext--md">read more</button>
+            <button class="read-more btn-primary btn bodytext--md">read more</button>
         </section>
 
 
@@ -226,7 +260,7 @@
                     </div>
 
                     <div class="quick-add">
-                        <button class="quick-add-btn bodytext--md">Quick add +</button>
+                        <button class="quick-add-btn btn btn-primary bodytext--md">Quick add +</button>
                     </div>
 
                 </div>
@@ -245,7 +279,7 @@
                 We offer a variety of different blends and single origin coffees, each with its own unique flavor profile. Whether you prefer a light and fruity blend or a rich and bold roast, we have something for everyone.
             </p>
 
-            <button class="shop-now bodytext--md">Shop now</button>
+            <button class="shop-now bodytext--md btn btn-primary">Shop now</button>
             <div class="coffee-img">
                 <img src="/assets/coffe-img.svg" alt="coffee-img">
             </div>
@@ -269,7 +303,7 @@
             <p class="bodytext">Get 15% off your first order, the latest news and new product alerts… No junk, we promise!</p>
             <div class="newsletter-input">
                 <input type="email" name="email" class="bodytext" id="newsletter-email" placeholder="Email address">
-                <button class="newsletter-signup bodytext--md">Sign up</button>
+                <button class="newsletter-signup btn btn-primary bodytext--md">Sign up</button>
             </div>
         </div>
 

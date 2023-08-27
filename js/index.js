@@ -10,21 +10,29 @@ const iconsElem = document.querySelector('.icons')
 
 const navbar = document.querySelector('.navbar')
 
-const exitBtn = document.querySelector('.exit-btn')
+const exitSearchBtn = document.querySelector('.exit-search-btn')
+
+const exitBrowseBtn = document.querySelector('.exit-browsing-btn')
 
 const searchDropdownEl = document.querySelector('.dropdown')
 
-// const menuDropdownEl = document.querySelector('.dropdown')
+const menuDropdownEl = document.querySelector('.menu')
 
 const layerEl = document.querySelector('.layer')
 
+const browsingWrapper = document.querySelector('.browsing-wrapper')
+
 searchBtn.addEventListener('click',handleSearch)
-// menuBtn.addEventListener('click',handleSearch)
-exitBtn.addEventListener('click',handleExit)
+
+menuBtn.addEventListener('click',handleBrowsing)
+
+exitSearchBtn.addEventListener('click',handleExitSearch)
+
+exitBrowseBtn.addEventListener('click',handleExitBrowsing)
 
 
 function handleSearch(){
-    exitBtn.classList.remove('hidden')
+    exitSearchBtn.classList.remove('hidden')
     logoElem.classList.add('hidden')
     iconsElem.classList.add('hidden')
     searchElem.classList.remove('hidden')
@@ -33,8 +41,8 @@ function handleSearch(){
     layerEl.classList.remove('hidden')
 }
 
-function handleExit(){
-    exitBtn.classList.add('hidden')
+function handleExitSearch(){
+    exitSearchBtn.classList.add('hidden')
     logoElem.classList.remove('hidden')
     iconsElem.classList.remove('hidden')
     searchElem.classList.add('hidden')
@@ -42,3 +50,24 @@ function handleExit(){
     searchDropdownEl.classList.add('hidden')
     layerEl.classList.add('hidden')
 }
+
+
+function handleBrowsing(){
+    browsingWrapper.classList.remove('hidden')
+    logoElem.classList.add('hidden')
+    iconsElem.classList.add('hidden')
+    navbar.classList.add('browsing')
+    menuDropdownEl.classList.remove('hidden')
+    layerEl.classList.remove('hidden')
+}
+
+
+function handleExitBrowsing(){
+    browsingWrapper.classList.add('hidden')
+    logoElem.classList.remove('hidden')
+    iconsElem.classList.remove('hidden')
+    navbar.classList.remove('browsing')
+    menuDropdownEl.classList.add('hidden')
+    layerEl.classList.add('hidden')
+}
+
