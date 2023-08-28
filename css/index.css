@@ -597,5 +597,51 @@ main .new-arrivals h2::after {
   right: 45%;
 }
 main .new-arrivals .product-card {
+  border: 1px solid #FAD9A7;
   margin-top: 4.0625em;
+}
+main .new-arrivals .product-card .product-desc {
+  padding: 1em 1.25em;
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-direction: column;
+  column-gap: unset;
+  row-gap: 0.75em;
+}
+main .new-arrivals .product-card .product-desc .product-name p {
+  color: #717171;
+}
+main .new-arrivals .product-card .product-desc .product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  column-gap: unset;
+  row-gap: unset;
+}
+main .new-arrivals .product-card .product-desc .product-info .product-weight {
+  color: #717171;
+}
+main .new-arrivals .product-card .product-desc .product-reviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  column-gap: unset;
+  row-gap: unset;
+}
+main .new-arrivals .product-card .product-desc .product-reviews .product-ratings {
+  display: flex;
+}
+main .new-arrivals .product-card .product-desc .product-reviews .product-like-wrapper .product-like-img {
+  width: 50px;
+  height: 50px;
+  padding: 8.73px 9.524px 9.524px 8.73px;
+  background-color: #EEE;
+  border-radius: 50%;
+}
+main .new-arrivals .product-card .product-desc .quick-add button {
+  border-bottom: 5px solid #B6791B;
+  width: 100%;
 }
