@@ -18,13 +18,15 @@ main{
         }
     }
 
-    .new-arrivals{
+    .cards-container{
         max-width: em(367);
         padding: em(67.3) 0 em(94);
         @include respond-to(md){
-            max-width: none;
+            max-width: em(1500);
         }
         .section-header{
+            display: inline-flex;
+            flex-direction: column;
             margin-bottom: em(65);
             h2{
                 position: relative;
@@ -32,8 +34,8 @@ main{
             }
             .header-underline{
                 img{
-                    width: auto;
-                    height: auto;
+                    width: 100%;
+                    height: 100%;
                 }
             }
             
@@ -118,9 +120,19 @@ main{
             }
         }
     }
+
+    .best-sellers{
+        .section-header{
+            margin-bottom: em(37);
+            h2{
+                padding-bottom: em(20,48.8);
+            }      
+        }
+    }
     
     .site-info{
         padding: em(107) 0 em(146);
+        margin-bottom: em(20);
         .container{
             @include flex(center,center,column);
             .header-container{
@@ -133,10 +145,10 @@ main{
                 }
                 h2{
                     color: white;
-                    text-align: center;
                 }
     
                 .vector-wrapper{
+                    max-width: em(900);
                     width: 100%;
                 }
             }
@@ -144,19 +156,98 @@ main{
             p{
                 margin-top: em(12);
                 max-width: em(366);
-                text-align: center;
                 color: white;
-                margin-bottom: em(32.6);
+                margin-bottom: em(32.6,18);
             }
 
         }
     }
     
     .our-story{
-        background-image: url(../../assets/HP-Story1.jpg.svg);
+        background-image: url(../../assets/HP-Story1.png);
         background-size:cover;
         background-repeat: no-repeat;
-        
+        h2,p{
+            text-align: center;
+        }
+    }
+
+    .about-us{
+        background-size:cover;
+        background-repeat: no-repeat;
+        .container{
+            gap: 17px;
+            align-items: flex-start;
+            max-width: em(400);
+
+            .header-container,h2{
+                align-self: flex-start;
+            }
+
+            p{
+                margin: 0;
+            }
+        }
+    }
+
+    .success{
+        padding: em(185) 0 em(41);
+        background-image: url(../../assets/HP-Blog1.png);
+        .container{
+            .header-container{
+                width: 100%;
+            }
+        }
+    }
+
+    .community{
+        padding: em(104) 0 em(41);
+        margin-bottom: em(98);
+        background-image: url(../../assets/HP-Blog2.png);
+        .container{
+            .header-container{
+                .vector-wrapper{
+                    max-width: em(302);
+                    align-self: flex-start;
+                }
+            }
+            
+        }
+    }
+
+    .start-day{
+        margin-bottom: em(164);
+        .container{
+            padding: em(93.5) 0 em(80);
+            @include flex(center,center,column,unset,em(28));
+            h2,p{
+                text-align: center;
+            }
+        }
+    }
+
+    .instagram-container{
+        .container{
+            .header-container{
+                @include flex(center,center,column);
+                .frame-container{
+                    width: em(118.992);
+                    height: em(33.996);
+                    margin-bottom: em(25);
+                }
+                h2{
+                    text-align: center;
+                    margin-bottom: em(14,48);
+                }
+                .join-wrapper{
+                    @include flex(unset, center,row, 37px);
+                    .icon-wrapper{
+                        width: 33px;
+                        height: 33px;
+                    }
+                }
+            }
+        }
     }
     
 }

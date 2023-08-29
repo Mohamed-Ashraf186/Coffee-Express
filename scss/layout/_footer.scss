@@ -1,0 +1,50 @@
+footer{
+    margin-top: em(106);
+    padding: em(70) 0 em(34);
+    background-color: black;
+    h2,h3,p,li,a{
+        color: white;
+    }
+    
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: white;
+        opacity: 1; /* Firefox */
+    }
+
+    ::-ms-input-placeholder { /* Microsoft Edge */
+        color: white;
+      }
+
+    .newsletter-wrapper{
+        @include flex(center,unset,column);
+        margin-bottom: em(41);
+        .header-container{
+            h2{
+                margin-bottom: em(20,40);
+            }
+            p{
+                margin-bottom: em(22)
+            }
+        }
+        .newsletter-input{
+            display: flex;
+            input{
+                height: em(56);
+                padding: 1em;
+                flex-basis: 73%;
+                border: 1px solid $primary;
+                color: white;
+            }
+        }
+    }
+
+    .payment-methods{
+        @include flex(flex-start,center,row,em(6));
+        margin-bottom: em(83);
+        .icon-wrapper{
+            width: em(37.992);
+            height: em(24);
+        }
+    }
+
+}
