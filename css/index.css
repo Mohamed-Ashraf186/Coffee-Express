@@ -98,13 +98,13 @@ html {
 }
 
 .container {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   max-width: 1800px;
 }
 @media (min-width: 720px) {
   .container {
-    width: 85%;
+    width: 90%;
   }
 }
 
@@ -251,6 +251,58 @@ footer .payment-methods .icon-wrapper {
   width: 2.3745em;
   height: 1.5em;
 }
+footer .quick-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: row;
+  column-gap: 2.5em;
+  row-gap: unset;
+  margin-bottom: 5.3125em;
+}
+footer .quick-links .left-column {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  column-gap: unset;
+  row-gap: 3.55em;
+}
+footer .quick-links .left-column .about .section-header, footer .quick-links .left-column .visit .section-header {
+  margin-bottom: 1.4583333333em;
+  display: inline-flex;
+  flex-direction: column;
+}
+footer .quick-links .left-column .about ul {
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-direction: column;
+  column-gap: unset;
+  row-gap: 0.5em;
+}
+footer .quick-links .left-column .visit .address {
+  max-width: 160px;
+}
+footer .quick-links .right-column .help .section-header {
+  margin-bottom: 1.5em;
+  display: inline-flex;
+  flex-direction: column;
+}
+footer .quick-links .right-column .help ul {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  column-gap: unset;
+  row-gap: 0.5em;
+}
+footer .copyright {
+  max-width: 16.625em;
+}
+footer .copyright p {
+  text-align: center;
+}
 
 /* I M P O R T E D   O N   E V E R Y   S C S S   F I L E */
 /*------  R E S P O N S I V E    L A Y O U T ------*/
@@ -363,7 +415,6 @@ body header nav {
   flex-direction: row;
   column-gap: unset;
   row-gap: unset;
-  max-width: 1800px;
 }
 body header nav .navbar {
   display: flex;
@@ -373,6 +424,11 @@ body header nav .navbar {
   column-gap: unset;
   row-gap: unset;
   padding: 0.6875em 0 1em;
+}
+@media (min-width: 1280px) {
+  body header nav .navbar {
+    display: none;
+  }
 }
 body header nav .navbar .search-container .searchbar-wrapper {
   display: flex;
@@ -606,6 +662,70 @@ body header nav .navbar.browsing .menu .create-acc .create-btn-wrapper .create-b
   position: relative;
   border: 1px solid #131313;
   border-bottom: 4px solid #131313;
+}
+body header nav .navbar-desktop {
+  max-width: 1750px;
+  padding: 1.125em 0 1.625em;
+}
+body header nav .navbar-desktop h3 {
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+@media (min-width: 1440px) {
+  body header nav .navbar-desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    column-gap: unset;
+    row-gap: unset;
+  }
+}
+body header nav .navbar-desktop .search-wrapper {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 0.75em;
+  row-gap: unset;
+}
+body header nav .navbar-desktop .search-wrapper .icon {
+  cursor: pointer;
+  width: 2em;
+  height: 2em;
+  padding: 0.25em;
+}
+body header nav .navbar-desktop .menu-links .menu-wrapper .nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 3.5625em;
+  row-gap: unset;
+}
+body header nav .navbar-desktop .cart-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 2.6875em;
+  row-gap: unset;
+}
+body header nav .navbar-desktop .cart-login .cart-wrapper {
+  position: relative;
+}
+body header nav .navbar-desktop .cart-login .cart-wrapper .badge {
+  font-size: 0.625rem;
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  background-color: #FFB800;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  top: 52%;
+  left: 8%;
 }
 
 main .hero {

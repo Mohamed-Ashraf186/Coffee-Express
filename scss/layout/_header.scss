@@ -22,10 +22,12 @@ body{
      
      nav{
         background-color: white;
-        border-bottom: $border-secondary;
+        border-bottom: $border-secondary;        
         @include flex(center,center);
-        max-width: 1800px;
         .navbar{
+            @include respond-to(xl){
+                display: none;
+            }
             @include flex(space-between,center);
             padding: em(11) 0 1em;
             .search-container{
@@ -233,6 +235,59 @@ body{
                     }
                 }
             
+        }
+
+
+        .navbar-desktop{
+            max-width: 1750px;
+            padding: em(18) 0 em(26);
+            h3{
+                font-size: $card-font-size-md;
+                line-height: 1.25;
+            }
+            @include respond-to(xxl){
+                @include flex(space-between,center,row);
+            }
+            .search-wrapper{
+                @include flex(unset,center,row,em(12));
+                .icon{
+                    cursor: pointer;
+                    width: em(32);
+                    height: em(32);
+                    padding: em(4);
+                }
+
+            }
+
+            .menu-links{
+                .menu-wrapper{
+                    .nav-links{
+                        @include flex(center,center,row,em(57))
+                    }
+                }
+            }
+            
+            .cart-login{
+                @include flex(center,center,row,em(43));
+                .cart-wrapper{
+                    position: relative;
+                    .badge{
+                        font-size: root(10);
+                        position: absolute;
+                        width: 13px;
+                        height: 13px;
+                        background-color: $primary;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center; 
+                        border-radius: 50%;
+                        top: 52%;
+                        left: 8%;
+                    }
+                }
+            }
+
+
         }
      }
      

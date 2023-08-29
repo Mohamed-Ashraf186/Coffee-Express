@@ -47,4 +47,53 @@ footer{
         }
     }
 
+    .quick-links{
+        @include flex(space-evenly, flex-start, row,em(40));
+        margin-bottom: em(85);
+        .left-column{
+            @include flex(center,flex-start,column,unset,em(56.8));
+            
+            .about,.visit{
+                .section-header{
+                    margin-bottom: em(35,24);
+                    display: inline-flex;
+                    flex-direction: column;
+                }
+            }
+
+            .about{
+                ul{
+                    @include flex(unset,unset,column,unset,em(8))
+                }
+            }
+            
+            .visit{
+                .address{
+                    max-width: 160px;
+                }
+            }
+        }
+
+        .right-column{
+            .help{
+                .section-header{
+                    margin-bottom: em(36,24);
+                    display: inline-flex;
+                    flex-direction: column;
+                }
+                ul{
+                    @include flex(center,flex-start,column,unset, em(8))
+                }
+            }
+        }
+
+    }
+
+    .copyright{
+        max-width: em(266);
+        p{
+            text-align: center;
+        }
+    }
+
 }
