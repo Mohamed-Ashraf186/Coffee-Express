@@ -25,7 +25,7 @@ body{
         border-bottom: $border-secondary;        
         @include flex(center,center);
         .navbar{
-            @include respond-to(xl){
+            @include respond-to(xxl){
                 display: none;
             }
             @include flex(space-between,center);
@@ -239,6 +239,7 @@ body{
 
 
         .navbar-desktop{
+            position: relative;
             max-width: 1750px;
             padding: em(18) 0 em(26);
             h3{
@@ -266,9 +267,102 @@ body{
                     }
                 }
             }
+
+
+
+            .desktop-search-container{
+                flex-basis: 47%;
+                .searchbar-wrapper{
+                    @include flex(unset, center, row,em(15));
+                    @include margin-auto();
+                    .desktop-exit-search,.search-btn{
+                        cursor: pointer;
+                    }
+                   .searchbar{
+                    position: relative;
+                    flex-basis: calc((100% - em(15)) * 0.91);
+                    border: $border-primary;
+                    @include flex(space-between, center, row, em(56));
+                    @include padding(em(11), em(14), em(12), em(20));
+                       input{
+                           font-family: 'Itim', cursive;
+                        }
+
+                       .search-btn-wrapper{
+                            width: em(32);
+                            height: em(32);
+                            padding: em(4);
+                        }
+
+                        .desktop-dropdown{
+                            border-bottom: $border-secondary;
+                            border-right: $border-secondary;
+                            border-left: $border-secondary;
+                            box-shadow: 5px 4px 20px 0px rgba(107, 107, 107, 0.16); 
+                               position: absolute;
+                               width: 100%;
+                               background-color: white;
+                               top: 102%;
+                               left: 0%;
+                               padding-bottom: 30px;
+                               padding-top: 20px;
+                               .dropdown-wrapper{
+                                   max-width: em(370);
+                                   @include margin-auto();
+                                   .dropdown-header{
+                                       font-size:$card-font-size-md;
+                                       line-height: 1.5;
+                                       margin-bottom: em(36,20);
+                                   }
+                                   .dropdown-card{
+                                       @include flex(unset,center,row,17px);
+                                       .product-img-wrapper{
+                                           height: 146px;
+                                           width: fit-content;
+                                           img{
+                                               height: 100%;
+                                           }
+                                       }
+                       
+                                       .product-desc{
+                                           .product-name{
+                                               h4{
+                                                   font-family: 'Itim', cursive;
+                                               }
+                                               p{
+                                                   color:$gray-primary;
+                                               }
+                                           }
+                                           .product-info{
+                                               p{
+                                                   display: inline-block;
+                                               }
+                                           }
+                                       }
+                       
+                                   }
+                               }
+                           }
+
+                    
+                    }    
+
+                   .desktop-exit-search{
+                        width: em(32);
+                        height: em(32);
+                   }
+               }
+               
+
+            }
+    
+    
             
             .cart-login{
                 @include flex(center,center,row,em(43));
+                .desktop-login{
+                    cursor: pointer;
+                }
                 .cart-wrapper{
                     position: relative;
                     .badge{
@@ -286,7 +380,74 @@ body{
                     }
                 }
             }
+            
+            .desktop-menu{
+                position: absolute;
+                top: 60%;
+                background: white;
+                right: 3%;
+                border: $border-secondary;
+                .create-acc{
+                    border-bottom: $border-secondary;
+                    .header-wrapper{
+                        border-bottom: $border-secondary;
+                        padding: em(35) em(121) em(23) em(32);
+                        h2{
+                            font-size: root(22);
+                            line-height: 1.45455;
+                        }
+                        p{
+                            color:$gray-primary;
+                        }
+                    }
 
+                    .create-btn-wrapper{
+                        padding: em(18) em(31) em(23);
+                        @include flex(space,center,row,em(12));
+                        .create-btn{
+                            position: relative;
+                            border: 1px solid #131313;
+                            border-bottom: 4px solid #131313;
+                        }
+                        .create-btn,.login-btn{
+                            flex-basis: calc((100% - 12px) /2);
+                        }
+                    }
+                }
+
+                .menu-wrapper{
+                    .nav-links{
+                        li{
+                            border-bottom: $border-secondary;
+                            @include flex(unset,center,row,em(23));
+                            padding: em(18) em(97) em(16) em(30);
+                            .order{
+                                width: em(51);
+                                height: em(51);
+                            }
+                            .link{
+                                h3{
+                                    font-size: root(22);
+                                    line-height: 1.45455;
+                                }
+                                p{
+                                    color:$gray-primary;
+                                }
+                            }
+
+
+                            .icon-wrapper{
+                                width: 50px;
+                                height: 50px;
+                                padding: em(8.73) em(9.524) em(9.524) em(8.73);
+                                background-color: $gray-secondary;
+                                border-radius: 50%;
+                                cursor: pointer;       
+                            }
+                        }
+                    }
+                }
+            }
 
         }
      }

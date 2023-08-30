@@ -124,7 +124,7 @@
             </div>
 
             <div class="navbar-desktop container hidden">
-                <div class="search-wrapper">
+                <div class="desktop-search search-wrapper">
                     <div class="icon">
                         <img class="search-btn" src="./assets/Group 2440.svg" alt="Search">
                     </div>
@@ -134,28 +134,150 @@
                 <div class="menu-links">
                     <div class="menu-wrapper">
                         <ul class="nav-links">
-                            <li><a href="#"><h3>New Arrivals</h3></a></li>
-                            <li><a href="#"><h3>Best Sellers</h3></a></li>
-                            <li><a href="#"><h3>Learn</h3></a></li>
-                            <li><a href="#">
-                                <div class="logo">
-                                    <img src="./assets/Logo.svg" alt="Logo">
-                                </div>
-                            </a></li>
-                            <li><a href="#"><h3>About Us</h3></a></li>
-                            <li><a href="#"><h3>Contact Us</h3></a></li>
+                            <li class="desktop-nav-link"><a href="#"><h3>New Arrivals</h3></a></li>
+
+                            <li class="desktop-nav-link"><a href="#"><h3>Best Sellers</h3></a></li>
+
+                            <li class="desktop-nav-link"><a href="#"><h3>Learn</h3></a></li>
+
+                            <li>
+                                <a href="#">
+                                    <div class="logo">
+                                        <img src="./assets/Logo.svg" alt="Logo">
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="desktop-nav-link"><a href="#"><h3>About Us</h3></a></li>
+
+                            <li class="desktop-nav-link"><a href="#"><h3>Contact Us</h3></a></li>
                         </ul>
                     </div>
                 </div>
 
+
+                <div class="desktop-search-container hidden">
+                    <div class="searchbar-wrapper">
+                        <div class="searchbar">
+                            <input type="text" name="search" class="bodytext--md" id="search" placeholder="What are you looking for?">
+                            <div class="search-btn-wrapper">
+                                <img class="search-btn" src="./assets/Group 2440.svg" alt="Search">
+                            </div>
+                            <div class="desktop-dropdown">
+                                <div class="dropdown-wrapper">
+                                    <h2 class="dropdown-header">Are you looking for...</h2>
+                                    <div class="dropdown-card">
+                                        <div class="product-img-wrapper">
+                                            <img src="./assets/search-product.png" alt="product Img">
+                                        </div>
+                        
+                                        <div class="product-desc">
+                                            <div class="product-name">
+                                                <h4 class="bodytext--xl">CLASSIC</h4>
+                                                <p class="bodytext">premium quality roasters</p>
+                                            </div>
+                                            
+                                            <div class="product-info">
+                                                <p class="product-weight bodytext">From</p>
+                                                <p class="product-price bodytext--xl">£9.55</p>
+                                            </div>
+                        
+                                            <div class="product-reviews">
+                                                <div class="product-ratings">
+                                                    <img src="./assets/Stars.png" alt="star-reviews">
+                                                </div>
+                                            </div>
+                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="desktop-exit-search">
+                            <img src="./assets/exit.svg" alt="exit">
+                        </div>
+                    </div>
+                </div>
+
+
                 <div class="cart-login">
-                    <h3>Login</h3>
+                    <h3 class="desktop-login">Login</h3>
                     <div class="icon cart-wrapper">
                         <img class="cart" src="./assets/shopping-cart 1.svg" alt="Shopping Cart">
                         <div class="badge flex">0</div>
                     </div>
                 </div>
+
+
+                <div class="desktop-menu hidden">
+                    <div class="create-acc">
+                        <div class="header-wrapper">
+                            <h2>Good Day!</h2>
+                            <p class="bodytext--md">Sign in for a more personalized experience</p>
+                        </div>
+
+                        <div class="create-btn-wrapper">
+                            <button class="create-btn btn">Create an account</button>
+                            <button class="login-btn btn-primary btn">Log In</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-wrapper">
+                        <ul class="nav-links">
+                            <li>
+                                <a class="order">
+                                    <img src="./assets/Order-icon.svg" alt="Order-icon">
+                                </a>
+
+                                <a href="#" class="link">
+                                    <h3>Orders</h3>
+                                    <p class="bodytext--md">View & track online or pickup orders</p>
+                                </a>
+
+                            </li>
+
+                            <li>
+                                <a class="icon-wrapper">
+                                    <img src="./assets/heart.svg" alt="Order-icon">
+                                </a>
+
+                                <a href="#" class="link">
+                                    <h3>Loves</h3>
+                                    <p class="bodytext--md">View saved products</p>
+                                </a>
+
+                            </li>
+
+                            <li>
+                                <a class="icon-wrapper">
+                                    <img src="./assets/nav-user.svg" alt="Order-icon">
+                                </a>
+
+                                <a href="#" class="link">
+                                    <h3>Account Settings</h3>
+                                    <p class="bodytext--md">Payment, contact info, addresses, password</p>
+                                </a>
+
+                            </li>
+
+                            <li>
+                                <a class="icon-wrapper">
+                                    <img src="./assets/Like.svg" alt="Order-icon">
+                                </a>
+
+                                <a href="#" class="link">
+                                    <h3>Coffee Brew Guides</h3>
+                                    <p class="bodytext--md">How To Brew Coffee At Home</p>
+                                </a>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
             </div>
+
 
         </nav>
 

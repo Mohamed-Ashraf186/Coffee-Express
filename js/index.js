@@ -1,3 +1,4 @@
+// M o b i l e  H e a d e r
 const searchBtn = document.querySelector('.search-wrapper')
 
 const menuBtn = document.querySelector('.burger-btn')
@@ -69,5 +70,28 @@ function handleExitBrowsing(){
     navbar.classList.remove('browsing')
     menuDropdownEl.classList.add('hidden')
     layerEl.classList.add('hidden')
+}
+
+
+
+// D e s k t o p   H e a d e r 
+
+
+document.querySelector('.desktop-login').addEventListener('click',loginSearchToolTip)
+
+document.querySelector('.desktop-search').addEventListener('click',handleDesktopSearch)
+
+function loginSearchToolTip(){
+    document.querySelector('.desktop-menu').classList.toggle('hidden')
+}
+
+function handleDesktopSearch(){
+    const desktopNavLinks = [...document.querySelectorAll('.desktop-nav-link')]
+    desktopNavLinks.map(link=>{
+        link.classList.add('hidden')
+    })
+    document.querySelector('.desktop-search').style.display = 'none'
+
+    document.querySelector('.desktop-search-container').classList.remove('hidden')
 }
 
