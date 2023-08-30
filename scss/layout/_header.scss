@@ -271,7 +271,7 @@ body{
 
 
             .desktop-search-container{
-                flex-basis: 47%;
+                flex-basis: 50%;
                 .searchbar-wrapper{
                     @include flex(unset, center, row,em(15));
                     @include margin-auto();
@@ -280,7 +280,7 @@ body{
                     }
                    .searchbar{
                     position: relative;
-                    flex-basis: calc((100% - em(15)) * 0.91);
+                    flex-basis: calc(100% - em(15));
                     border: $border-primary;
                     @include flex(space-between, center, row, em(56));
                     @include padding(em(11), em(14), em(12), em(20));
@@ -298,7 +298,6 @@ body{
                             border-bottom: $border-secondary;
                             border-right: $border-secondary;
                             border-left: $border-secondary;
-                            box-shadow: 5px 4px 20px 0px rgba(107, 107, 107, 0.16); 
                                position: absolute;
                                width: 100%;
                                background-color: white;
@@ -307,39 +306,46 @@ body{
                                padding-bottom: 30px;
                                padding-top: 20px;
                                .dropdown-wrapper{
-                                   max-width: em(370);
-                                   @include margin-auto();
                                    .dropdown-header{
                                        font-size:$card-font-size-md;
                                        line-height: 1.5;
-                                       margin-bottom: em(36,20);
+                                       margin-bottom: em(33,20);
                                    }
-                                   .dropdown-card{
-                                       @include flex(unset,center,row,17px);
-                                       .product-img-wrapper{
-                                           height: 146px;
-                                           width: fit-content;
-                                           img{
-                                               height: 100%;
+                                   .card-grid{
+                                        display: flex;
+                                        justify-content: flex-start;
+                                       .dropdown-card{
+                                            flex-basis: calc( 100% / 3);
+                                           @include flex(space-between,center,column,17px);
+                                           .product-img-wrapper{
+                                                // min-width: 200px;
+                                                width: 100%;
                                            }
+                           
+                                           .product-desc{
+                                               .product-name{
+                                                   h4{
+                                                       font-family: 'Itim', cursive;
+                                                   }
+                                                   p{
+                                                       color:$gray-primary;
+                                                   }
+                                               }
+                                               .product-info{
+                                                   p{
+                                                       display: inline-block;
+                                                   }
+                                               }
+
+                                               .product-reviews{
+                                                .product-ratings{
+                                                    width: em(128);
+                                                    height: em(29);
+                                                }
+                                               }
+                                           }
+                           
                                        }
-                       
-                                       .product-desc{
-                                           .product-name{
-                                               h4{
-                                                   font-family: 'Itim', cursive;
-                                               }
-                                               p{
-                                                   color:$gray-primary;
-                                               }
-                                           }
-                                           .product-info{
-                                               p{
-                                                   display: inline-block;
-                                               }
-                                           }
-                                       }
-                       
                                    }
                                }
                            }

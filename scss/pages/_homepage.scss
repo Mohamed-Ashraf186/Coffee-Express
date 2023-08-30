@@ -6,14 +6,30 @@ main{
         .hero-wrapper{
             @include flex(center,center,column,unset,em(12));
             padding: em(130) 0 em(100);
+            @include respond-to(md){
+                row-gap: em(22);
+            }
             h1{
+                max-width: root(915);
                 color: white;
                 padding: em(43.5,40) 0; 
                 text-align: center;
+                @include respond-to(md){
+                    font-size: root(60);
+                    padding: 0;
+                }
+
+                @include respond-to(xl){
+                    font-size: root(89.76);
+                }
             }
             .hero-desc{
                 color: white;
                 text-align: center;
+                max-width: root(700);
+                @include respond-to(md){
+                    margin-bottom: root(14);
+                }
             }
         }
     }
@@ -23,6 +39,10 @@ main{
         padding: em(67.3) 0 em(94);
         @include respond-to(md){
             max-width: em(1500);
+        }
+        
+        @include respond-to(lg){
+            padding: em(90) 0 em(220);
         }
         .section-header{
             display: inline-flex;

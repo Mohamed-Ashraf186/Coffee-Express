@@ -76,17 +76,19 @@ function handleExitBrowsing(){
 
 // D e s k t o p   H e a d e r 
 
+const desktopNavLinks = [...document.querySelectorAll('.desktop-nav-link')]
 
 document.querySelector('.desktop-login').addEventListener('click',loginSearchToolTip)
 
 document.querySelector('.desktop-search').addEventListener('click',handleDesktopSearch)
+
+document.querySelector('.desktop-exit-search').addEventListener('click',handleExitSearchDesktop)
 
 function loginSearchToolTip(){
     document.querySelector('.desktop-menu').classList.toggle('hidden')
 }
 
 function handleDesktopSearch(){
-    const desktopNavLinks = [...document.querySelectorAll('.desktop-nav-link')]
     desktopNavLinks.map(link=>{
         link.classList.add('hidden')
     })
@@ -95,3 +97,11 @@ function handleDesktopSearch(){
     document.querySelector('.desktop-search-container').classList.remove('hidden')
 }
 
+
+function handleExitSearchDesktop(){
+    desktopNavLinks.map(link=>{
+        link.classList.remove('hidden')
+    })
+    document.querySelector('.desktop-search').style.display = 'flex'
+    document.querySelector('.desktop-search-container').classList.add('hidden')
+}

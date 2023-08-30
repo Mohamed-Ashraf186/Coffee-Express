@@ -705,7 +705,7 @@ body header nav .navbar-desktop .menu-links .menu-wrapper .nav-links {
   row-gap: unset;
 }
 body header nav .navbar-desktop .desktop-search-container {
-  flex-basis: 47%;
+  flex-basis: 50%;
 }
 body header nav .navbar-desktop .desktop-search-container .searchbar-wrapper {
   display: flex;
@@ -722,7 +722,7 @@ body header nav .navbar-desktop .desktop-search-container .searchbar-wrapper .de
 }
 body header nav .navbar-desktop .desktop-search-container .searchbar-wrapper .searchbar {
   position: relative;
-  flex-basis: calc((100% - 0.9375em) * 0.91);
+  flex-basis: calc(100% - 0.9375em);
   border: 1px solid #000;
   display: flex;
   justify-content: space-between;
@@ -747,7 +747,6 @@ body header nav .navbar-desktop .desktop-search-container .searchbar-wrapper .se
   border-bottom: 1px solid #DBDBDB;
   border-right: 1px solid #DBDBDB;
   border-left: 1px solid #DBDBDB;
-  box-shadow: 5px 4px 20px 0px rgba(107, 107, 107, 0.16);
   position: absolute;
   width: 100%;
   background-color: white;
@@ -756,39 +755,39 @@ body header nav .navbar-desktop .desktop-search-container .searchbar-wrapper .se
   padding-bottom: 30px;
   padding-top: 20px;
 }
-body header nav .navbar-desktop .desktop-search-container .searchbar-wrapper .searchbar .desktop-dropdown .dropdown-wrapper {
-  max-width: 23.125em;
-  margin-right: auto;
-  margin-left: auto;
-}
 body header nav .navbar-desktop .desktop-search-container .searchbar-wrapper .searchbar .desktop-dropdown .dropdown-wrapper .dropdown-header {
   font-size: 1.25rem;
   line-height: 1.5;
-  margin-bottom: 1.8em;
+  margin-bottom: 1.65em;
 }
-body header nav .navbar-desktop .desktop-search-container .searchbar-wrapper .searchbar .desktop-dropdown .dropdown-wrapper .dropdown-card {
+body header nav .navbar-desktop .desktop-search-container .searchbar-wrapper .searchbar .desktop-dropdown .dropdown-wrapper .card-grid {
   display: flex;
-  justify-content: unset;
+  justify-content: flex-start;
+}
+body header nav .navbar-desktop .desktop-search-container .searchbar-wrapper .searchbar .desktop-dropdown .dropdown-wrapper .card-grid .dropdown-card {
+  flex-basis: 33.3333333333%;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   column-gap: 17px;
   row-gap: unset;
 }
-body header nav .navbar-desktop .desktop-search-container .searchbar-wrapper .searchbar .desktop-dropdown .dropdown-wrapper .dropdown-card .product-img-wrapper {
-  height: 146px;
-  width: fit-content;
+body header nav .navbar-desktop .desktop-search-container .searchbar-wrapper .searchbar .desktop-dropdown .dropdown-wrapper .card-grid .dropdown-card .product-img-wrapper {
+  width: 100%;
 }
-body header nav .navbar-desktop .desktop-search-container .searchbar-wrapper .searchbar .desktop-dropdown .dropdown-wrapper .dropdown-card .product-img-wrapper img {
-  height: 100%;
-}
-body header nav .navbar-desktop .desktop-search-container .searchbar-wrapper .searchbar .desktop-dropdown .dropdown-wrapper .dropdown-card .product-desc .product-name h4 {
+body header nav .navbar-desktop .desktop-search-container .searchbar-wrapper .searchbar .desktop-dropdown .dropdown-wrapper .card-grid .dropdown-card .product-desc .product-name h4 {
   font-family: "Itim", cursive;
 }
-body header nav .navbar-desktop .desktop-search-container .searchbar-wrapper .searchbar .desktop-dropdown .dropdown-wrapper .dropdown-card .product-desc .product-name p {
+body header nav .navbar-desktop .desktop-search-container .searchbar-wrapper .searchbar .desktop-dropdown .dropdown-wrapper .card-grid .dropdown-card .product-desc .product-name p {
   color: #717171;
 }
-body header nav .navbar-desktop .desktop-search-container .searchbar-wrapper .searchbar .desktop-dropdown .dropdown-wrapper .dropdown-card .product-desc .product-info p {
+body header nav .navbar-desktop .desktop-search-container .searchbar-wrapper .searchbar .desktop-dropdown .dropdown-wrapper .card-grid .dropdown-card .product-desc .product-info p {
   display: inline-block;
+}
+body header nav .navbar-desktop .desktop-search-container .searchbar-wrapper .searchbar .desktop-dropdown .dropdown-wrapper .card-grid .dropdown-card .product-desc .product-reviews .product-ratings {
+  width: 8em;
+  height: 1.8125em;
 }
 body header nav .navbar-desktop .desktop-search-container .searchbar-wrapper .desktop-exit-search {
   width: 2em;
@@ -903,14 +902,37 @@ main .hero .hero-wrapper {
   row-gap: 0.75em;
   padding: 8.125em 0 6.25em;
 }
+@media (min-width: 720px) {
+  main .hero .hero-wrapper {
+    row-gap: 1.375em;
+  }
+}
 main .hero .hero-wrapper h1 {
+  max-width: 57.1875rem;
   color: white;
   padding: 1.0875em 0;
   text-align: center;
 }
+@media (min-width: 720px) {
+  main .hero .hero-wrapper h1 {
+    font-size: 3.75rem;
+    padding: 0;
+  }
+}
+@media (min-width: 1280px) {
+  main .hero .hero-wrapper h1 {
+    font-size: 5.61rem;
+  }
+}
 main .hero .hero-wrapper .hero-desc {
   color: white;
   text-align: center;
+  max-width: 43.75rem;
+}
+@media (min-width: 720px) {
+  main .hero .hero-wrapper .hero-desc {
+    margin-bottom: 0.875rem;
+  }
 }
 main .cards-container {
   max-width: 22.9375em;
@@ -919,6 +941,11 @@ main .cards-container {
 @media (min-width: 720px) {
   main .cards-container {
     max-width: 93.75em;
+  }
+}
+@media (min-width: 992px) {
+  main .cards-container {
+    padding: 5.625em 0 13.75em;
   }
 }
 main .cards-container .section-header {
