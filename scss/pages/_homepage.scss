@@ -38,7 +38,7 @@ main{
         max-width: em(367);
         padding: em(67.3) 0 em(94);
         @include respond-to(md){
-            max-width: em(1500);
+            max-width: none;
         }
         
         @include respond-to(lg){
@@ -51,12 +51,34 @@ main{
             h2{
                 position: relative;
                 padding-bottom: em(20,32);
+                &::after{
+                    position: absolute;
+                    content: '';
+                    background-image: url('/assets/Vector.svg');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    width: 100%;
+                    height: 9px;
+                    // top: 70%;
+                    left: 0%;
+                    bottom: 0%;
+                    @include respond-to(md){
+                        bottom: -20%;
+                    }
+                }
+                @include respond-to(md){
+                    font-size: root(48);
+                    line-height: 1.05;
+                    padding-bottom: 0;
+                }
+                @include respond-to(xl){
+                    font-size: root(64);
+                    line-height: 1;
+                }
+                
             }
             .header-underline{
-                img{
-                    width: 100%;
-                    height: 100%;
-                }
+                width: 100%;
             }
             
         }
@@ -69,9 +91,6 @@ main{
                 justify-content: space-between;
             }
             
-            @include respond-to(xxl){
-                justify-content: flex-start;
-            }
             gap: 20px;
             .product-card{
                 border: 1px solid $card-border;
@@ -142,10 +161,23 @@ main{
     }
 
     .best-sellers{
+        margin-bottom: em(89);
+        @include respond-to(lg){
+            padding: em(90) 0 em(40);
+        }
         .section-header{
             margin-bottom: em(37);
             h2{
                 padding-bottom: em(20,48.8);
+                @include respond-to(md){
+                    padding-bottom: 0;
+                }
+                &::after{
+                    width: 90%;
+                    @include respond-to(md){
+                        width: 100%;
+                    }
+                }
             }      
         }
     }
@@ -162,86 +194,172 @@ main{
                     height: 33.996px;
                     flex-shrink: 0;
                     margin-bottom: em(8);
+                    @include respond-to(md){
+                        width: 76.259px;
+                        height: 33.962px; 
+                    }
                 }
                 h2{
                     color: white;
+                    max-width: root(1070);
                 }
     
                 .vector-wrapper{
-                    max-width: em(900);
+                    max-width: em(881);
                     width: 100%;
+                    height: 9.683px;
                 }
             }
     
             p{
-                margin-top: em(12);
-                max-width: em(366);
+                margin-top: root(12);
+                max-width: root(366);
                 color: white;
-                margin-bottom: em(32.6,18);
+                margin-bottom: root(32.6);
+                @include respond-to(md){
+                    margin: root(6) 0 root(40);
+                    max-width: root(1123);
+                }
             }
 
         }
     }
     
     .our-story{
+
         background-image: url(../../assets/HP-Story1.png);
         background-size:cover;
         background-repeat: no-repeat;
+        @include respond-to(xl){
+            width: 90%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        h2{
+            @include respond-to(md){
+                font-size: root(48);
+            }
+            @include respond-to(xl){
+                font-size: root(64);
+            }
+        }
         h2,p{
             text-align: center;
         }
     }
 
-    .about-us{
-        background-size:cover;
-        background-repeat: no-repeat;
-        .container{
-            gap: 17px;
-            align-items: flex-start;
-            max-width: em(400);
-
-            .header-container,h2{
-                align-self: flex-start;
-            }
-
-            p{
-                margin: 0;
-            }
+    .about-us-container{
+        margin-bottom: em(90);
+        @include respond-to(xl){
+            width: 90%;
+            margin-right: auto;
+            margin-left: auto;
+            display: flex;
+            gap: em(20);
         }
-    }
-
-    .success{
-        padding: em(185) 0 em(41);
-        background-image: url(../../assets/HP-Blog1.png);
-        .container{
-            .header-container{
-                width: 100%;
+        .about-us{
+            @include respond-to(xl){
+                flex-basis: calc((100% - em(20)) / 2);
+                display: flex;
+                align-items: flex-end;
             }
-        }
-    }
-
-    .community{
-        padding: em(104) 0 em(41);
-        margin-bottom: em(98);
-        background-image: url(../../assets/HP-Blog2.png);
-        .container{
-            .header-container{
-                .vector-wrapper{
-                    max-width: em(302);
+            background-size:cover;
+            background-repeat: no-repeat;
+            .container{
+                gap: 17px;
+                align-items: flex-start;
+                max-width: em(400);
+                @include respond-to(xl){
+                    width: 100%;
+                    margin: 0;
+                }
+                .header-container,h2{
                     align-self: flex-start;
                 }
+                h2{
+                    @include respond-to(md){
+                        font-size: root(40);
+                    }
+                    @include respond-to(xl){
+                        font-size: root(48);
+                    }
+                }
+    
+                p{
+                    margin: 0;
+                }
             }
-            
         }
+    
+        .success{
+            padding: em(185) 0 em(41);
+            background-image: url(../../assets/HP-Blog1.png);
+            @include respond-to(xl){
+                padding: em(213) em(100) em(40) em(40);
+            }
+            @include respond-to(xxl){
+                padding-right: em(240);
+            }
+            .container{
+                @include respond-to(xl){
+                    max-width: root(600);
+                }
+                .header-container{
+                    width: 100%;
+                }
+
+            }
+        }
+    
+        .community{
+            padding: em(104) 0 em(41);
+            background-image: url(../../assets/HP-Blog2.png);
+            @include respond-to(xl){
+                padding: em(259) em(72.5) em(40) em(55);
+            }
+
+            .container{
+                @include respond-to(xl){
+                    max-width: root(755);
+                }
+                .header-container{
+                    .vector-wrapper{
+                        align-self: flex-start;
+                    }
+
+                }
+                
+            }
+        }
+        
     }
 
     .start-day{
         margin-bottom: em(164);
+        @include respond-to(xxl){
+            display: flex;
+            gap: em(100);
+            margin-left: auto;
+        }
         .container{
+            @include respond-to(xxl){
+                max-width: em(600);
+            }
             padding: em(93.5) 0 em(80);
             @include flex(center,center,column,unset,em(28));
             h2,p{
                 text-align: center;
+            }
+
+            h2{
+                @include respond-to(md){
+                    font-size: root(48);
+                }
+
+                @include respond-to(xl){
+                    font-size: root(64);
+                    line-height: 1;
+                }
             }
         }
     }
@@ -254,10 +372,23 @@ main{
                     width: em(118.992);
                     height: em(33.996);
                     margin-bottom: em(25);
+                    @include respond-to(lg){
+                        width: 76.259px;
+                        height: 33.962px; 
+                    }
                 }
                 h2{
+                    max-width: root(450);
                     text-align: center;
                     margin-bottom: em(14,48);
+                    @include respond-to(md){
+                        font-size: root(48);
+                    }
+
+                    @include respond-to(xl){
+                        font-size: root(64);
+                        line-height: 1;
+                    }
                 }
                 .join-wrapper{
                     @include flex(unset, center,row, 37px);

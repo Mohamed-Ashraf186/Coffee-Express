@@ -18,6 +18,9 @@ body{
         display: flex;
         justify-content: center;
         background-color: $primary;
+        h3{
+            font-family: Itim;
+        }
      }
      
      nav{

@@ -1,0 +1,64 @@
+#bread-crumb {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    .bread-crumb-arrow{
+        width: em(24);
+        height: em(24);
+    }
+
+    padding: em(15) 0 em(15) em(30);
+    @include respond-to(md){
+        padding-left: em(70);
+    }
+
+    .active{
+        color: $primary;
+    }
+   p{
+    color: white;
+   }
+}
+
+
+
+
+
+//   #bread-crumb {
+//     margin-bottom: 30px;
+//     @include respond-to(md){
+//         margin-bottom:14px;
+//     }	
+//     .container {
+//       @include flex(flex-start, center, row, 33.5px);
+//       padding: 54px 0 39px;
+//       border-bottom: 1px solid #ecedee;
+  
+      
+//       /* R E S P O N S I V E   S T A R T */
+  
+//       @include respond-to(xxl){
+//           border-top: 1px solid #ecedee;
+//           padding: 12px 0;
+//       }	  
+//       @include respond-to(md) {
+//         column-gap: 9px;
+//         padding: 10.5px 0;
+//       }
+//       /* R E S P O N S I V E   E N D */
+//       a {
+//         h5 {
+//           cursor:text;
+//           color: #919191;
+//             line-height:26px;
+//           @include respond-to(md) {
+//             font-size: 17.5px;
+//               line-height:24px;
+//           }
+//         }
+//         .active {
+//           color: $Secondary;
+//         }
+//       }
+//     }
+//   }

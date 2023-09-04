@@ -1,0 +1,184 @@
+main {
+    padding-top: em(45);
+    h2{
+        @include respond-to(xl){
+            font-size: root(39.06);
+            line-height: 1;
+        }
+        margin-bottom: root(24);
+    }
+
+    .new-arrivals-container{
+        @include respond-to(xl){
+            display: flex;
+            gap: em(54);
+        }
+        .filter-container{
+            .sidebar-widget{
+                display: none;
+                @include respond-to(xl){
+                    display: unset;
+                }
+            }
+            .filter-mobile{
+                border-bottom: $border-secondary;
+                padding-bottom: em(19);
+                margin-bottom: em(22);
+                @include flex(space-between,center,row);
+                @include respond-to(xl){
+                    display: none;
+                }
+                .item-num{
+                    p{
+                        color: $gray-600;
+                    }
+                }
+                .filter-btn-wrapper{
+                    @include flex(center,center,row,em(12));
+                    .filter-btn{
+                        height: em(42);
+                        border-radius: 4px;
+                        border: $border-secondary;
+                        @include flex(center,center,row,em(7));
+                        padding: em(8) em(18);
+                        .filter-icon{
+                            width: root(18);
+                            height: root(18);
+                        }
+                    }
+                }
+            }
+        }
+
+        .product-listing-container{
+            .filters-wrapper{
+                margin-bottom: em(32);
+                @include flex(space-between,baseline,row);
+                .filter-categories{
+                    @include flex(flex-start,center,row,em(9));
+                    .filter{
+                        @include flex(center,center,row,em(4));
+                        width: fit-content;
+                        padding: em(5) em(15) em(5) em(22);
+                        background-color: #FCECD3; 
+                        border-radius: em(36); 
+                        .filter-cancel{
+                            width: em(15);
+                            height: em(15);
+                        }
+                    }
+                }
+
+                .sort{
+                    display: none;
+                    @include respond-to(xl){
+                        @include flex(unset,center,row,em(19))
+                    }
+                    padding-bottom: em(19);
+                    .item-num{
+                        p{
+                            color: $gray-600;
+                        }
+                    }
+                    .filter-btn-wrapper{
+                        @include flex(center,center,row,em(12));
+                        .filter-btn{
+                            height: em(42);
+                            border-radius: 4px;
+                            border: $border-secondary;
+                            @include flex(center,center,row,em(7));
+                            padding: em(8) em(18);
+                            .filter-icon{
+                                width: root(18);
+                                height: root(18);
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .card-grid{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                @include respond-to(md){
+                    justify-content: flex-start;
+                }
+                
+                column-gap: em(20);
+                row-gap: em(67);
+                .product-card{
+                    width: 100%;
+                    border: 1px solid $card-border;
+                    max-width: em(430);
+                    @include respond-to(md){
+                        flex-basis: calc((100% - 20px) / 2);
+                    }
+                    @include respond-to(lg){
+                        flex-basis: calc((100% - 40px) / 3);
+                    }
+                    
+                    @include respond-to(1750px){
+                        flex-basis: calc((100% - 60px) / 4);
+                    }
+                    
+                    .img-container{
+                        .product-img-wrapper{
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                    .product-desc{
+                        padding: em(16) em(20);
+                        @include flex(unset,unset,column,unset,em(12));
+                        .product-name{
+                            p{
+                                color: $gray-primary;
+                            }
+                        }
+                        .product-info{
+                            @include flex(space-between,center);
+                            .product-weight{
+                                color: $gray-primary;
+                            }
+                        }
+                        .product-reviews{
+                            @include flex(space-between,center);
+                            .product-ratings{
+                                display:flex;
+                            }
+        
+                            .product-like-wrapper{
+                                .product-like-img{
+                                    width: 50px;
+                                    height: 50px;
+                                    padding: 8.73px 9.524px 9.524px 8.73px;
+                                    background-color: $gray-secondary;
+                                    border-radius: 50%;
+                                    cursor: pointer;                         
+                                }
+                            }
+                        }
+        
+                        .quick-add{
+                            button{
+                                border-bottom: 5px solid $primary2;
+                                width:100%
+                            }
+                        }
+                    }
+                }
+            }
+
+            .no-results{
+                .empty-img{
+                    width: em(296);
+                    height: em(188);
+                }
+            }
+        }
+    }
+}

@@ -19,6 +19,7 @@
 // layout
 @import './layout/footer';
 @import './layout/header';
+@import './layout/breadcrumb';
 
 
 
@@ -27,7 +28,7 @@
 
 
 // pages
-@import './pages/homepage'
-
+@import './pages/homepage';
+@import './pages/newArrivals';
 
 // themes
