@@ -1,0 +1,89 @@
+.account{
+    padding-top: em(95.5);
+    .account-wrapper{
+        max-width: em(580);
+        margin: 0 auto;
+        .header-section{
+            margin-bottom: em(37);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: em(6);
+            h2{
+                font-size: root(39.06);
+                line-height: 1;
+            }
+
+            p{
+                color: $gray-700;
+            }
+        }
+
+        .form-buttons-wrapper{
+            width: 100%;
+            button{
+                display: flex;
+                width: 100%;
+            }
+            .login-btn{
+                border-bottom: 3px solid $gray-200;
+                background: $gray-100;
+                margin-bottom: 12px;
+            }
+
+            .login-btn.active{
+                background-color: $primary;
+                border-bottom: 3px solid $primary2; 
+            }
+
+            .create-acc-btn{
+                border: 1px solid #000;
+                border-bottom: 5px solid #000;
+            }
+        }
+
+        .account-form{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            .form-input{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                label{
+                    margin-bottom: 5px;
+                }
+                input{
+                    border: 1px solid $gray-200;
+                    height: 56px;
+                    padding: 1rem;
+                }
+            }
+
+            .email-wrapper{
+                margin-bottom: em(12);
+            }
+
+            .password-wrapper{
+                margin-bottom: em(46);
+                @include respond-to(md){
+                    margin-bottom: em(50);
+                }
+                input{
+                    margin-bottom: 8px;
+                    @include respond-to(md){
+                        margin-bottom: 12px;
+                    }
+                }
+                .forgot-password-link{
+                    align-self: flex-end;
+                    a{
+                        color: $gray-700;
+                    }
+                }
+            }
+
+        }
+    }
+}
+

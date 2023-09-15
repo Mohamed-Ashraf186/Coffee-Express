@@ -12,5 +12,4 @@ function watchTask(){
     watch(['scss/**/*.scss'], buildStyles)
 }
 
-
 exports.default = series(watchTask,buildStyles)

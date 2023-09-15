@@ -1,106 +1,183 @@
 footer{
-    margin-top: em(106);
     padding: em(70) 0 em(34);
     background-color: black;
-    h2,h3,p,li,a{
-        color: white;
-    }
-    
-    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-        color: white;
-        opacity: 1; /* Firefox */
-    }
+        h2,h3,p,li,a{
+            color: white;
+        }
+        
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: white;
+            opacity: 1; /* Firefox */
+        }
 
-    ::-ms-input-placeholder { /* Microsoft Edge */
-        color: white;
-      }
+        ::-ms-input-placeholder { /* Microsoft Edge */
+            color: white;
+        }
 
 
       .footer-grid-wrapper{
-        @include respond-to(lg){
-            display: flex;
-        }
-          .footer-col{
-              .newsletter-wrapper{
-                  @include flex(center,unset,column);
-                  margin-bottom: em(41);
-                  .header-container{
-                      h2{
-                          margin-bottom: em(20,40);
-                      }
-                      p{
-                          margin-bottom: em(22)
-                      }
-                  }
-                  .newsletter-input{
-                      display: flex;
-                      input{
-                          height: em(56);
-                          padding: 1em;
-                          flex-basis: 70%;
-                          border: 1px solid $primary;
-                          color: white;
-                      }
-                  }
-              }
-          
-              .payment-methods{
-                  @include flex(flex-start,center,row,em(6));
-                  margin-bottom: em(83);
-                  .icon-wrapper{
-                      width: em(37.992);
-                      height: em(24);
-                  }
-              }
-          }
+            margin-bottom: em(85);
+            @include respond-to(xl){
+                display: flex;
+                justify-content: space-between;
+            }
+        
+            .footer-col{
+                    max-width: em(470);
+                .newsletter-wrapper{
+                    @include flex(center,unset,column);
+                    margin-bottom: em(41);
+                    .header-container{
+                        h2{
+                            margin-bottom: em(20,40);
+                        }
+                        p{
+                            margin-bottom: em(22)
+                        }
+                    }
+                    .newsletter-input{
+                        display: flex;
+                        input{
+                            height: em(56);
+                            padding: 1em;
+                            flex-basis: 75%;
+                            border: 1px solid $primary;
+                            color: white;
+                        }
+                        .newsletter-signup{
+                            flex-basis: 25%;
+                            padding: em(10,18) 0;
+                        }
+                    }
+                }
+            
+                .payment-methods{
+                    @include flex(flex-start,center,row,em(6));
+                    margin-bottom: em(83);
+                    .icon-wrapper{
+                        width: em(37.992);
+                        height: em(24);
+                    }
+                }
+            }
       
-      
-          .quick-links{
-              @include flex(space-evenly, flex-start, row,em(40));
-              margin-bottom: em(85);
-              .left-column{
-                  @include flex(center,flex-start,column,unset,em(56.8));
-                  @include respond-to(lg){
-                    flex-direction: row;
-                    row-gap: unset;
-                    gap: em(100);
-                  }
-                  
-                  .about,.visit{
-                      .section-header{
-                          margin-bottom: em(35,24);
-                          display: inline-flex;
-                          flex-direction: column;
-                      }
-                  }
-      
-                  .about{
-                      ul{
-                          @include flex(unset,unset,column,unset,em(8))
-                      }
-                  }
-                  
-                  .visit{
-                      .address{
-                          max-width: 160px;
-                      }
-                  }
-              }
-      
-              .right-column{
-                  .help{
-                      .section-header{
-                          margin-bottom: em(36,24);
-                          display: inline-flex;
-                          flex-direction: column;
-                      }
-                      ul{
-                          @include flex(center,flex-start,column,unset, em(8))
-                      }
-                  }
-              }
-      
-          }
+            .quick-links{
+                @include flex(flex-start, flex-start, row,em(40));
+                margin-bottom: em(85);
+                .left-column{
+                    @include flex(center,flex-start,column,unset,em(56.8));
+                    @include respond-to(lg){
+                        flex-direction: row;
+                        row-gap: unset;
+                        gap: em(100);
+                    }
+                    
+                    .about,.visit{
+                        .section-header{
+                            margin-bottom: em(35,24);
+                            display: inline-flex;
+                            flex-direction: column;
+                            .vector-wrapper{
+                                width: 81.516px;
+                                height: 6.996px;
+                            }
+                        }
+                    }
+        
+                    .about{
+                        ul{
+                            @include flex(unset,unset,column,unset,em(8))
+                        }
+                    }
+                    
+                    .visit{
+                        .address{
+                            max-width: 160px;
+                        }
+                    }
+                }
+        
+                .right-column{
+                    .help{
+                        .section-header{
+                            margin-bottom: em(36,24);
+                            display: inline-flex;
+                            flex-direction: column;
+                        }
+                        ul{
+                            @include flex(center,flex-start,column,unset, em(8))
+                        }
+                    }
+                }
+        
+            }
+
+            .quick-links-2{
+                display: grid;
+                grid-template-columns: em(160) em(160);
+                grid-template-rows: em(120) em(165);
+                row-gap: em(56.8);
+                column-gap: em(26);
+                grid-template-areas: 
+                    "about help-col"
+                    "visit help-col";
+
+                @include respond-to(800px){
+                    display: flex;
+                    justify-content: space-between;          
+
+                }
+                @include respond-to(xl){
+                    gap: em(90);
+                }
+                @include respond-to(xxl){
+                    gap: em(130);
+                }
+                @include respond-to(1650px){
+                    gap: em(186);
+                }
+                .about,.visit{
+                    .section-header{
+                        margin-bottom: em(28);
+                        display: inline-flex;
+                        flex-direction: column;
+                        .vector-wrapper{
+                            width: 81.516px;
+                            height: 6.996px;
+                        }
+                    }
+                }
+
+                .about{
+                    grid-area: about;
+                    ul{
+                        @include flex(unset,unset,column,unset,em(8))
+                    }
+                }
+                
+                .visit{
+                    grid-area: visit;
+                    .address{
+                        max-width: 160px;
+                    }
+                }
+
+                .help{
+                    grid-area: help-col;
+                    .section-header{
+                        margin-bottom: em(28);
+                        display: inline-flex;
+                        flex-direction: column;
+                        .vector-wrapper{
+                            width: 81.516px;
+                            height: 6.996px;
+                        }
+                    }
+                    ul{
+                        @include flex(center,flex-start,column,unset, em(8))
+                    }
+                }
+            }
       }
 
     .copyright{

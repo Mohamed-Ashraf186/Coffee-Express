@@ -1,0 +1,62 @@
+#create-account{
+    margin-bottom: em(94);
+    @include respond-to(lg){
+        margin-bottom: em(210);
+    }
+    .header-section{
+        margin-bottom: em(52);
+        gap: em(12);
+        p{
+            text-align: center;
+            a{
+                text-decoration: underline;
+                color: black;
+            }
+        }
+    }
+
+    .create-account-form{
+        .full-name-wrapper{
+            margin-bottom: em(12);
+            flex-direction: row;
+            gap: em(12);
+            @include respond-to(lg){
+                flex-direction: column;
+            }
+            .last-name-wrapper,.first-name-wrapper{
+                min-width: 150px;
+                flex-basis: calc((100% - em(12)) / 2);
+            }
+        }
+
+        .password-wrapper{
+            label{
+                display: flex;
+                justify-content: space-between;
+                .min-character{
+                    color: $gray-400;
+                }
+            }
+        }
+
+        .form-buttons-wrapper{
+            margin-bottom: em(30);
+            button{
+                border-bottom: 3px solid $primary2; 
+            }
+        }
+
+        .checkboxes-wrapper{
+                margin-bottom: em(46);
+                display: flex;
+                flex-direction: column;
+                gap: em(12);
+            .checkbox{
+                display: flex;
+                gap:em(10);
+                align-items: baseline;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,48 @@
+#account-success{
+    margin-bottom: em(65);
+    @include respond-to(md){
+        margin-bottom: em(112);
+    }
+    .account-success-wrapper{
+        max-width: em(806);
+        .header-section{
+            margin-bottom: em(12);
+            h2{
+                font-size: root(32);
+                line-height: 1.125;
+                @include respond-to(md){
+                    font-size: root(39.06);
+                    line-height: 1;
+                }
+            }
+        }
+        .success-message{
+            margin-bottom: em(115);
+            display: flex;
+            flex-direction: column;
+            gap: em(32); 
+            @include respond-to(md){
+                text-align: center;
+                margin-bottom: em(72);
+            }  
+        }
+
+        .form-buttons-wrapper{
+            max-width: em(400);
+            margin: 0 auto;
+            @include respond-to(md){
+                display: flex;
+                gap: 12px;
+            }
+            .my-acc-btn{
+                border: 1px solid black;
+                border-bottom: 5px solid black;
+                margin-bottom: 12px;
+            }
+
+            .shopping-btn{
+                border-bottom: 3px solid $primary2; 
+            }
+        }
+    }
+}

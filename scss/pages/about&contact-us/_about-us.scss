@@ -1,0 +1,313 @@
+#about-us-page{
+    .our-story{
+        padding-bottom: em(122);
+        margin-bottom: 0;
+        @include respond-to(md){
+            width: 100%;
+        }
+        @include respond-to(lg){
+            padding-top: em(142.5);
+        }
+
+        .container{
+            .header-container{
+                margin-bottom: em(35);
+                h2{
+                    margin-bottom: 0;
+                    font-size: root(40);
+                    line-height: 1;
+                    max-width: root(1219);
+                    @include respond-to(md){
+                        font-size: root(65);
+                    }
+                    @include respond-to(xl){
+                        font-size: root(89.76);
+                        line-height: 0.91355;
+                    }
+                }
+                .vector-wrapper{
+                    max-width: 245.968px;
+                    @include respond-to(md){
+                        max-width: 450px;
+                    }
+                    @include respond-to(917px){
+                        max-width: 600px;
+                    }
+                    @include respond-to(xl){
+                        max-width: 791.368px;
+                    }
+                    img{
+                        object-fit: cover;
+                    }
+                }
+            }
+            p{
+                margin-top: 0;
+                max-width: em(346,18);
+                @include respond-to(md){
+                    max-width: em(500,18);
+                }
+
+                @include respond-to(lg){
+                    max-width: em(650,18);
+                }
+
+                @include respond-to(xl){
+                    max-width: em(925,18);
+                }
+            }
+        }
+    }
+
+    .about-us-section{
+        display: flex;
+        flex-direction: column;
+        @include respond-to(xl){
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: em(150);
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        @include respond-to(xxxl){
+            gap: 0;
+        }
+        .section-wrapper{
+            @include respond-to(xl){
+                margin: 0;
+                flex-basis: calc((100% - 150px) * 0.43);
+            }
+
+            @include respond-to(xxxl){
+                flex-basis: 43%;
+            }
+            .frame-container{
+                width: em(83);
+                height: em(67);
+            }
+
+            .section-body,.header-container{
+                margin-left: em(20);
+                @include respond-to(xl){
+                    width: 95%;
+                }
+            }
+    
+            
+            .header-container{
+                margin-bottom:em(33);
+                h2{
+                    margin-top: -10px;
+                    margin-bottom: 0;
+                    @include respond-to(md){
+                        font-size: root(40);
+                        line-height: 1.05;
+                    }
+                    @include respond-to(lg){
+                        font-size: root(48.8);
+                        line-height: 1.00061;
+                    }
+                }
+
+            }
+            
+            .section-body{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: em(26);
+                @include respond-to(xl){
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .section-img{
+            @include respond-to(xl){
+                flex-basis: calc((100% - 150px) * 0.57);
+                max-width: 880px;
+                max-height: 540px; 
+                img{
+                    object-fit: contain;
+                }
+            }
+            @include respond-to(xxxl){
+                flex-basis: 57%;
+            }
+        }
+
+    }
+
+    .our-journey{
+        padding-top: em(39);
+        @include respond-to(xl){
+            padding-top: em(97);
+        }
+
+        .section-wrapper{
+            @include respond-to(md){
+                max-width: em(676);
+            }
+
+            .header-container{
+                .vector-wrapper{
+                    width: 250.164px;
+                    height: 9.683px; 
+                    img{
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .section-body{
+                margin-bottom: em(60);
+                @include respond-to(xl){
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+    }
+
+    .success{
+        padding-top: em(67);
+        @include respond-to(xl){
+            padding-top: em(148);
+        }
+
+        .section-wrapper{
+            @include respond-to(md){
+                max-width: em(765);
+            }
+            @include respond-to(xl){
+                order: 1;
+                flex-basis: calc((100% - 150px) /2);
+            }
+
+            @include respond-to(xxxl){
+                flex-basis: 50%
+            }
+
+            .header-container{
+                margin-bottom: em(44);
+                .vector-wrapper{
+                    min-width: 300px;
+                    height: 9.683px;
+                    max-width:454.27px ;
+                    img{
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .section-body{
+                margin-bottom: em(34);
+                @include respond-to(xl){
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .section-img{
+            @include respond-to(xl){
+                order: 0;
+                flex-basis: calc((100% - 150px) /2);
+            }
+
+            @include respond-to(xxxl){
+                flex-basis: 50%
+            }
+        }
+    }
+
+
+    .community{
+        padding-top: em(67);
+        @include respond-to(xl){
+            padding-top: em(148);
+        }
+        .section-wrapper{
+            @include respond-to(md){
+                max-width: em(765);
+            }
+
+            .header-container{
+                .vector-wrapper{
+                    min-width: 300px;
+                    height: 9.683px;
+                    max-width:629.876px ;
+                    img{
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .section-body{
+                margin-bottom: em(75);
+                @include respond-to(xl){
+                    margin-bottom: 0;
+                }
+
+            }
+        }
+    }
+
+    .owner-quote{
+        max-width: em(885);
+        padding-top: em(114);
+        @include respond-to(xl){
+            padding-top: em(185);
+        }
+        text-align: center;
+        .quote{
+            font-size: root(24);
+            line-height: 1.25;
+            margin-bottom: em(44,24);
+        }
+
+        .owner-name{
+            font-size: root(20);
+            line-height: 1.5;
+        }
+    }
+
+
+    .instagram-container{
+        padding-top: em(148);
+        .container{
+           .header-container{
+            margin-bottom: em(47);
+            .frame-container{
+                margin-bottom: em(15.54);
+                @include respond-to(xl){
+                    margin-bottom: em(9.5);
+
+                }
+            }
+            h2{
+                margin-bottom: root(25);
+
+                @include respond-to(md){
+                    font-size: root(48);
+                    line-height: 1.05;
+                }
+
+                @include respond-to(xl){
+                    font-size: root(64);
+                    line-height: 1;
+                    margin-bottom: root(17);
+                }
+            }
+
+            .join-wrapper{
+                @include respond-to(xl){
+                    gap: 15px;
+                }
+            }
+           } 
+        }
+    }
+
+}

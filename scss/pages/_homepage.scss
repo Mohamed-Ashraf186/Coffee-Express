@@ -1,6 +1,10 @@
 main{
+    .btn{
+        padding: 10px 26px;
+    }
+    padding-top: 0 !important;
     .hero{
-        background-image: url(../../assets/hero-bg.svg);
+        background-image: url(/assets/hero-bg.png);
         background-size: cover;
         background-repeat: no-repeat;
         .hero-wrapper{
@@ -31,6 +35,7 @@ main{
                     margin-bottom: root(14);
                 }
             }
+
         }
     }
 
@@ -81,82 +86,6 @@ main{
                 width: 100%;
             }
             
-        }
-
-
-        .card-grid{
-            display: flex;
-            flex-wrap: wrap;
-            @include respond-to(md){
-                justify-content: space-between;
-            }
-            
-            gap: 20px;
-            .product-card{
-                border: 1px solid $card-border;
-                max-width: em(430);
-                @include respond-to(md){
-                    flex-basis: calc((100% - 20px) / 2);
-                }
-                @include respond-to(lg){
-                    flex-basis: calc((100% - 40px) / 3);
-                }
-                
-                @include respond-to(xxl){
-                    flex-basis: calc((100% - 60px) / 4);
-                }
-                
-                .img-container{
-                    .product-img-wrapper{
-                        // max-width: 372px;
-                        // max-height: 411px; 
-                        // margin: 0 auto;
-                        img{
-                            width: 100%;
-                            height: 100%;
-                        }
-                    }
-                }
-                .product-desc{
-                    padding: em(16) em(20);
-                    @include flex(unset,unset,column,unset,em(12));
-                    .product-name{
-                        p{
-                            color: $gray-primary;
-                        }
-                    }
-                    .product-info{
-                        @include flex(space-between,center);
-                        .product-weight{
-                            color: $gray-primary;
-                        }
-                    }
-                    .product-reviews{
-                        @include flex(space-between,center);
-                        .product-ratings{
-                            display:flex;
-                        }
-    
-                        .product-like-wrapper{
-                            .product-like-img{
-                                width: 50px;
-                                height: 50px;
-                                padding: 8.73px 9.524px 9.524px 8.73px;
-                                background-color: $gray-secondary;
-                                border-radius: 50%;
-                                cursor: pointer;                         
-                            }
-                        }
-                    }
-    
-                    .quick-add{
-                        button{
-                            border-bottom: 5px solid $primary2;
-                            width:100%
-                        }
-                    }
-                }
-            }
         }
     }
 
@@ -226,8 +155,7 @@ main{
     }
     
     .our-story{
-
-        background-image: url(../../assets/HP-Story1.png);
+        background-image: url(/assets/HP-Story1.png);
         background-size:cover;
         background-repeat: no-repeat;
         @include respond-to(xl){
@@ -281,7 +209,7 @@ main{
                         font-size: root(40);
                     }
                     @include respond-to(xl){
-                        font-size: root(48);
+                        font-size: root(48.8);
                     }
                 }
     
@@ -293,7 +221,7 @@ main{
     
         .success{
             padding: em(185) 0 em(41);
-            background-image: url(../../assets/HP-Blog1.png);
+            background-image: url(/assets/HP-Blog1.png);
             @include respond-to(xl){
                 padding: em(213) em(100) em(40) em(40);
             }
@@ -313,7 +241,7 @@ main{
     
         .community{
             padding: em(104) 0 em(41);
-            background-image: url(../../assets/HP-Blog2.png);
+            background-image: url(/assets/HP-Blog2.png);
             @include respond-to(xl){
                 padding: em(259) em(72.5) em(40) em(55);
             }

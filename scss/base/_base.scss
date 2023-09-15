@@ -1,5 +1,7 @@
-html {
+html,body{
     box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
 }
   
 *,
@@ -59,11 +61,13 @@ a,button{
 }
 
 .btn{
-    padding: 10px 26px;
     height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn-primary{
-    background-color: $primary;
+    background-color: $primary !important;
 }
 
