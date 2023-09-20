@@ -1,0 +1,100 @@
+.receipt{
+    position: absolute;
+    background-color: white;
+    min-width: em(368);
+    max-width: em(600);
+    z-index: 4;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    .receipt-wrapper{
+        padding: em(24) 0 em(37);
+        .header-section{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: em(30);
+            h2{
+                font-size: root(30);
+                line-height:133.333%;
+                margin-bottom: 0;
+            }
+            .order-no{
+                display: flex;
+                flex-direction: column;
+                p{
+                    color: $gray-400;
+                }
+                h3{
+                    font-size: root(22);
+                    line-height: 145.455%;
+                    color: $primary3;
+                }
+            }
+        }
+
+        .order-thanks{
+            padding-bottom: em(35);
+            border-bottom: 1px solid $gray-100;
+        }
+        
+        
+        .order-info-wrapper{
+            padding: em(10) 0;
+            margin-bottom: em(38);
+            border-bottom: 1px solid $gray-100;
+            display: flex;
+            flex-direction: column;
+            .order-info{
+                display: flex;
+                flex-direction: column;
+                gap: em(7);
+                .info-header{
+                    color: $gray-400;
+                }
+                .info-value{
+                    color: $gray-700;
+                }
+            }
+
+            .shipping-address{
+                max-width: em(228);
+                .info-value{
+                    p{
+                        color: $gray-700;
+                    }
+                }
+            }
+        }
+
+        .purchased-products-wrapper{
+            display: flex;
+            flex-direction: column;
+            gap: em(21);
+            .purchased-product{
+                display: flex;
+                justify-content: space-between;
+                padding-top: em(7);
+                padding-bottom: em(14);
+                border-bottom: 1px solid $gray-100;
+                .img-wrapper{
+                    width: em(70);
+                    height: em(70);
+                }
+
+                .product-info-wrapper{
+                    .name{
+                        color: $gray-400;
+                    }
+                    .product-spec{
+                        display: flex;
+                        justify-content: space-between;
+                        p{
+                            color: $gray-400;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

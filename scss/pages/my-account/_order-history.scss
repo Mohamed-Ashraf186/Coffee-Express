@@ -1,0 +1,113 @@
+.order-history-wrapper{
+    max-width: 385.2px;
+    margin:0 auto;
+    @include respond-to(lg){
+        max-width: 1330px;
+    }
+    h3{
+        font-size: root(20);
+        line-height: 1.5;
+    }
+    .order-history-table{
+
+        .order-wrapper-row{
+            padding-top: em(35);
+            padding-bottom: em(24);
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid $gray-100;
+            row-gap: em(24);
+            @include respond-to(lg){
+                padding: em(22) 0;
+            }
+            .cell-group{
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .cell{
+                // flex-basis: calc(100% / 3);   
+                .cell-header{
+                    color: $gray-400;
+                }
+                .cell-value{
+                    color: $gray-700;
+                }
+            }
+
+            .shipping-status{
+                width: em(75);
+                @include respond-to(lg){
+                    width: 123px;
+                }
+                .shipped{
+                    color:#0DAA26;
+                }
+                .cancelled{
+                    color: #E2574C;
+                }
+            }
+
+            .shipping-address{
+                .cell-value{
+                    max-width: em(210);
+                }
+            }
+
+            .order-amount{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                @include respond-to(lg){
+                    flex-direction: column;
+                    gap: em(4);
+                    justify-content: stretch;
+                }
+            }
+
+            
+        }
+
+        @include respond-to(lg){
+            .order-wrapper-row:first-of-type{
+               padding-top: em(40);
+            }   
+           }
+    } 
+
+    .order-history-table.mobile{
+        @include respond-to(lg){
+            display: none;
+        }
+        .view-receipt{
+                display: flex;
+                justify-content: center;
+                border: 1px solid black;
+                border-bottom: 5px solid black;
+            
+        }
+    }
+
+    .order-history-table.desktop{
+        display: none;
+        @include respond-to(lg){
+            display: unset;
+        }
+
+        .order-wrapper-row{
+            flex-direction: row;
+            justify-content: space-between;
+
+            .shipping-address{
+                .cell-value{
+                    max-width: em(228);
+                }
+            }
+            
+            .view-receipt{
+                cursor: pointer;
+            }
+
+        }
+    }
+}

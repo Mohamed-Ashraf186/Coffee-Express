@@ -1,0 +1,22 @@
+.selector{
+    .select-field{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .dropdown-arrow{
+            width: em(10.4);
+            height: em(10.4);
+        }
+    }
+
+    .select-field,.option{
+        padding:em(12) em(19) ;
+        background-color: #FFECBB;
+        border: 2px solid $primary;
+        cursor: pointer;
+    }
+
+    .option{
+        border-top: none;
+    }
+}

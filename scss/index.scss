@@ -27,22 +27,30 @@
 @import './components/product-card';
 @import './components/card-grid';
 @import './components/account';
+@import './components/custom-select';
+@import './components/receipt';
 
 
 // pages
 @import './pages/homepage';
 
-
+// listing pages
 @import './pages/Listing-pages/newArrivals';
 @import './pages/Listing-pages/product-view'; 
 
-@import './pages/account/login';
-@import './pages/account/forgot-password';
-@import './pages/account/reset-password';
-@import './pages/account/create-account';
-@import './pages/account/create-success';
+// login & create account pages
+@import './pages/create-account/login';
+@import './pages/create-account/forgot-password';
+@import './pages/create-account/reset-password';
+@import './pages/create-account/create-account';
+@import './pages/create-account/create-success';
 
-
+// about us / contact us pages
 @import './pages/about&contact-us/about-us';
+
+// my account pages
+@import './pages/my-account/my-account';
+@import './pages/my-account/order-history';
+
 
 // themes

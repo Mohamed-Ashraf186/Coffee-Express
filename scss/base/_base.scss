@@ -23,9 +23,6 @@ html,body{
 .container{
     width: 90%;
     margin: 0 auto;
-    @include respond-to(md){
-        width: 85%;
-    }
 }
 
 .flex{
