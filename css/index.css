@@ -82,7 +82,6 @@
 html, body {
   box-sizing: border-box;
   width: 100vw;
-  height: 100vh;
 }
 
 *,
@@ -1105,6 +1104,7 @@ body header nav .navbar-desktop .desktop-menu .menu-wrapper .nav-links li .icon-
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #FFECBB;
 }
 .selector .select-field .dropdown-arrow {
   width: 0.65em;
@@ -1112,7 +1112,6 @@ body header nav .navbar-desktop .desktop-menu .menu-wrapper .nav-links li .icon-
 }
 .selector .select-field, .selector .option {
   padding: 0.75em 1.1875em;
-  background-color: #FFECBB;
   border: 2px solid #FFB800;
   cursor: pointer;
 }
@@ -1123,12 +1122,16 @@ body header nav .navbar-desktop .desktop-menu .menu-wrapper .nav-links li .icon-
 .receipt {
   position: absolute;
   background-color: white;
-  min-width: 23em;
-  max-width: 37.5em;
+  width: 23em;
   z-index: 4;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+@media (min-width: 1280px) {
+  .receipt {
+    width: 37.5em;
+  }
 }
 .receipt .receipt-wrapper {
   padding: 1.5em 0 2.3125em;
@@ -1147,6 +1150,18 @@ body header nav .navbar-desktop .desktop-menu .menu-wrapper .nav-links li .icon-
 .receipt .receipt-wrapper .header-section .order-no {
   display: flex;
   flex-direction: column;
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-direction: column;
+  column-gap: unset;
+  row-gap: unset;
+}
+@media (min-width: 1280px) {
+  .receipt .receipt-wrapper .header-section .order-no {
+    flex-direction: row;
+    gap: 1.3125em;
+  }
 }
 .receipt .receipt-wrapper .header-section .order-no p {
   color: #717171;
@@ -1160,12 +1175,28 @@ body header nav .navbar-desktop .desktop-menu .menu-wrapper .nav-links li .icon-
   padding-bottom: 2.1875em;
   border-bottom: 1px solid #DBDBDB;
 }
+@media (min-width: 1280px) {
+  .receipt .receipt-wrapper .order-thanks {
+    padding-bottom: 2.5625em;
+  }
+}
 .receipt .receipt-wrapper .order-info-wrapper {
   padding: 0.625em 0;
   margin-bottom: 2.375em;
   border-bottom: 1px solid #DBDBDB;
   display: flex;
+  justify-content: unset;
+  align-items: unset;
   flex-direction: column;
+  column-gap: unset;
+  row-gap: unset;
+}
+@media (min-width: 1280px) {
+  .receipt .receipt-wrapper .order-info-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.875em 0;
+  }
 }
 .receipt .receipt-wrapper .order-info-wrapper .order-info {
   display: flex;
@@ -1186,29 +1217,129 @@ body header nav .navbar-desktop .desktop-menu .menu-wrapper .nav-links li .icon-
 }
 .receipt .receipt-wrapper .purchased-products-wrapper {
   display: flex;
+  justify-content: unset;
+  align-items: unset;
   flex-direction: column;
-  gap: 1.3125em;
+  column-gap: unset;
+  row-gap: 1.3125em;
 }
 .receipt .receipt-wrapper .purchased-products-wrapper .purchased-product {
   display: flex;
-  justify-content: space-between;
-  padding-top: 0.4375em;
-  padding-bottom: 0.875em;
+  justify-content: unset;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 1.1875em;
+  row-gap: unset;
+  padding: 0.4375em 0 0.875em;
   border-bottom: 1px solid #DBDBDB;
+}
+@media (min-width: 1280px) {
+  .receipt .receipt-wrapper .purchased-products-wrapper .purchased-product {
+    padding: 0.9375em 0;
+  }
 }
 .receipt .receipt-wrapper .purchased-products-wrapper .purchased-product .img-wrapper {
   width: 4.375em;
   height: 4.375em;
 }
-.receipt .receipt-wrapper .purchased-products-wrapper .purchased-product .product-info-wrapper .name {
+@media (min-width: 1280px) {
+  .receipt .receipt-wrapper .purchased-products-wrapper .purchased-product .img-wrapper {
+    width: 5.9375em;
+    height: 5.9375em;
+  }
+}
+.receipt .receipt-wrapper .purchased-products-wrapper .purchased-product .product-info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-direction: row;
+  column-gap: unset;
+  row-gap: unset;
+  width: 100%;
+}
+@media (min-width: 1280px) {
+  .receipt .receipt-wrapper .purchased-products-wrapper .purchased-product .product-info-wrapper .product-price {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+}
+.receipt .receipt-wrapper .purchased-products-wrapper .purchased-product .product-info-wrapper .product-desc .size {
+  text-transform: uppercase;
+}
+@media (min-width: 1280px) {
+  .receipt .receipt-wrapper .purchased-products-wrapper .purchased-product .product-info-wrapper .product-desc .size {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+}
+.receipt .receipt-wrapper .purchased-products-wrapper .purchased-product .product-info-wrapper .product-desc .name {
   color: #717171;
 }
-.receipt .receipt-wrapper .purchased-products-wrapper .purchased-product .product-info-wrapper .product-spec {
+@media (min-width: 1280px) {
+  .receipt .receipt-wrapper .purchased-products-wrapper .purchased-product .product-info-wrapper .product-desc .name {
+    font-size: 1.125rem;
+    line-height: 144.444%;
+  }
+}
+.receipt .receipt-wrapper .purchased-products-wrapper .purchased-product .product-info-wrapper .product-desc .product-spec {
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-direction: row;
+  column-gap: 2.8125em;
+  row-gap: unset;
+}
+@media (min-width: 1280px) {
+  .receipt .receipt-wrapper .purchased-products-wrapper .purchased-product .product-info-wrapper .product-desc .product-spec {
+    gap: 2.1875em;
+  }
+}
+.receipt .receipt-wrapper .purchased-products-wrapper .purchased-product .product-info-wrapper .product-desc .product-spec p {
+  color: #717171;
+}
+@media (min-width: 1280px) {
+  .receipt .receipt-wrapper .purchased-products-wrapper .purchased-product .product-info-wrapper .product-desc .product-spec p {
+    font-size: 1.125rem;
+    line-height: 144.444%;
+  }
+}
+.receipt .receipt-wrapper .price-breakdown-wrapper {
+  padding: 2.9375em 0 0.625em;
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-direction: column;
+  column-gap: 0.625em;
+  row-gap: unset;
+  border-bottom: 1px solid #DBDBDB;
+}
+@media (min-width: 1280px) {
+  .receipt .receipt-wrapper .price-breakdown-wrapper {
+    padding-top: 2.25em;
+  }
+}
+.receipt .receipt-wrapper .price-breakdown-wrapper .price-element {
   display: flex;
   justify-content: space-between;
 }
-.receipt .receipt-wrapper .purchased-products-wrapper .purchased-product .product-info-wrapper .product-spec p {
+.receipt .receipt-wrapper .price-breakdown-wrapper .price-element .desc {
   color: #717171;
+}
+.receipt .receipt-wrapper .price-breakdown-wrapper .discount .value {
+  color: #0DAA26;
+}
+.receipt .receipt-wrapper .total-price {
+  padding-top: 0.625em;
+  display: flex;
+  justify-content: space-between;
+  align-items: unset;
+  flex-direction: row;
+  column-gap: unset;
+  row-gap: unset;
+}
+.receipt .receipt-wrapper .total-price h3 {
+  font-size: 1.875rem;
+  line-height: 133.333%;
 }
 
 main {
@@ -2173,6 +2304,9 @@ main .new-arrivals-container .product-listing-container .no-results .empty-img {
   gap: 0.625em;
   align-items: baseline;
 }
+#create-account .create-account-form .checkboxes-wrapper .checkbox input[type=checkbox] {
+  accent-color: #FFB800;
+}
 
 #account-success {
   margin-bottom: 4.0625em;
@@ -2620,7 +2754,7 @@ main .new-arrivals-container .product-listing-container .no-results .empty-img {
     flex-direction: column;
   }
 }
-.my-account .profile-wrapper .account-options-wrapper .desktop-options ul .order-history {
+.my-account .profile-wrapper .account-options-wrapper .desktop-options ul .active {
   border: 2px solid #FFB800;
   background-color: #FFECBB;
 }
@@ -2761,6 +2895,7 @@ main .new-arrivals-container .product-listing-container .no-results .empty-img {
   justify-content: center;
   border: 1px solid black;
   border-bottom: 5px solid black;
+  cursor: pointer;
 }
 .order-history-wrapper .order-history-table.desktop {
   display: none;
@@ -2779,4 +2914,323 @@ main .new-arrivals-container .product-listing-container .no-results .empty-img {
 }
 .order-history-wrapper .order-history-table.desktop .order-wrapper-row .view-receipt {
   cursor: pointer;
+}
+
+#update-profile-wrapper {
+  padding-top: 0;
+}
+@media (min-width: 992px) {
+  #update-profile-wrapper .account-wrapper {
+    max-width: 55em;
+  }
+}
+#update-profile-wrapper .account-wrapper .header-section {
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-direction: unset;
+  column-gap: 0;
+  row-gap: 0;
+  margin-bottom: 1.375em;
+}
+@media (min-width: 992px) {
+  #update-profile-wrapper .account-wrapper .header-section {
+    margin-bottom: 2.625em;
+  }
+}
+#update-profile-wrapper .account-wrapper .header-section h2 {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+@media (min-width: 992px) {
+  #update-profile-wrapper .account-wrapper .header-section h2 {
+    font-size: 1.375rem;
+    line-height: 145.455%;
+  }
+}
+#update-profile-wrapper .account-wrapper form label, #update-profile-wrapper .account-wrapper form input {
+  color: #272727;
+}
+#update-profile-wrapper .account-wrapper form input {
+  font-size: 1.125rem;
+  line-height: 144.444%;
+}
+#update-profile-wrapper .account-wrapper form .form-input {
+  margin-bottom: 0.75em;
+}
+#update-profile-wrapper .account-wrapper form .phone-wrapper {
+  margin-bottom: 1.5625em;
+}
+#update-profile-wrapper .account-wrapper form .checkboxes-wrapper .checkbox {
+  display: flex;
+  gap: 0.625em;
+  align-items: baseline;
+}
+#update-profile-wrapper .account-wrapper form .checkboxes-wrapper .checkbox input[type=checkbox] {
+  accent-color: #FFB800;
+  color: white;
+}
+#update-profile-wrapper .account-wrapper form .form-buttons-wrapper {
+  margin-top: 3.125em;
+}
+#update-profile-wrapper .account-wrapper form .form-buttons-wrapper button {
+  border: none;
+  padding: 0.625em 1.625em;
+  border-bottom: 3px solid #B6791B;
+}
+#update-profile-wrapper .personal-details {
+  margin-bottom: 4.0625em;
+}
+@media (min-width: 992px) {
+  #update-profile-wrapper .personal-details {
+    margin-bottom: 2em;
+  }
+}
+@media (min-width: 992px) {
+  #update-profile-wrapper .personal-details form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.25em;
+  }
+}
+@media (min-width: 992px) {
+  #update-profile-wrapper .personal-details form .form-input {
+    flex-basis: calc((100% - 1.25em) / 2);
+  }
+}
+@media (min-width: 1280px) {
+  #update-profile-wrapper .personal-details form .form-buttons-wrapper {
+    margin-top: 2.5em;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 1280px) {
+  #update-profile-wrapper .personal-details form .form-buttons-wrapper button {
+    width: auto;
+  }
+}
+@media (min-width: 1280px) {
+  #update-profile-wrapper .update-password-form {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    gap: 1.25em;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1280px) {
+  #update-profile-wrapper .update-password-form .form-input {
+    flex-basis: calc((100% - 1.25em) * 0.4);
+    margin-bottom: 0 !important;
+  }
+  #update-profile-wrapper .update-password-form .form-input input {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1280px) {
+  #update-profile-wrapper .update-password-form .form-buttons-wrapper {
+    flex-basis: calc((100% - 1.25em) * 0.2);
+    margin-top: 0 !important;
+  }
+}
+#update-profile-wrapper .update-password-form .form-buttons-wrapper button {
+  padding: 0.625em 0 !important;
+}
+
+body.address-book-page .my-account {
+  position: relative;
+}
+body.address-book-page .my-account .delete-address-modal {
+  display: none;
+  position: absolute;
+  z-index: 50;
+  background-color: white;
+  padding: 1.875em;
+  max-width: 33.6875em;
+  border: 1px solid #4D4D4D;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 1.875em;
+}
+body.address-book-page .my-account .delete-address-modal .header-section {
+  display: flex;
+  justify-content: space-between;
+}
+body.address-book-page .my-account .delete-address-modal .header-section h2 {
+  font-size: 1.375rem;
+  line-height: 145.455%;
+  text-transform: capitalize;
+}
+body.address-book-page .my-account .delete-address-modal .header-section .delete-exit {
+  cursor: pointer;
+  width: 1.5em;
+  height: 1.5em;
+}
+body.address-book-page .my-account .delete-address-modal p {
+  color: #272727;
+}
+body.address-book-page .my-account .delete-address-modal .btns-wrapper {
+  display: flex;
+  gap: 0.75em;
+  margin-left: auto;
+}
+body.address-book-page .my-account .delete-address-modal .btns-wrapper button {
+  padding: 0.9375em 1.625em 0.625em;
+}
+body.address-book-page .my-account .delete-address-modal .btns-wrapper .cancel-btn {
+  border: 1px solid #4D4D4D;
+  border-bottom: 4px solid black;
+}
+body.address-book-page .my-account .delete-address-modal .btns-wrapper .delete-btn {
+  color: white;
+  background-color: #E2574C;
+  border-bottom: 3px solid #BD3F35;
+}
+body.address-book-page .my-account #address-book-wrapper {
+  max-width: 80em;
+}
+@media (min-width: 1280px) {
+  body.address-book-page .my-account #address-book-wrapper {
+    max-width: 64.4375em;
+  }
+}
+body.address-book-page .my-account #address-book-wrapper .add-address {
+  max-width: 37.5em;
+  margin: 0 auto;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+@media (min-width: 1280px) {
+  body.address-book-page .my-account #address-book-wrapper .add-address {
+    max-width: none;
+  }
+}
+body.address-book-page .my-account #address-book-wrapper .add-address h3 {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: 0.6em;
+}
+@media (min-width: 1280px) {
+  body.address-book-page .my-account #address-book-wrapper .add-address h3 {
+    font-size: 1.375rem;
+    line-height: 145.455%;
+    margin-bottom: 0.5454545455em;
+  }
+}
+body.address-book-page .my-account #address-book-wrapper .add-address .address-desc {
+  margin-bottom: 2.125em;
+}
+@media (min-width: 1280px) {
+  body.address-book-page .my-account #address-book-wrapper .add-address .address-desc {
+    margin-bottom: 2.5625em;
+  }
+}
+body.address-book-page .my-account #address-book-wrapper .add-address .address-desc p {
+  text-align: start;
+  margin-bottom: 0;
+  max-width: none;
+}
+body.address-book-page .my-account #address-book-wrapper .add-address button {
+  border-bottom: 3px solid #B6791B;
+}
+body.address-book-page .my-account #address-book-wrapper .profile-address-wrapper .add-address {
+  margin-bottom: 1.375em;
+}
+@media (min-width: 992px) {
+  body.address-book-page .my-account #address-book-wrapper .profile-address-wrapper .add-address {
+    max-width: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 1.875em;
+  }
+}
+body.address-book-page .my-account #address-book-wrapper .profile-address-wrapper .add-address .address-desc-wrapper .address-desc {
+  max-width: 33.5em;
+}
+@media (min-width: 992px) {
+  body.address-book-page .my-account #address-book-wrapper .profile-address-wrapper .add-address button {
+    width: auto;
+  }
+}
+body.address-book-page .my-account #address-book-wrapper .profile-address-wrapper .address-card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25em;
+  max-width: 37.5em;
+  margin: 0 auto;
+}
+@media (min-width: 992px) {
+  body.address-book-page .my-account #address-book-wrapper .profile-address-wrapper .address-card-grid {
+    max-width: none;
+    margin: unset;
+  }
+}
+body.address-book-page .my-account #address-book-wrapper .profile-address-wrapper .address-card-grid .address-card-wrapper {
+  border: 1px solid #949494;
+  padding: 1.25em;
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 992px) {
+  body.address-book-page .my-account #address-book-wrapper .profile-address-wrapper .address-card-grid .address-card-wrapper {
+    flex-basis: calc((100% - 1.25em) / 2);
+  }
+}
+body.address-book-page .my-account #address-book-wrapper .profile-address-wrapper .address-card-grid .address-card-wrapper .address-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3125em;
+}
+body.address-book-page .my-account #address-book-wrapper .profile-address-wrapper .address-card-grid .address-card-wrapper .address-info .address-content p {
+  color: #4D4D4D;
+}
+body.address-book-page .my-account #address-book-wrapper .profile-address-wrapper .address-card-grid .address-card-wrapper .address-edit-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+body.address-book-page .my-account #address-book-wrapper .profile-address-wrapper .address-card-grid .address-card-wrapper .address-edit-wrapper .default p {
+  color: #0DAA26;
+}
+body.address-book-page .my-account #address-book-wrapper .profile-address-wrapper .address-card-grid .address-card-wrapper .address-edit-wrapper .edit-icons-wrapper {
+  display: flex;
+  gap: 0.75em;
+  margin-top: auto;
+}
+body.address-book-page .my-account #address-book-wrapper .profile-address-wrapper .address-card-grid .address-card-wrapper .address-edit-wrapper .edit-icons-wrapper .icon {
+  cursor: pointer;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+#add-address-wrapper .profile-address-wrapper .add-address .address-desc-wrapper .header-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  margin-bottom: 0.75em;
+}
+#add-address-wrapper .profile-address-wrapper .add-address .address-desc-wrapper .header-section .img-wrapper {
+  margin: 0;
+  width: 1.17625em;
+  height: 1.25em;
+  transform: rotate(180deg);
+}
+#add-address-wrapper .profile-address-wrapper .add-address .address-desc-wrapper .header-section h3 {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin: 0;
+}
+@media (min-width: 1280px) {
+  #add-address-wrapper .profile-address-wrapper .add-address .address-desc-wrapper .header-section h3 {
+    font-size: 1.375rem;
+    line-height: 145.455%;
+  }
+}
+#add-address-wrapper .profile-address-wrapper .add-address .address-desc-wrapper .address-desc p {
+  text-align: start;
 }

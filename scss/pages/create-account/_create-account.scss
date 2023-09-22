@@ -55,6 +55,9 @@
                 display: flex;
                 gap:em(10);
                 align-items: baseline;
+                input[type = checkbox]{
+                    accent-color: $primary;
+                }
             }
         }
 

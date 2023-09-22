@@ -1,0 +1,35 @@
+#add-address-wrapper{
+    .profile-address-wrapper{
+        .add-address{
+            .address-desc-wrapper{
+                .header-section{
+                    display: flex;
+                    align-items: center;
+                    gap: em(12);
+                    margin-bottom: em(12);
+                   .img-wrapper{
+                    margin: 0;
+                    width: em(18.82);
+                    height: em(20); 
+                    transform: rotate(180deg); 
+                   }
+                   h3{
+                        font-size: root(20);
+                        line-height: 1.5;
+                        margin: 0;
+                        @include respond-to(xl){
+                            font-size: root(22);
+                            line-height: 145.455%;
+                        }
+                   } 
+                }
+
+                .address-desc{
+                   p{
+                       text-align: start;
+                   } 
+                }
+            }
+        }
+    }   
+}

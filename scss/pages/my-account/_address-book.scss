@@ -1,0 +1,176 @@
+
+body.address-book-page{
+    .my-account{
+        position: relative;
+        .delete-address-modal{
+            display: none;
+            position: absolute;
+            z-index: 50;
+            background-color: white;
+            padding: em(30);
+            max-width: em(539);
+            border: 1px solid $gray-500 ;
+            flex-direction: column;
+            top: 50%;
+            left: 50%;    
+            transform: translate(-50%, -50%);
+            gap: em(30);
+            .header-section{
+                display: flex;
+                justify-content: space-between;
+                h2{
+                    font-size: root(22);
+                    line-height: 145.455%;
+                    text-transform: capitalize;
+                }
+    
+                .delete-exit{
+                    cursor: pointer;
+                    width: em(24);
+                    height: em(24); 
+                }
+            }
+    
+            p{
+                color: $gray-700;
+            }
+    
+            .btns-wrapper{
+                display: flex;
+                gap: em(12);
+                margin-left: auto;
+                button{
+                    padding: em(15) em(26) em(10);
+                }
+    
+                .cancel-btn{
+                    border: 1px solid $gray-500;
+                    border-bottom: 4px solid black;
+                }
+    
+                .delete-btn{
+                    color: white;
+                    background-color: #E2574C;
+                    border-bottom: 3px solid #BD3F35;
+                }
+            }
+    
+        }
+    
+    
+        #address-book-wrapper{
+            max-width: em(1280);
+            @include respond-to(xl){
+                max-width: em(1031);
+            }
+            .add-address{
+                max-width: em(600);
+                margin: 0 auto;
+                @include respond-to(xl){
+                    max-width: none;
+                }
+                margin: 0 auto;
+                align-items: flex-start;
+                h3{
+                   font-size: root(20);
+                   line-height: 1.5; 
+                   margin-bottom: em(12,20);
+                   @include respond-to(xl){
+                    font-size: root(22);
+                    line-height: 145.455%;
+                    margin-bottom: em(12,22);
+                   }
+                }
+                .address-desc{
+                    margin-bottom: em(34);
+                    @include respond-to(xl){
+                        margin-bottom: em(41);
+                    }
+                    p{
+                        text-align: start;
+                        margin-bottom: 0;
+                        max-width: none;
+                    }
+                }
+        
+                button{
+                    border-bottom: 3px solid $primary2;
+                }
+            }
+            .profile-address-wrapper{
+                .add-address{
+                    margin-bottom: em(22);
+                    @include respond-to(lg){
+                        max-width: none;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin: 0  0 em(30);
+                    }
+                    .address-desc-wrapper{
+                        .address-desc{
+                            max-width: em(536);
+                        }
+                    }
+                    button{
+                        @include respond-to(lg){
+                            width: auto;
+                        }
+                    }
+                }
+        
+                .address-card-grid{
+                    display:  flex;
+                    flex-wrap: wrap;
+                    gap: em(20);
+                    max-width: em(600);
+                    margin: 0 auto;
+                    @include respond-to(lg){
+                        max-width: none;
+                        margin: unset;
+                    }
+                    .address-card-wrapper{  
+                        border: 1px solid $gray-300;
+                        padding: em(20);
+                        flex-basis: 100%;
+                        @include respond-to(lg){
+                            flex-basis: calc((100% - em(20)) / 2);
+                        }
+                        display: flex;
+                        justify-content: space-between;
+                        .address-info{
+                            display: flex;
+                            flex-direction: column;
+                            gap: em(5);
+                            .address-content{
+                                p{
+                                    color: $gray-500;
+                                }
+                            }
+        
+                        }
+                        .address-edit-wrapper{
+                            display: flex;
+                            flex-direction: column;
+                            .default{
+                                p{
+                                    color: #0DAA26;
+                                }
+                            }
+                            .edit-icons-wrapper{
+                                display: flex;
+                                gap: em(12);
+                                margin-top: auto;
+                                .icon{
+                                    cursor: pointer;
+                                    width: em(24);
+                                    height: em(24);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -11,7 +11,7 @@
 </head>
 
 
-<body>
+<body class="address-book-page">
     <div class="layer hidden"></div>
     <header>
         <!--  H E A D E R   S E C T I O N   S T A R T  -->
@@ -336,6 +336,8 @@
         <!--  N A V B A R   S E C T I O N   E N D  -->
     </header>
 
+
+
     <section id="bread-crumb">
         <div class="bread-crumb-contianer container">
             <a href="#">
@@ -355,122 +357,27 @@
             </div>
     
             <a href="#">
-                <p class="bodytext--md">Order history</p>
+                <p class="bodytext--md">Address Book</p>
             </a>
         </div> 
     </section>
 
     <section class="my-account container">
-        <div class="receipt hidden">
-            <div class="receipt-wrapper container">
-                <div class="header-section">
-                    <h2>Receipt</h2>
+        <div class="delete-address-modal">
+            <div class="header-section">
+                <h2>Delete address?</h2>
+                <div class="delete-exit">
+                    <img src="/assets/exit.svg" alt="exit">
+                </div>
+            </div>
     
-                    <div class="order-no">
-                        <p class="bodytext--md">Order no.</p>
-                        <h3>NDW2934</h3>
-                    </div>
-                </div>
-
-                <div class="order-thanks">
-                    <p class="bodytext--md">Thank you for your order!</p>
-                    <p class="bodytext--md">Coffee Express</p>
-                </div>
-
-                <div class="order-info-wrapper">
-                    <div class="order-info order-date">
-                            <p class="info-header bodytext--md">Order date</p>
-                            <p class="info-value bodytext--md">Jan 12, 2021</p>
-                    </div>
-
-
-                    <div class="order-info payment-type">
-                        <p class="info-header bodytext--md">Payment type</p>
-                        <p class="info-value bodytext--md">Visa</p>
-                    </div>
-
-                <div class="order-info shipping-address">
-                    <p class="info-header bodytext--md">Shipping address</p>
-                    <div class="info-value shippen-address-wrapper">
-                        <p class="bodytext--md">
-                            4597 Rardin Drive, San Bruno 
-                        </p>
-                        <p class="bodytext--md">
-                            CA California 94066
-                        </p>
-                    </div>
-                </div>
-                    
-                </div>
-
-                <div class="purchased-products-wrapper">
-                    <div class="purchased-product">                       
-                        <div class="img-wrapper">
-                            <img src="/assets/image01.png" alt="product-img">
-                        </div>
-                        <div class="product-info-wrapper">
-                            <div class="product-desc">
-                                    <p class="size bodytext">Classic 12 oz</p>
-                                    <p class="name bodytext--sm">premium quality roasters </p>
-                                <div class="product-spec">
-                                    <p class="bodytext--sm quantity">Qty: 1</p>
-                                    <p class="bodytext--sm weight">250g</p>
-                                </div>
-                            </div>
-                            <p class="product-price bodytext">£9.55</p>
-                        </div>
-
-                    </div>
-
-                    <div class="purchased-product">                       
-                        <div class="img-wrapper">
-                            <img src="/assets/image01.png" alt="product-img">
-                        </div>
-                        <div class="product-info-wrapper">
-                            <div class="product-desc">
-                                    <p class="size bodytext">Classic 12 oz</p>
-                                    <p class="name bodytext--sm">premium quality roasters </p>
-                                <div class="product-spec">
-                                    <p class="bodytext--sm quantity">Qty: 1</p>
-                                    <p class="bodytext--sm weight">250g</p>
-                                </div>
-                            </div>
-                            <p class="product-price bodytext">£9.55</p>
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-                <div class="price-breakdown-wrapper">
-                    <div class="price-element subtotal">
-                        <p class="bodytext--md desc">Subtotal</p>
-                        <p class="bodytext--md value">$47.98</p>
-                    </div>
-
-                    <div class="price-element shipping-cost">
-                        <p class="bodytext--md desc">Shipping</p>
-                        <p class="bodytext--md value">$25.00</p>
-                    </div>
-
-                    <div class="price-element tax-fee">
-                        <p class="bodytext--md desc">Tax fee</p>
-                        <p class="bodytext--md value">$5.00</p>
-                    </div>
-
-                    <div class="price-element discount">
-                        <p class="bodytext--md desc">Discount</p>
-                        <p class="bodytext--md value">-$3.00</p>
-                    </div>
-                </div>
-
-                <div class="total-price">
-                    <p class="bodytext--md"> Order amount</p>
-                    <h3>$74.98</h3>
-                </div>
+            <p class="bodytext--md">
+                If you delete this address you won't we able to recover it. Do you want to delete it?
+            </p>
     
-
+            <div class="btns-wrapper">
+                <button class="btn cancel-btn">Cancel</button>
+                <button class="btn delete-btn">Delete</button>
             </div>
         </div>
         <h2>My Account</h2>
@@ -479,7 +386,7 @@
                 <div class="mobile-options">
                    <div class="selector">
                         <div class="select-field">
-                            <p class="bodytext--md select-text">Order History</p>
+                            <p class="bodytext--md select-text">Address Book</p>
                             <div class="dropdown-arrow">
                                 <img src="/assets/dropdown arrow.svg" alt="dropdown arrow">
                             </div>
@@ -507,15 +414,15 @@
 
                 <div class="desktop-options">
                     <ul>
-                        <li class="option order-history active">
+                        <li class="option order-history">
                             <a href="#" class="bodytext--md">Order history</a>
                         </li>
 
-                        <li class="option">
+                        <li class="option ">
                             <a href="#" class="bodytext--md">My Profile</a>
                         </li>
 
-                        <li class="option">
+                        <li class="option active">
                             <a href="#" class="bodytext--md">Address Book</a>
                         </li>
 
@@ -527,309 +434,230 @@
             </aside>
 
             <div class="account-content-wrapper">
-                <div class="not-found hidden">
-                    <div class="img-wrapper">
-                        <img src="/assets/coffee-empty 2.png" alt="coffee-empty">
+                <div id="address-book-wrapper">
+                    <div class="not-found add-address hidden">
+                        <h3>Address Book</h3>
+                        <div class="address-desc">
+                            <p class="bodytext--md ">
+                                No address added yet.
+                            </p>
+                            
+                            <p class="bodytext--md ">
+                                Click “Add Address” button below to add your first Shipping Address and start shopping!
+                            </p>
+                        </div>
+    
+                        <button class="btn btn-primary">Add address</button>
                     </div>
 
-                    <h3>you haven't bought a coffee!</h3>
+                    <div class="profile-address-wrapper">
+                        <div class="not-found add-address">
 
-                    <p class="bodytext--md">
-                        Oops! It seems like your order history is currently empty. But don't worry, there's plenty of room for your future coffee adventures!
-                    </p>
-
-                    <button class="btn btn-primary">Start shopping</button>
-                </div>
-
-                <div class="order-history-wrapper">
-                    <h3>Order History</h3>
-
-                    <div class="order-history-table mobile">
-                        <div class="order-wrapper-row">
-                            <div class="cell-group">
-                                <div class="cell order-on">
-                                    <p class="cell-header bodytext--md">Ordered on</p>
-                                    <p class="cell-value bodytext--md">Jan 12, 2021</p>
-                                </div>
-    
-                                <div class="cell order-num">
-                                    <p class="cell-header bodytext--md">Order no.</p>
-                                    <p class="cell-value bodytext--md">NDW2934</p>
-                                </div>
-    
-                                <div class="cell shipping-status">
-                                    <p class="cell-header bodytext--md">Status</p>
-                                    <p class="cell-value bodytext--md shipped">Shipped</p>
-                                </div>
-                            </div>
-                            
-                            <div class="cell-group">
-                                <div class="cell items-num">
-                                    <p class="cell-header bodytext--md">No of Items</p>
-                                    <p class="cell-value bodytext--md">2</p>
-                                </div>
-    
-                                <div class="cell shipping-address">
-                                    <p class="cell-header bodytext--md">Shipping address</p>
-                                    <div class="cell-value ">
-                                        <p class="bodytext--md">
-                                            4597 Rardin Drive, San Bruno
-                                        </p>
-                                        <p class="bodytext--md">
-                                            CA California 94066
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="cell order-amount">
-                                <p class="cell-header bodytext--md">Order amount</p>
-                                <p class="cell-value bodytext--md">$74.98</p>
-                            </div>
-
-                            <div class="cell view-receipt receipt-btn">
-                                    <button class="btn ">View receipt</button>     
-                            </div>
-                        </div>
-
-
-                        <div class="order-wrapper-row">
-                            <div class="cell-group row1">
-                                <div class="cell order-on">
-                                    <p class="cell-header bodytext--md">Ordered on</p>
-                                    <p class="cell-value bodytext--md">Jan 12, 2021</p>
-                                </div>
-    
-                                <div class="cell order-num">
-                                    <p class="cell-header bodytext--md">Order no.</p>
-                                    <p class="cell-value bodytext--md">NDW2934</p>
-                                </div>
-    
-                                <div class="cell shipping-status">
-                                    <p class="cell-header bodytext--md">Status</p>
-                                    <p class="cell-value bodytext--md delivered">Delivered on June 21, 2022</p>
-                                </div>
-                            </div>
-                            
-                            <div class="cell-group row2">
-                                <div class="cell items-num">
-                                    <p class="cell-header bodytext--md">No of Items</p>
-                                    <p class="cell-value bodytext--md">2</p>
-                                </div>
-    
-                                <div class="cell shipping-address">
-                                    <p class="cell-header bodytext--md">Shipping address</p>
-                                    <div class="cell-value ">
-                                        <p class="bodytext--md">
-                                            4597 Rardin Drive, San Bruno
-                                        </p>
-                                        <p class="bodytext--md">
-                                            CA California 94066
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="cell order-amount">
-                                <p class="cell-header bodytext--md">Order amount</p>
-                                <p class="cell-value bodytext--md">$74.98</p>
-                            </div>
-
-                            <div class="cell view-receipt receipt-btn">
-                                    <button class="btn ">View receipt</button>                   
-                            </div>
-                        </div>
-
-                        <div class="order-wrapper-row">
-                            <div class="cell-group">
-                                <div class="cell order-on">
-                                    <p class="cell-header bodytext--md">Ordered on</p>
-                                    <p class="cell-value bodytext--md">Jan 12, 2021</p>
-                                </div>
-    
-                                <div class="cell order-num">
-                                    <p class="cell-header bodytext--md">Order no.</p>
-                                    <p class="cell-value bodytext--md">NDW2934</p>
-                                </div>
-    
-                                <div class="cell shipping-status">
-                                    <p class="cell-header bodytext--md">Status</p>
-                                    <p class="cell-value bodytext--md cancelled">Cancelled</p>
-                                </div>
-                            </div>
-                            
-                            <div class="cell-group">
-                                <div class="cell items-num">
-                                    <p class="cell-header bodytext--md">No of Items</p>
-                                    <p class="cell-value bodytext--md">2</p>
-                                </div>
-    
-                                <div class="cell shipping-address">
-                                    <p class="cell-header bodytext--md">Shipping address</p>
-                                    <div class="cell-value ">
-                                        <p class="bodytext--md">
-                                            4597 Rardin Drive, San Bruno
-                                        </p>
-                                        <p class="bodytext--md">
-                                            CA California 94066
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="cell order-amount">
-                                <p class="cell-header bodytext--md">Order amount</p>
-                                <p class="cell-value bodytext--md">$74.98</p>
-                            </div>
-
-                            <div class="cell view-receipt receipt-btn">
-                                    <button class="btn">View receipt</button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="order-history-table desktop">
-                        <div class="order-wrapper-row">
-                                <div class="cell order-on">
-                                    <p class="cell-header bodytext--md">Ordered on</p>
-                                    <p class="cell-value bodytext--md">Jan 12, 2021</p>
-                                </div>
-    
-                                <div class="cell order-num">
-                                    <p class="cell-header bodytext--md">Order no.</p>
-                                    <p class="cell-value bodytext--md">NDW2934</p>
-                                </div>
-    
-                                <div class="cell shipping-status">
-                                    <p class="cell-header bodytext--md">Status</p>
-                                    <p class="cell-value bodytext--md shipped">Shipped</p>
-                                </div>
-
-                            
-                                <div class="cell items-num">
-                                    <p class="cell-header bodytext--md">No of Items</p>
-                                    <p class="cell-value bodytext--md">2</p>
-                                </div>
-    
-                                <div class="cell shipping-address">
-                                    <p class="cell-header bodytext--md">Shipping address</p>
-                                    <div class="cell-value ">
-                                        <p class="bodytext--md">
-                                            4597 Rardin Drive, San Bruno
-                                        </p>
-                                        <p class="bodytext--md">
-                                            CA California 94066
-                                        </p>
-                                    </div>
-                                </div>
-
-
-                            <div class="cell order-amount">
-                                <p class="cell-header bodytext--md">Order amount</p>
-                                <p class="cell-value bodytext--md">$74.98</p>
-                            </div>
-
-                            <div class="cell view-receipt">                              
-                                    <p class="cell-header bodytext--md">Receipt</p>
-                                    <p class="cell-value bodytext--md receipt-btn">View</p>
-                            </div>
-                        </div>
-
-                        <div class="order-wrapper-row">
-                            <div class="cell order-on">
-                                <p class="cell-header bodytext--md">Ordered on</p>
-                                <p class="cell-value bodytext--md">Jan 12, 2021</p>
-                            </div>
-
-                            <div class="cell order-num">
-                                <p class="cell-header bodytext--md">Order no.</p>
-                                <p class="cell-value bodytext--md">NDW2934</p>
-                            </div>
-
-                            <div class="cell shipping-status">
-                                <p class="cell-header bodytext--md">Status</p>
-                                <p class="cell-value bodytext--md delivered">Delivered on June 21, 2022</p>
-                            </div>
-
-                        
-                            <div class="cell items-num">
-                                <p class="cell-header bodytext--md">No of Items</p>
-                                <p class="cell-value bodytext--md">2</p>
-                            </div>
-
-                            <div class="cell shipping-address">
-                                <p class="cell-header bodytext--md">Shipping address</p>
-                                <div class="cell-value ">
-                                    <p class="bodytext--md">
-                                        4597 Rardin Drive, San Bruno
-                                    </p>
-                                    <p class="bodytext--md">
-                                        CA California 94066
+                            <div class="address-desc-wrapper">
+                                <h3>Address Book</h3>   
+                                <div class="address-desc">
+                                    <p class="bodytext--md ">
+                                        A maximum of 3 address book entries allowed. You can choose billing and shipping defaults
                                     </p>
                                 </div>
                             </div>
-
-
-                        <div class="cell order-amount">
-                            <p class="cell-header bodytext--md">Order amount</p>
-                            <p class="cell-value bodytext--md">$74.98</p>
+        
+                            <button class="btn btn-primary">Add address</button>
                         </div>
 
-                        <div class="cell view-receipt">
-                                <p class="cell-header bodytext--md">Receipt</p>
-                                <p class="cell-value bodytext--md receipt-btn">View</p>
-                        </div>
-                    </div>
+                        <div class="address-card-grid">
+                            <div class="address-card-wrapper">
+                                <div class="address-info">
+                                    <div class="customer-name">
+                                        <p class="bodytext--md">Mohamed Ashraf</p>
+                                    </div>
+                                    <div class="address-content">
+                                        <p class="bodytext street">
+                                            292 S La Cienega Blvd #100
+                                        </p>
 
-                    <div class="order-wrapper-row">
-                        <div class="cell order-on">
-                            <p class="cell-header bodytext--md">Ordered on</p>
-                            <p class="cell-value bodytext--md">Jan 12, 2021</p>
-                        </div>
+                                        <p class="bodytext area">
+                                            Beverly Hills
+                                        </p>
+                                        
+                                        <p class="bodytext state">
+                                            California
+                                        </p>
+                                        
+                                        <p class="bodytext zip-code">
+                                            90211
+                                        </p>
 
-                        <div class="cell order-num">
-                            <p class="cell-header bodytext--md">Order no.</p>
-                            <p class="cell-value bodytext--md">NDW2934</p>
-                        </div>
+                                        <p class="bodytext phone-num">
+                                            (310) 855-7504
+                                        </p>
+                                        
+                                        <p class="bodytext country">
+                                            United States
+                                        </p>
+                                        
+                                    </div>
+                                </div>
 
-                        <div class="cell shipping-status">
-                            <p class="cell-header bodytext--md">Status</p>
-                            <p class="cell-value bodytext--md cancelled">Cancelled</p>
-                        </div>
+                                <div class="address-edit-wrapper">
+                                    <div class="default">
+                                        <p class="bodytext">Default</p>
+                                    </div>
 
-                    
-                        <div class="cell items-num">
-                            <p class="cell-header bodytext--md">No of Items</p>
-                            <p class="cell-value bodytext--md">2</p>
-                        </div>
+                                    <div class="edit-icons-wrapper">
+                                        <div class="icon edit">
+                                            <img src="/assets/edit-2.svg" alt="edit">
+                                        </div>
 
-                        <div class="cell shipping-address">
-                            <p class="cell-header bodytext--md">Shipping address</p>
-                            <div class="cell-value ">
-                                <p class="bodytext--md">
-                                    4597 Rardin Drive, San Bruno
-                                </p>
-                                <p class="bodytext--md">
-                                    CA California 94066
-                                </p>
+                                        <div class="icon delete">
+                                            <img src="/assets/trash-2.svg" alt="trash-2">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="address-card-wrapper">
+                                <div class="address-info">
+                                    <div class="customer-name">
+                                        <p class="bodytext--md">Mohamed Ashraf</p>
+                                    </div>
+                                    <div class="address-content">
+                                        <p class="bodytext street">
+                                            292 S La Cienega Blvd #100
+                                        </p>
+
+                                        <p class="bodytext area">
+                                            Beverly Hills
+                                        </p>
+                                        
+                                        <p class="bodytext state">
+                                            California
+                                        </p>
+                                        
+                                        <p class="bodytext zip-code">
+                                            90211
+                                        </p>
+
+                                        <p class="bodytext phone-num">
+                                            (310) 855-7504
+                                        </p>
+                                        
+                                        <p class="bodytext country">
+                                            United States
+                                        </p>
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="address-edit-wrapper">
+                                    <div class="edit-icons-wrapper">
+                                        <div class="icon edit">
+                                            <img src="/assets/edit-2.svg" alt="edit">
+                                        </div>
+
+                                        <div class="icon delete">
+                                            <img src="/assets/trash-2.svg" alt="trash-2">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="address-card-wrapper">
+                                <div class="address-info">
+                                    <div class="customer-name">
+                                        <p class="bodytext--md">Mohamed Ashraf</p>
+                                    </div>
+                                    <div class="address-content">
+                                        <p class="bodytext street">
+                                            292 S La Cienega Blvd #100
+                                        </p>
+
+                                        <p class="bodytext area">
+                                            Beverly Hills
+                                        </p>
+                                        
+                                        <p class="bodytext state">
+                                            California
+                                        </p>
+                                        
+                                        <p class="bodytext zip-code">
+                                            90211
+                                        </p>
+
+                                        <p class="bodytext phone-num">
+                                            (310) 855-7504
+                                        </p>
+                                        
+                                        <p class="bodytext country">
+                                            United States
+                                        </p>
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="address-edit-wrapper">
+                                    <div class="edit-icons-wrapper">
+                                        <div class="icon edit">
+                                            <img src="/assets/edit-2.svg" alt="edit">
+                                        </div>
+
+                                        <div class="icon delete">
+                                            <img src="/assets/trash-2.svg" alt="trash-2">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="address-card-wrapper">
+                                <div class="address-info">
+                                    <div class="customer-name">
+                                        <p class="bodytext--md">Mohamed Ashraf</p>
+                                    </div>
+                                    <div class="address-content">
+                                        <p class="bodytext street">
+                                            292 S La Cienega Blvd #100
+                                        </p>
+
+                                        <p class="bodytext area">
+                                            Beverly Hills
+                                        </p>
+                                        
+                                        <p class="bodytext state">
+                                            California
+                                        </p>
+                                        
+                                        <p class="bodytext zip-code">
+                                            90211
+                                        </p>
+
+                                        <p class="bodytext phone-num">
+                                            (310) 855-7504
+                                        </p>
+                                        
+                                        <p class="bodytext country">
+                                            United States
+                                        </p>
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="address-edit-wrapper">
+
+                                    <div class="edit-icons-wrapper">
+                                        <div class="icon edit">
+                                            <img src="/assets/edit-2.svg" alt="edit">
+                                        </div>
+
+                                        <div class="icon delete">
+                                            <img src="/assets/trash-2.svg" alt="trash-2">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
-
-                    <div class="cell order-amount">
-                        <p class="cell-header bodytext--md">Order amount</p>
-                        <p class="cell-value bodytext--md">$74.98</p>
                     </div>
 
-                    <div class="cell view-receipt">
-                            <p class="cell-header bodytext--md">Receipt</p>
-                            <p class="cell-value bodytext--md receipt-btn">View</p>
-                    </div>
                 </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -936,5 +764,5 @@
 
     <script src="/js/index.js"></script>
     <script src="/js/components/custom-select.js"></script>
-    <script src="/js/order-history.js"></script>
+    <script src="/js/pages/address-book.js"></script>
 </body>

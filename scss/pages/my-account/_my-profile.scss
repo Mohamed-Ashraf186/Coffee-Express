@@ -1,0 +1,129 @@
+#update-profile-wrapper{
+    padding-top: 0;
+    .account-wrapper{
+        @include respond-to(lg){
+            max-width: em(880);
+        }
+        .header-section{
+            @include flex(unset,unset,unset,0,0);
+            margin-bottom: em(22);
+            @include respond-to(lg){
+                margin-bottom: em(42);
+            }
+            h2{
+                font-size: root(20);
+                line-height: 1.5;
+                margin-bottom: 0;
+                @include respond-to(lg){
+                    font-size: root(22);
+                    line-height: 145.455%;
+                }
+            }
+        }
+        form{
+
+            label,input{
+                color: $gray-700;
+            }
+            input{
+                font-size: root(18);
+                line-height:144.444%;
+            }
+
+            .form-input{
+                margin-bottom: em(12);
+
+            }
+            
+            .phone-wrapper{
+                margin-bottom: em(25);
+            }
+
+            .checkboxes-wrapper{
+                .checkbox{
+                    display: flex;
+                    gap: em(10);
+                    align-items: baseline;
+                    input[type = checkbox]{
+                        accent-color: $primary;
+                        color: white;
+                    }
+                }
+            }
+
+            .form-buttons-wrapper{
+                margin-top: em(50);
+                
+                button{
+                    border: none;
+                    padding: em(10) em(26);
+                   border-bottom: 3px solid $primary2;
+                }
+            }
+        }
+    }
+
+    .personal-details{
+        margin-bottom: em(65);
+        @include respond-to(lg){
+            margin-bottom: em(32);
+        }
+        form{
+            @include respond-to(lg){
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: em(20);
+            }
+
+            .form-input{
+                @include respond-to(lg){
+                    flex-basis: calc((100% - em(20)) / 2 );
+                }
+            }
+
+            .form-buttons-wrapper{
+                @include respond-to(xl){
+                    margin-top: em(40);
+                    display: flex;
+                    justify-content: flex-end;
+                }
+                button{
+                    @include respond-to(xl){
+                        width: auto;
+                       }
+                }
+            }
+
+        }
+    }
+
+    .update-password-form{
+        @include respond-to(xl){
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: flex-end;
+            gap: em(20);
+            justify-content: space-between;
+        }
+
+        .form-input{
+            @include respond-to(xl){
+                flex-basis: calc((100% - em(20)) * 0.4);
+                margin-bottom: 0 !important;
+                input{
+                    margin-bottom: 0;
+                }
+            }
+        }
+        
+        .form-buttons-wrapper{
+            @include respond-to(xl){
+                flex-basis: calc((100% - em(20)) * 0.2);
+                margin-top: 0 !important;
+            }
+            button{
+                padding: em(10) 0 !important;
+            }
+        } 
+    }
+}
