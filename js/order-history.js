@@ -1,9 +1,11 @@
 const receiptBtns = [...document.querySelectorAll('.receipt-btn')]
 const receiptEl = document.querySelector('.receipt')
 const viewReceiptEl=[...document.querySelectorAll('.view-receipt')]
+
+const overLay = document.querySelector('.overlay')
 function viewReceipt(){
-    if(layerEl.classList.contains('hidden')){
-        layerEl.classList.remove('hidden')
+    if(overLay.classList.contains('hidden')){
+        overLay.classList.remove('hidden')
     }
     if(receiptEl.classList.contains('hidden')){
         receiptEl.classList.remove('hidden')
@@ -11,9 +13,9 @@ function viewReceipt(){
 }
 
 function hideReceipt(){
-    if(!layerEl.classList.contains('hidden')){
+    if(!overLay.classList.contains('hidden')){
         receiptEl.classList.add('hidden')
-        layerEl.classList.add('hidden')
+        overLay.classList.add('hidden')
     }
 }
 

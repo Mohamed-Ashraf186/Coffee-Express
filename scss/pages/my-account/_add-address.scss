@@ -1,10 +1,11 @@
 #add-address-wrapper{
     .profile-address-wrapper{
         .add-address{
+            align-items: flex-start;
             .address-desc-wrapper{
                 .header-section{
                     display: flex;
-                    align-items: center;
+                    align-items: flex-start;
                     gap: em(12);
                     margin-bottom: em(12);
                    .img-wrapper{
@@ -27,9 +28,13 @@
                 .address-desc{
                    p{
                        text-align: start;
+                       margin-bottom: 0;
                    } 
                 }
             }
+        }
+        .add-address-form{
+            padding-top: em(32);
         }
     }   
 }

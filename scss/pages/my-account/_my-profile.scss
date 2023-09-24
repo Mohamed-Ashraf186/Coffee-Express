@@ -63,9 +63,15 @@
         }
     }
 
+    .form-partial-wrapper{
+        @include respond-to(lg){
+            max-width: none;
+        }
+    }
+
     .personal-details{
         margin-bottom: em(65);
-        @include respond-to(lg){
+        @include respond-to(02){
             margin-bottom: em(32);
         }
         form{
@@ -88,6 +94,7 @@
                     justify-content: flex-end;
                 }
                 button{
+                    padding: 10px 26px;
                     @include respond-to(xl){
                         width: auto;
                        }

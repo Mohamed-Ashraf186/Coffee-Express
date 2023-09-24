@@ -1,6 +1,6 @@
-.account{
+.form-partial-container{
     padding-top: em(95.5);
-    .account-wrapper{
+    .form-partial-wrapper{
         max-width: em(580);
         margin: 0 auto;
         .header-section{
@@ -42,7 +42,7 @@
             }
         }
 
-        .account-form{
+        .form-partial{
             display: flex;
             flex-direction: column;
             align-items: flex-start;

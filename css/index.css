@@ -405,12 +405,15 @@ footer .copyright p {
 body {
   position: relative;
 }
-body .layer {
+body .layer, body .overlay {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.33);
   width: 100%;
   height: 100%;
-  z-index: 3;
+  z-index: 1;
+}
+body .overlay {
+  z-index: 4;
 }
 body header {
   position: relative;
@@ -1015,88 +1018,88 @@ body header nav .navbar-desktop .desktop-menu .menu-wrapper .nav-links li .icon-
   gap: 20px;
 }
 
-.account {
+.form-partial-container {
   padding-top: 5.96875em;
 }
-.account .account-wrapper {
+.form-partial-container .form-partial-wrapper {
   max-width: 36.25em;
   margin: 0 auto;
 }
-.account .account-wrapper .header-section {
+.form-partial-container .form-partial-wrapper .header-section {
   margin-bottom: 2.3125em;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.375em;
 }
-.account .account-wrapper .header-section h2 {
+.form-partial-container .form-partial-wrapper .header-section h2 {
   font-size: 2.44125rem;
   line-height: 1;
 }
-.account .account-wrapper .header-section p {
+.form-partial-container .form-partial-wrapper .header-section p {
   color: #272727;
 }
-.account .account-wrapper .form-buttons-wrapper {
+.form-partial-container .form-partial-wrapper .form-buttons-wrapper {
   width: 100%;
 }
-.account .account-wrapper .form-buttons-wrapper button {
+.form-partial-container .form-partial-wrapper .form-buttons-wrapper button {
   display: flex;
   width: 100%;
 }
-.account .account-wrapper .form-buttons-wrapper .login-btn {
+.form-partial-container .form-partial-wrapper .form-buttons-wrapper .login-btn {
   border-bottom: 3px solid #B8B8B8;
   background: #DBDBDB;
   margin-bottom: 12px;
 }
-.account .account-wrapper .form-buttons-wrapper .login-btn.active {
+.form-partial-container .form-partial-wrapper .form-buttons-wrapper .login-btn.active {
   background-color: #FFB800;
   border-bottom: 3px solid #B6791B;
 }
-.account .account-wrapper .form-buttons-wrapper .create-acc-btn {
+.form-partial-container .form-partial-wrapper .form-buttons-wrapper .create-acc-btn {
   border: 1px solid #000;
   border-bottom: 5px solid #000;
 }
-.account .account-wrapper .account-form {
+.form-partial-container .form-partial-wrapper .form-partial {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.account .account-wrapper .account-form .form-input {
+.form-partial-container .form-partial-wrapper .form-partial .form-input {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.account .account-wrapper .account-form .form-input label {
+.form-partial-container .form-partial-wrapper .form-partial .form-input label {
   margin-bottom: 5px;
 }
-.account .account-wrapper .account-form .form-input input {
+.form-partial-container .form-partial-wrapper .form-partial .form-input input {
   border: 1px solid #B8B8B8;
   height: 56px;
   padding: 1rem;
 }
-.account .account-wrapper .account-form .email-wrapper {
+.form-partial-container .form-partial-wrapper .form-partial .email-wrapper {
   margin-bottom: 0.75em;
 }
-.account .account-wrapper .account-form .password-wrapper {
+.form-partial-container .form-partial-wrapper .form-partial .password-wrapper {
   margin-bottom: 2.875em;
 }
 @media (min-width: 720px) {
-  .account .account-wrapper .account-form .password-wrapper {
+  .form-partial-container .form-partial-wrapper .form-partial .password-wrapper {
     margin-bottom: 3.125em;
   }
 }
-.account .account-wrapper .account-form .password-wrapper input {
+.form-partial-container .form-partial-wrapper .form-partial .password-wrapper input {
   margin-bottom: 8px;
 }
 @media (min-width: 720px) {
-  .account .account-wrapper .account-form .password-wrapper input {
+  .form-partial-container .form-partial-wrapper .form-partial .password-wrapper input {
     margin-bottom: 12px;
   }
 }
-.account .account-wrapper .account-form .password-wrapper .forgot-password-link {
+.form-partial-container .form-partial-wrapper .form-partial .password-wrapper .forgot-password-link {
   align-self: flex-end;
 }
-.account .account-wrapper .account-form .password-wrapper .forgot-password-link a {
+.form-partial-container .form-partial-wrapper .form-partial .password-wrapper .forgot-password-link a {
   color: #272727;
 }
 
@@ -2979,10 +2982,15 @@ main .new-arrivals-container .product-listing-container .no-results .empty-img {
   padding: 0.625em 1.625em;
   border-bottom: 3px solid #B6791B;
 }
+@media (min-width: 992px) {
+  #update-profile-wrapper .form-partial-wrapper {
+    max-width: none;
+  }
+}
 #update-profile-wrapper .personal-details {
   margin-bottom: 4.0625em;
 }
-@media (min-width: 992px) {
+@media (min-width: 2) {
   #update-profile-wrapper .personal-details {
     margin-bottom: 2em;
   }
@@ -3005,6 +3013,9 @@ main .new-arrivals-container .product-listing-container .no-results .empty-img {
     display: flex;
     justify-content: flex-end;
   }
+}
+#update-profile-wrapper .personal-details form .form-buttons-wrapper button {
+  padding: 10px 26px;
 }
 @media (min-width: 1280px) {
   #update-profile-wrapper .personal-details form .form-buttons-wrapper button {
@@ -3208,9 +3219,12 @@ body.address-book-page .my-account #address-book-wrapper .profile-address-wrappe
   height: 1.5em;
 }
 
+#add-address-wrapper .profile-address-wrapper .add-address {
+  align-items: flex-start;
+}
 #add-address-wrapper .profile-address-wrapper .add-address .address-desc-wrapper .header-section {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.75em;
   margin-bottom: 0.75em;
 }
@@ -3233,4 +3247,8 @@ body.address-book-page .my-account #address-book-wrapper .profile-address-wrappe
 }
 #add-address-wrapper .profile-address-wrapper .add-address .address-desc-wrapper .address-desc p {
   text-align: start;
+  margin-bottom: 0;
+}
+#add-address-wrapper .profile-address-wrapper .add-address-form {
+  padding-top: 2em;
 }
