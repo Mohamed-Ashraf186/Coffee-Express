@@ -3219,6 +3219,17 @@ body.address-book-page .my-account #address-book-wrapper .profile-address-wrappe
   height: 1.5em;
 }
 
+#add-address-wrapper select {
+  height: 56px;
+}
+#add-address-wrapper .req-star {
+  color: #E2574C;
+}
+#add-address-wrapper .profile-address-wrapper {
+  width: 100%;
+  max-width: 45.625em;
+  margin: 0 auto;
+}
 #add-address-wrapper .profile-address-wrapper .add-address {
   align-items: flex-start;
 }
@@ -3251,4 +3262,337 @@ body.address-book-page .my-account #address-book-wrapper .profile-address-wrappe
 }
 #add-address-wrapper .profile-address-wrapper .add-address-form {
   padding-top: 2em;
+}
+#add-address-wrapper .profile-address-wrapper .add-address-form .form-partial-wrapper {
+  max-width: none;
+}
+#add-address-wrapper .profile-address-wrapper .add-address-form .form-partial-wrapper .form-partial {
+  gap: 1.25em;
+}
+#add-address-wrapper .profile-address-wrapper .add-address-form .form-partial-wrapper .form-partial #country-select, #add-address-wrapper .profile-address-wrapper .add-address-form .form-partial-wrapper .form-partial #state-select {
+  padding: 0 1.25em;
+  border: 1px solid #B8B8B8;
+  font-family: "Itim", cursive;
+  font-size: 1.125rem;
+  line-height: 144.444%;
+}
+#add-address-wrapper .profile-address-wrapper .add-address-form .form-partial-wrapper .form-partial .full-name-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+@media (min-width: 992px) {
+  #add-address-wrapper .profile-address-wrapper .add-address-form .form-partial-wrapper .form-partial .full-name-wrapper {
+    flex-direction: row;
+  }
+}
+#add-address-wrapper .profile-address-wrapper .add-address-form .form-partial-wrapper .form-partial .location-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.25em;
+}
+#add-address-wrapper .profile-address-wrapper .add-address-form .form-partial-wrapper .form-partial .location-wrapper .form-input {
+  flex-basis: calc((100% - 1.25em) / 2);
+  min-width: 0;
+}
+#add-address-wrapper .profile-address-wrapper .add-address-form .form-partial-wrapper .form-partial .phone-input-wrapper {
+  margin-bottom: 0.75em;
+}
+@media (min-width: 992px) {
+  #add-address-wrapper .profile-address-wrapper .add-address-form .form-partial-wrapper .form-partial .form-buttons-wrapper {
+    width: auto;
+    margin-left: auto;
+  }
+}
+#add-address-wrapper .profile-address-wrapper .add-address-form .form-partial-wrapper .form-partial .form-buttons-wrapper button {
+  border: none;
+  border-bottom: 3px solid #B6791B;
+  padding: 0.625em 1.625em;
+}
+
+#payment-methods-wrapper {
+  max-width: 80em;
+}
+@media (min-width: 1280px) {
+  #payment-methods-wrapper {
+    max-width: 64.4375em;
+  }
+}
+#payment-methods-wrapper .profile-payment-wrapper {
+  max-width: 45.625em;
+  margin: 0 auto;
+}
+#payment-methods-wrapper .profile-payment-wrapper .payment-method-header {
+  margin-bottom: 2.25em;
+  align-items: flex-start;
+}
+@media (min-width: 992px) {
+  #payment-methods-wrapper .profile-payment-wrapper .payment-method-header {
+    max-width: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 1.375em;
+  }
+}
+#payment-methods-wrapper .profile-payment-wrapper .payment-method-header .payment-desc-wrapper h3 {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+@media (min-width: 992px) {
+  #payment-methods-wrapper .profile-payment-wrapper .payment-method-header .payment-desc-wrapper h3 {
+    font-size: 1.375rem;
+    line-height: 145.455%;
+    margin-bottom: em;
+  }
+}
+#payment-methods-wrapper .profile-payment-wrapper .payment-method-header .payment-desc-wrapper .payment-desc p {
+  text-align: start;
+  margin-bottom: 0;
+}
+#payment-methods-wrapper .profile-payment-wrapper .payment-card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25em;
+  margin: 0 auto;
+}
+@media (min-width: 992px) {
+  #payment-methods-wrapper .profile-payment-wrapper .payment-card-grid {
+    max-width: none;
+    margin: unset;
+  }
+}
+#payment-methods-wrapper .profile-payment-wrapper .payment-card-grid .payment-card-wrapper {
+  width: 100%;
+  border: 1px solid #949494;
+  padding: 1.25em;
+  padding-right: 1.875em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 1.875em;
+}
+#payment-methods-wrapper .profile-payment-wrapper .payment-card-grid .payment-card-wrapper .logo-wrapper {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  gap: 1.875em;
+}
+@media (min-width: 992px) {
+  #payment-methods-wrapper .profile-payment-wrapper .payment-card-grid .payment-card-wrapper .logo-wrapper {
+    flex-basis: 33.3333333333%;
+  }
+}
+#payment-methods-wrapper .profile-payment-wrapper .payment-card-grid .payment-card-wrapper .logo-wrapper .logo.visa {
+  width: 3em;
+  height: 1.875em;
+}
+#payment-methods-wrapper .profile-payment-wrapper .payment-card-grid .payment-card-wrapper .logo-wrapper .logo.mastercard {
+  width: 2em;
+  height: 2em;
+}
+#payment-methods-wrapper .profile-payment-wrapper .payment-card-grid .payment-card-wrapper .logo-wrapper .logo.american-express {
+  width: 2.551875em;
+  height: 0.761875em;
+}
+#payment-methods-wrapper .profile-payment-wrapper .payment-card-grid .payment-card-wrapper .logo-wrapper .default p {
+  color: #0DAA26;
+}
+#payment-methods-wrapper .profile-payment-wrapper .payment-card-grid .payment-card-wrapper .credit-card-num-wrapper {
+  flex-basis: 50%;
+}
+@media (min-width: 992px) {
+  #payment-methods-wrapper .profile-payment-wrapper .payment-card-grid .payment-card-wrapper .credit-card-num-wrapper {
+    flex-basis: 33.3333333333%;
+  }
+}
+#payment-methods-wrapper .profile-payment-wrapper .payment-card-grid .payment-card-wrapper .credit-card-num-wrapper p {
+  text-align: end;
+}
+@media (min-width: 992px) {
+  #payment-methods-wrapper .profile-payment-wrapper .payment-card-grid .payment-card-wrapper .credit-card-num-wrapper p {
+    text-align: start;
+  }
+}
+#payment-methods-wrapper .profile-payment-wrapper .payment-card-grid .payment-card-wrapper .payment-edit-wrapper {
+  flex-basis: 100%;
+  display: flex;
+  gap: 1.25em;
+  justify-content: flex-end;
+}
+@media (min-width: 992px) {
+  #payment-methods-wrapper .profile-payment-wrapper .payment-card-grid .payment-card-wrapper .payment-edit-wrapper {
+    flex-basis: 33.3333333333%;
+  }
+}
+#payment-methods-wrapper .profile-payment-wrapper .payment-card-grid .payment-card-wrapper .payment-edit-wrapper .icon-wrapper {
+  display: flex;
+  gap: 0.375em;
+}
+#payment-methods-wrapper .profile-payment-wrapper .payment-card-grid .payment-card-wrapper .payment-edit-wrapper .icon-wrapper .icon.delete {
+  width: 1.5em;
+  height: 1.5em;
+}
+@media (min-width: 992px) {
+  #payment-methods-wrapper .profile-payment-wrapper .payment-card-grid .payment-card-wrapper .payment-edit-wrapper .icon-wrapper .icon.delete {
+    display: none;
+  }
+}
+#payment-methods-wrapper .profile-payment-wrapper .payment-card-grid .payment-card-wrapper .payment-edit-wrapper .icon-wrapper p {
+  color: #E2574C;
+}
+#payment-methods-wrapper .profile-payment-wrapper .payment-card-grid .payment-card-wrapper .payment-edit-wrapper .inactive {
+  color: #949494;
+}
+#payment-methods-wrapper .profile-payment-wrapper .add-card-btn {
+  margin-top: 2.75em;
+  display: flex;
+}
+@media (min-width: 1280px) {
+  #payment-methods-wrapper .profile-payment-wrapper .add-card-btn {
+    justify-content: flex-end;
+  }
+}
+#payment-methods-wrapper .profile-payment-wrapper .add-card-btn button {
+  border-bottom: 3px solid #B6791B;
+  width: 100%;
+  padding: 0.625em 1.625em;
+}
+@media (min-width: 1280px) {
+  #payment-methods-wrapper .profile-payment-wrapper .add-card-btn button {
+    width: auto;
+  }
+}
+
+#add-payment-wrapper .add-payment {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+#add-payment-wrapper .add-payment h3 {
+  margin-bottom: 12px;
+}
+#add-payment-wrapper .add-payment .payment-desc {
+  margin-bottom: 2.5em;
+}
+#add-payment-wrapper .add-payment .payment-desc p {
+  text-align: start;
+  margin-bottom: 0;
+  max-width: none;
+}
+#add-payment-wrapper .add-payment button {
+  border-bottom: 3px solid #B6791B;
+}
+@media (min-width: 1280px) {
+  #add-payment-wrapper .add-payment button {
+    width: auto;
+  }
+}
+#add-payment-wrapper .profile-payment-wrapper {
+  max-width: 36.25em;
+  margin: 0 auto;
+}
+@media (min-width: 1280px) {
+  #add-payment-wrapper .profile-payment-wrapper {
+    margin: unset;
+  }
+}
+#add-payment-wrapper .profile-payment-wrapper .add-payment {
+  align-items: flex-start;
+}
+#add-payment-wrapper .profile-payment-wrapper .add-payment .payment-desc-wrapper .header-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75em;
+  margin-bottom: 0.75em;
+}
+#add-payment-wrapper .profile-payment-wrapper .add-payment .payment-desc-wrapper .header-section .img-wrapper {
+  cursor: pointer;
+  margin: 0;
+  width: 1.17625em;
+  height: 1.25em;
+  transform: rotate(180deg);
+}
+#add-payment-wrapper .profile-payment-wrapper .add-payment .payment-desc-wrapper .header-section h3 {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin: 0;
+}
+@media (min-width: 1280px) {
+  #add-payment-wrapper .profile-payment-wrapper .add-payment .payment-desc-wrapper .header-section h3 {
+    font-size: 1.375rem;
+    line-height: 145.455%;
+  }
+}
+#add-payment-wrapper .profile-payment-wrapper .add-payment .payment-desc-wrapper .payment-desc {
+  margin-bottom: 0;
+}
+#add-payment-wrapper .profile-payment-wrapper .add-payment .payment-desc-wrapper .payment-desc p {
+  text-align: start;
+  margin-bottom: 0;
+}
+#add-payment-wrapper .profile-payment-wrapper .add-payment-form {
+  padding-top: 3.75em;
+}
+#add-payment-wrapper .profile-payment-wrapper .add-payment-form .form-partial-wrapper {
+  max-width: none;
+}
+#add-payment-wrapper .profile-payment-wrapper .add-payment-form .form-partial-wrapper .form-partial {
+  gap: 1.25em;
+}
+#add-payment-wrapper .profile-payment-wrapper .add-payment-form .form-partial-wrapper .form-partial .card-num-wrapper .card-input-wrapper {
+  border: 1px solid #B8B8B8;
+  display: flex;
+  align-items: center;
+  height: 56px;
+  padding: 0.625em 1.25em;
+}
+#add-payment-wrapper .profile-payment-wrapper .add-payment-form .form-partial-wrapper .form-partial .card-num-wrapper .card-input-wrapper .logo {
+  width: 2.3125em;
+  height: 2.3125em;
+}
+#add-payment-wrapper .profile-payment-wrapper .add-payment-form .form-partial-wrapper .form-partial .card-num-wrapper .card-input-wrapper input {
+  border: none;
+  width: 100%;
+}
+#add-payment-wrapper .profile-payment-wrapper .add-payment-form .form-partial-wrapper .form-partial .card-info-wrapper {
+  flex-direction: row;
+  gap: 0.75em;
+}
+#add-payment-wrapper .profile-payment-wrapper .add-payment-form .form-partial-wrapper .form-partial .card-info-wrapper .expiry-date-wrapper {
+  flex-basis: calc((100% - 0.75em) * 0.725);
+}
+#add-payment-wrapper .profile-payment-wrapper .add-payment-form .form-partial-wrapper .form-partial .card-info-wrapper .security-code-wrapper {
+  flex-basis: calc((100% - 0.75em) * 0.275);
+}
+#add-payment-wrapper .profile-payment-wrapper .add-payment-form .form-partial-wrapper .form-partial .card-info-wrapper .security-code-wrapper .cvv-input-wrapper {
+  border: 1px solid #B8B8B8;
+  display: flex;
+  align-items: center;
+  height: 56px;
+  padding: 0.625em 0.3125em;
+}
+#add-payment-wrapper .profile-payment-wrapper .add-payment-form .form-partial-wrapper .form-partial .card-info-wrapper .security-code-wrapper .cvv-input-wrapper .help {
+  width: 1.5em;
+  height: 1.5em;
+  cursor: pointer;
+}
+#add-payment-wrapper .profile-payment-wrapper .add-payment-form .form-partial-wrapper .form-partial .card-info-wrapper .security-code-wrapper .cvv-input-wrapper input {
+  border: none;
+  width: 100%;
+}
+#add-payment-wrapper .profile-payment-wrapper .add-payment-form .form-partial-wrapper .form-partial .form-buttons-wrapper {
+  margin-top: 1.5625em;
+}
+#add-payment-wrapper .profile-payment-wrapper .add-payment-form .form-partial-wrapper .form-partial .form-buttons-wrapper button {
+  border: none;
+  padding: 0.5555555556em 1.4444444444em;
+  border-bottom: 3px solid #B6791B;
+}
+@media (min-width: 1280px) {
+  #add-payment-wrapper .profile-payment-wrapper .add-payment-form .form-partial-wrapper .form-partial .form-buttons-wrapper button {
+    width: auto;
+    margin-left: auto;
+  }
 }

@@ -1,5 +1,14 @@
 #add-address-wrapper{
+    select{
+        height: 56px;
+    }
+    .req-star{
+        color: #E2574C;
+    }
     .profile-address-wrapper{
+        width: 100%;
+        max-width: em(730);
+        margin: 0 auto;
         .add-address{
             align-items: flex-start;
             .address-desc-wrapper{
@@ -35,6 +44,57 @@
         }
         .add-address-form{
             padding-top: em(32);
+           .form-partial-wrapper{
+                max-width: none;
+                .form-partial{
+                    gap: em(20);
+                        #country-select,#state-select{
+                            padding: 0 em(20);
+                            border: 1px solid $gray-200;
+                            font-family: 'Itim', cursive;
+                            font-size: root(18);
+                            line-height: 144.444%;
+                        }
+
+                        .full-name-wrapper{
+                            display: flex;
+                            flex-direction: column;
+                            gap: em(12);
+                            @include respond-to(lg){
+                                flex-direction: row;
+                            }
+                        }
+
+
+                        .location-wrapper{
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            gap: em(20);
+                            .form-input{
+                                flex-basis: calc((100% - em(20)) / 2);
+                                min-width: 0;
+                            }
+
+                        }
+
+                        .phone-input-wrapper{
+                            margin-bottom: em(12);
+                        }
+
+                        .form-buttons-wrapper{
+                            @include respond-to(lg){
+                                width: auto;
+                                margin-left: auto;
+                            }
+                            button{
+                                border: none;
+                                border-bottom: 3px solid $primary2;
+                                padding: em(10) em(26);
+                            }
+                        }
+                }
+           }
         }
     }   
 }

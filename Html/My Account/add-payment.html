@@ -369,7 +369,7 @@
                 <div class="mobile-options">
                    <div class="selector">
                         <div class="select-field">
-                            <p class="bodytext--md select-text">Address Book</p>
+                            <p class="bodytext--md select-text">Payment Methods</p>
                             <div class="dropdown-arrow">
                                 <img src="/assets/dropdown arrow.svg" alt="dropdown arrow">
                             </div>
@@ -405,11 +405,11 @@
                             <a href="#" class="bodytext--md">My Profile</a>
                         </li>
 
-                        <li class="option active">
+                        <li class="option ">
                             <a href="#" class="bodytext--md">Address Book</a>
                         </li>
 
-                        <li class="option">
+                        <li class="option active">
                             <a href="#" class="bodytext--md">Payment Methods</a>
                         </li>
                     </ul>
@@ -417,99 +417,82 @@
             </aside>
 
             <div class="account-content-wrapper">
-                <div id="add-address-wrapper">
-                    <div class="profile-address-wrapper">
-                        <div class="not-found add-address">
-                            <div class="address-desc-wrapper">
+                <div id="add-payment-wrapper">
+                    <div class="not-found add-payment hidden">
+                        <h3>Payment Methods</h3>
+                        <div class="payment-desc">
+                            <p class="bodytext--md ">
+                                No payment method added yet.
+                            </p>
+                            
+                            <p class="bodytext--md ">
+                                Click “Add payment method” button below to add your first add payment method.
+                            </p>
+                        </div>
+    
+                        <button class="btn btn-primary">Add payment method</button>
+                    </div>
+                    <div class="profile-payment-wrapper">
+                        <div class="not-found add-payment">
+                            <div class="payment-desc-wrapper">
                                 <div class="header-section">
                                     <div class="img-wrapper">
                                         <img src="/assets/chevron-right.svg" alt="left-arrow">
                                     </div>
-                                    <h3>Add New Address</h3>   
+                                    <h3>Add Card</h3>   
                                 </div>
-                                <div class="address-desc">
+                                <div class="payment-desc">
+                                    <p class="bodytext--md">Your credit card details are protected.</p>
                                     <p class="bodytext--md ">
-                                        A maximum of 3 address book entries allowed. You can choose billing and shipping defaults
+                                        We partner with Stripe so that your card details are safe. 
                                     </p>
                                 </div>
                             </div>
                         </div>
 
 
-                        <div class="add-address-form form-partial-container">
+                        <div class="add-payment-form form-partial-container">
                             <div class="form-partial-wrapper">
                                 
                                 <form class="form-partial">
                     
-                                    <div class="full-name-wrapper form-input">
-                                        <div class="first-name-wrapper form-input">
-                                            <label for="first-name" class="bodytext--md">First name<span class="req-star">*</span></label>
-                                            <input type="text" id="first-name" name="first-name">
-                                        </div>
-                                        <div class="last-name-wrapper form-input">
-                                            <label for="last-name" class="bodytext--md">Last name<span class="req-star">*</span></label>
-                                            <input type="text" id="last-name" name="last-name">
+
+                                    <div class="card-num-wrapper form-input">
+                                        <label for="card-num" class="bodytext--md">Card</label>
+                                        <div class="card-input-wrapper">
+                                            <div class="logo">
+                                                <img src="/assets/logos_mastercard.svg" alt="mastercard">
+                                            </div>
+                                            <input type="text" maxlength="16" id="card-num" name="card-num" placeholder="0000 0000 0000">
                                         </div>
                                     </div>
                     
                     
-                                    <div class="address-input-wrapper form-input">
-                                        <label for="address-input" class="bodytext--md">
-                                            Address<span class="req-star">*</span>
-                                        </label>
-                                        <input type="text" id="address-input" name="address-input">
-                                    </div>
-                        
-                                    <div class="country-wrapper form-input">
-                                        <label for="country"  class="bodytext--md">Country<span class="req-star">*</span></label>
-                                        <select name="country" id="country-select">
-                                            <option value="us">United States</option>
-                                            <option value="uk">United Kingdom</option>
-                                            <option value="france">France</option>
-                                            <option value="germany">Germany</option>
-                                            <option value="eg">Egypt</option>
-                                        </select>
-                                    </div>
+                                    <div class="card-info-wrapper form-input">
+                                        <div class="expiry-date-wrapper form-input">
+                                            <label for="expirationdate">Expiry date (mm/yy)</label>
+                                            <input id="expirationdate" maxlength="5" type="text" pattern="[0-9]*" inputmode="numeric">
+                                        </div>
 
-
-
-                                <div class="location-wrapper">
-                                    <div class="city-input-wrapper form-input">
-                                        <label for="city-input" class="bodytext--md">
-                                            City<span class="req-star">*</span>
-                                        </label>
-                                        <input type="text" id="city-input" name="city-input" value="Beverly Hills">
+                                        <div class="security-code-wrapper form-input">
+                                            <label for="securitycode">CVC/CVV</label>
+                                            <div class="cvv-input-wrapper">
+                                                <input id="securitycode" maxlength="3" type="text" pattern="[0-9]*" inputmode="numeric">
+                                                <div class="help">
+                                                    <img src="/assets/info.svg" alt="info">
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
 
-                                    <div class="state-wrapper form-input">
-                                        <label for="state"  class="bodytext--md">State/Province<span class="req-star">*</span></label>
-                                        <select name="state" id="state-select">
-                                            <option value="cal">California</option>
-                                            <option value="ny">New York</option>
-                                            <option value="chicago">Chicago</option>
-                                        </select>
+                                    <div class="card-name-wrapper form-input">
+                                        <label for="card-name">Name on card</label>
+                                        <input type="text" name="card-name" id="card-name">
                                     </div>
 
-                                </div>
-
-
-                                <div class="zip-input-wrapper form-input">
-                                    <label for="zip-input" class="bodytext--md">
-                                        Zip/Postal Code<span class="req-star">*</span>
-                                    </label>
-                                    <input type="text" id="zip-input" name="zip-input" value="90211">
-                                </div>
-
-
-                                <div class="phone-input-wrapper form-input">
-                                    <label for="phone-input" class="bodytext--md">
-                                        Phone number<span class="req-star">*</span>
-                                    </label>
-                                    <input type="tel" id="phone-input" name="phone-input">
-                                </div>
                         
                                     <div class="form-buttons-wrapper">
-                                        <button class="btn btn-primary bodytext--md create-acc-btn">Save address</button>
+                                        <button class="btn btn-primary bodytext--md create-acc-btn">Add new card</button>
                                     </div>
                     
                     

@@ -1,0 +1,157 @@
+#payment-methods-wrapper{
+    max-width: em(1280);
+    @include respond-to(xl){
+        max-width: em(1031);
+    }
+
+    .profile-payment-wrapper{
+        max-width: em(730);
+        margin: 0 auto;
+        .payment-method-header{
+            margin-bottom: em(36);
+            align-items: flex-start;
+            @include respond-to(lg){
+                max-width: none;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0  0 em(22);
+            }
+            .payment-desc-wrapper{
+                h3{
+                    font-size: root(20);
+                    line-height: 1.5;
+                    margin-bottom: 12px;
+                    @include respond-to(lg){
+                        font-size: root(22);
+                        line-height: 145.455%;
+                        margin-bottom: em;
+                    }
+                }
+                .payment-desc{
+                    p{
+                        text-align: start;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .payment-card-grid{
+            display:  flex;
+            flex-wrap: wrap;
+            gap: em(20);
+            margin: 0 auto;
+            @include respond-to(lg){
+                max-width: none;
+                margin: unset;
+            }
+            .payment-card-wrapper{  
+                width: 100%;
+                border: 1px solid $gray-300;
+                padding: em(20);
+                padding-right: em(30);
+                // flex-basis: 100%;
+                // @include respond-to(lg){
+                //     flex-basis: calc((100% - em(20)) / 2);
+                // }
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                row-gap:em(30);
+                .logo-wrapper{
+                    flex-basis: 50%;
+                    display: flex;
+                    align-items: center;
+                    gap: em(30);
+
+                    @include respond-to(lg){
+                        flex-basis: calc(100% / 3);
+                    }
+                    .logo.visa{
+                        width: em(48);
+                        height: em(30);
+                    }
+
+                    .logo.mastercard{
+                        width: em(32);
+                        height: em(32);
+                    }
+
+                    .logo.american-express{
+                        width: em(40.83);
+                        height: em(12.19);
+                    }
+
+                    .default{
+                        p{
+                            color: #0DAA26;
+                        }
+                    }
+
+                }
+
+                .credit-card-num-wrapper{
+                    flex-basis: 50%;
+                    @include respond-to(lg){
+                        flex-basis: calc(100% / 3);
+                    }
+                    p{
+                        text-align: end;
+                        @include respond-to(lg){
+                           text-align: start;
+                        }
+                    }
+                }
+
+
+                .payment-edit-wrapper{
+                    flex-basis: 100%;
+                    display: flex;
+                    gap: em(20);
+                    justify-content: flex-end;
+                    @include respond-to(lg){
+                        flex-basis: calc(100% / 3);
+                    }
+                    .icon-wrapper{
+                        display: flex;
+                        gap: em(6);
+                        .icon.delete{
+                            width: em(24);
+                            height: em(24);
+                            @include respond-to(lg){
+                                display: none;
+                            }
+                        }
+                        
+                        p{
+                            color: #E2574C;
+                        }
+                    }
+
+                    .inactive{
+                        color: $gray-300;
+                    }
+                }
+            }
+        }
+
+
+        .add-card-btn{
+            margin-top: em(44);
+            display: flex;
+            @include respond-to(xl){
+                justify-content: flex-end;
+            }
+            button{
+                border-bottom: 3px solid $primary2;
+                width: 100%;
+                padding: em(10) em(26);
+                @include respond-to(xl){
+                    width: auto;
+                }
+            }
+        }
+    }
+}    
+        
