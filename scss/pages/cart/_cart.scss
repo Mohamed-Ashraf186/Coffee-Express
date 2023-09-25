@@ -1,0 +1,32 @@
+#cart-section{
+    margin-top: em(60);
+    .header-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: em(50);
+        h2{
+            @include respond-to(lg){
+                font-size: em(48.8);
+                line-height: 1.00061;
+            }
+        }
+
+        .vector-wrapper{
+            max-width: em(112);
+            height: 9.683px;
+            img{
+                object-fit: cover;
+            }
+        }
+    }
+
+    .cart-products-wrapper{
+        .cart-product{
+            
+        }
+    }
+}
+
+
+// margin-top: em(60);

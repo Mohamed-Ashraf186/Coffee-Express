@@ -3596,3 +3596,26 @@ body.address-book-page .my-account #address-book-wrapper .profile-address-wrappe
     margin-left: auto;
   }
 }
+
+#cart-section {
+  margin-top: 3.75em;
+}
+#cart-section .header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3.125em;
+}
+@media (min-width: 992px) {
+  #cart-section .header-section h2 {
+    font-size: 3.05em;
+    line-height: 1.00061;
+  }
+}
+#cart-section .header-section .vector-wrapper {
+  max-width: 7em;
+  height: 9.683px;
+}
+#cart-section .header-section .vector-wrapper img {
+  object-fit: cover;
+}
