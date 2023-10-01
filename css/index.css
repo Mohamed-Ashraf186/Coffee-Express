@@ -2693,6 +2693,177 @@ main .new-arrivals-container .product-listing-container .no-results .empty-img {
   }
 }
 
+#contact-us {
+  margin-bottom: 5.75em;
+}
+@media (min-width: 1280px) {
+  #contact-us {
+    display: flex;
+    gap: 6.25em;
+  }
+}
+#contact-us .req-star {
+  color: #E2574C;
+}
+@media (min-width: 1280px) {
+  #contact-us .header-section {
+    align-items: flex-start;
+  }
+}
+#contact-us .header-section .frame-container {
+  width: 3.12575em;
+  height: 1.3501875em;
+  margin: 0 auto;
+}
+@media (min-width: 1280px) {
+  #contact-us .header-section .frame-container {
+    margin: 0;
+    transform: rotate(-10deg);
+  }
+}
+#contact-us .header-section h2 {
+  position: relative;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 112.5%;
+}
+@media (min-width: 1280px) {
+  #contact-us .header-section h2 {
+    font-size: 3.05rem;
+    line-height: 100.061%;
+    margin-left: 10px;
+  }
+}
+#contact-us .header-section h2::after {
+  position: absolute;
+  content: "";
+  background-image: url("/assets/underline-2.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 9px;
+  left: 0%;
+  bottom: -22%;
+}
+#contact-us .contact-us-wrapper {
+  margin-bottom: 7.5em;
+}
+@media (min-width: 1280px) {
+  #contact-us .contact-us-wrapper {
+    max-width: 45.625em;
+    flex-basis: calc((100% - 100px) / 2);
+  }
+}
+#contact-us .contact-us-wrapper .header-section {
+  margin-bottom: 2.625em;
+}
+@media (min-width: 1280px) {
+  #contact-us .contact-us-wrapper .header-section {
+    margin-bottom: 1.6875em;
+  }
+}
+#contact-us .contact-us-wrapper .contact-us-form {
+  gap: 1.25em;
+}
+#contact-us .contact-us-wrapper .contact-us-form .email-wrapper {
+  margin: 0;
+}
+#contact-us .contact-us-wrapper .contact-us-form .message-wrapper label {
+  margin-bottom: 5px;
+}
+#contact-us .contact-us-wrapper .contact-us-form .message-wrapper #message {
+  border: 1px solid #B8B8B8;
+}
+#contact-us .contact-us-wrapper .contact-us-form .form-buttons-wrapper {
+  margin-top: 0.375em;
+}
+@media (min-width: 1280px) {
+  #contact-us .contact-us-wrapper .contact-us-form .form-buttons-wrapper {
+    margin-top: 1.375em;
+    display: flex;
+  }
+}
+#contact-us .contact-us-wrapper .contact-us-form .form-buttons-wrapper button {
+  padding: 0.5555555556em 1.4444444444em;
+  border-bottom: 5px solid #B6791B;
+}
+@media (min-width: 1280px) {
+  #contact-us .contact-us-wrapper .contact-us-form .form-buttons-wrapper button {
+    width: auto;
+    margin-left: auto;
+  }
+}
+#contact-us .contact-details-wrapper {
+  max-width: 36.25em;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#contact-us .contact-details-wrapper .header-section {
+  margin-bottom: 3.25em;
+}
+@media (min-width: 1280px) {
+  #contact-us .contact-details-wrapper .header-section {
+    align-self: flex-start;
+  }
+}
+@media (min-width: 1280px) {
+  #contact-us .contact-details-wrapper {
+    max-width: 55.125em;
+    flex-basis: calc((100% - 100px) / 2);
+  }
+}
+#contact-us .contact-details-wrapper .details-wrapper {
+  width: 100%;
+}
+#contact-us .contact-details-wrapper .details-wrapper .img-wrapper {
+  width: 100%;
+  height: auto;
+}
+#contact-us .contact-details-wrapper .details-wrapper .img-wrapper img {
+  object-fit: cover;
+}
+#contact-us .contact-details-wrapper .details-wrapper .details-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+  margin-top: 2.8125em;
+}
+@media (min-width: 1280px) {
+  #contact-us .contact-details-wrapper .details-wrapper .details-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 0;
+    row-gap: 2.5em;
+  }
+}
+@media (min-width: 1280px) {
+  #contact-us .contact-details-wrapper .details-wrapper .details-content .contact-info {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 1650px) {
+  #contact-us .contact-details-wrapper .details-wrapper .details-content .contact-info {
+    flex-basis: 33.3333333333%;
+  }
+}
+#contact-us .contact-details-wrapper .details-wrapper .details-content .contact-info .contact-title {
+  font-size: 1.25rem;
+  line-height: 125%;
+}
+#contact-us .contact-details-wrapper .details-wrapper .details-content .contact-info .contact-value {
+  color: #717171;
+}
+#contact-us .contact-details-wrapper .details-wrapper .loctations-link {
+  margin-top: 1.25em;
+}
+@media (min-width: 1280px) {
+  #contact-us .contact-details-wrapper .details-wrapper .loctations-link {
+    margin-top: 2.5em;
+  }
+}
+
 .my-account {
   position: relative;
   padding-top: 3.5em;
