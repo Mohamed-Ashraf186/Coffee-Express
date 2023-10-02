@@ -1,80 +1,44 @@
-main {
-    padding-top: em(45);
-    h2{
+body.listing-page{
+    position: relative;
+    .overlay{
         @include respond-to(xl){
-            font-size: root(39.06);
-            line-height: 1;
+            display: none;
         }
-        margin-bottom: root(24);
     }
-
-    .new-arrivals-container{
-        @include respond-to(xl){
-            display: flex;
-            gap: em(54);
-        }
-        .filter-container{
-            .sidebar-widget{
-                display: none;
-                @include respond-to(xl){
-                    display: unset;
-                }
-            }
-            .filter-mobile{
-                border-bottom: $border-secondary;
-                padding-bottom: em(19);
-                margin-bottom: em(22);
-                @include flex(space-between,center,row);
-                @include respond-to(xl){
-                    display: none;
-                }
-                .item-num{
-                    p{
-                        color: $gray-600;
-                    }
-                }
-                .filter-btn-wrapper{
-                    @include flex(center,center,row,em(12));
-                    .filter-btn{
-                        height: em(42);
-                        border-radius: 4px;
-                        border: $border-secondary;
-                        @include flex(center,center,row,em(7));
-                        padding: em(8) em(18);
-                        .filter-icon{
-                            width: root(18);
-                            height: root(18);
-                        }
-                    }
-                }
+    main {
+        h2{
+            margin-top: em(36,32);
+            @include respond-to(xl){
+                font-size: root(39.06);
+                line-height: 1;
+                margin-top: em(45,39.06);
             }
         }
-
-        .product-listing-container{
-            .filters-wrapper{
-                margin-bottom: em(32);
-                @include flex(space-between,baseline,row);
-                .filter-categories{
-                    @include flex(flex-start,center,row,em(9));
-                    .filter{
-                        @include flex(center,center,row,em(4));
-                        width: fit-content;
-                        padding: em(5) em(15) em(5) em(22);
-                        background-color: #FCECD3; 
-                        border-radius: em(36); 
-                        .filter-cancel{
-                            width: em(15);
-                            height: em(15);
-                        }
-                    }
-                }
-
-                .sort{
+    
+        .new-arrivals-container{
+            margin-top: em(24);
+            margin-bottom: em(137);
+            @include respond-to(xl){
+                display: flex;
+                gap: em(54);
+                margin-top: em(59);
+                margin-bottom: em(129);
+            }
+            .filter-container{
+                .filter-partial{
                     display: none;
                     @include respond-to(xl){
-                        @include flex(unset,center,row,em(19))
+                        display: block;
                     }
+                }
+                .filter-mobile{
+                    border-bottom: $border-secondary;
                     padding-bottom: em(19);
+                    margin-bottom: em(22);
+                    @include flex(space-between,center,row);
+                    @include respond-to(xl){
+                        display: none;
+                    }
                     .item-num{
                         p{
                             color: $gray-600;
@@ -94,21 +58,69 @@ main {
                             }
                         }
                     }
-
                 }
             }
-
-            .card-grid{
-                justify-content: center;
-                @include respond-to(md){
-                    justify-content: unset;
+    
+            .product-listing-container{
+                .filters-wrapper{
+                    margin-bottom: em(32);
+                    @include flex(space-between,baseline,row);
+                    .filter-categories{
+                        @include flex(flex-start,center,row,em(9));
+                        .filter{
+                            @include flex(center,center,row,em(4));
+                            width: fit-content;
+                            padding: em(5) em(15) em(5) em(22);
+                            background-color: #FCECD3; 
+                            border-radius: em(36); 
+                            .filter-cancel{
+                                width: em(15);
+                                height: em(15);
+                            }
+                        }
+                    }
+    
+                    .sort{
+                        display: none;
+                        @include respond-to(xl){
+                            @include flex(unset,center,row,em(19))
+                        }
+                        padding-bottom: em(19);
+                        .item-num{
+                            p{
+                                color: $gray-600;
+                            }
+                        }
+                        .filter-btn-wrapper{
+                            @include flex(center,center,row,em(12));
+                            .filter-btn{
+                                height: em(42);
+                                border-radius: 4px;
+                                border: $border-secondary;
+                                @include flex(center,center,row,em(7));
+                                padding: em(8) em(18);
+                                .filter-icon{
+                                    width: root(18);
+                                    height: root(18);
+                                }
+                            }
+                        }
+    
+                    }
                 }
-            }
-
-            .no-results{
-                .empty-img{
-                    width: em(296);
-                    height: em(188);
+    
+                .card-grid{
+                    justify-content: center;
+                    @include respond-to(md){
+                        justify-content: unset;
+                    }
+                }
+    
+                .no-results{
+                    .empty-img{
+                        width: em(296);
+                        height: em(188);
+                    }
                 }
             }
         }

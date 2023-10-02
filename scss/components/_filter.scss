@@ -1,0 +1,135 @@
+.filter-partial{
+    background-color: white;
+    min-width: em(360);
+    max-width: em(400);
+   
+    .arrow-img{
+        width: em(30);
+        height: em(30);
+        
+    }
+
+    h3{
+        font-size: root(22);
+        line-height: 145.455%;
+       }            
+
+    .header-section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: em(30);
+        margin-bottom: em(30);
+        border-bottom: 1px solid $gray-100;
+       #filter-exit{
+        cursor: pointer;
+        width: em(20);
+        height: em(20);
+       }
+    }
+
+    .filter-wrapper{
+        .categories{
+            .category-container{
+                padding-bottom: em(30);
+                margin-bottom: em(12);
+                border-bottom: 1px solid $gray-100;
+                .category-header{
+                    cursor: pointer;
+                    display: flex;
+                    align-items:center;
+                    justify-content: space-between; 
+                    padding: em(10) 0;
+                    margin-bottom: em(5);
+                }
+                .inputs-container{
+                    display: flex;
+                    flex-direction: column;
+                    gap: em(5);
+                   
+                    .category-input{
+                        display: flex;
+                        align-items: baseline;
+                        justify-content: space-between;
+                        .radio-container{
+                            display: flex;
+                            gap:em(8);
+                            input[type="radio"]{
+                                width: 1rem;
+                            }
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+        .price-slider{
+            .header-section{
+                padding: em(10) 0;
+                border: 0;
+                margin-bottom: em(5);
+                cursor: pointer;
+            }
+            
+            .price-input.range{
+                input{
+                    width: 100%;
+
+                }
+            }
+
+            .min-max{
+                display: flex;
+                justify-content: space-between;
+                .minmax-price{
+                    display: flex;
+                    flex-direction: column;
+                    gap: em(5);
+                    align-items: center;
+                    .input-container{
+                        display: flex;
+                        justify-content: center;
+                        align-items: baseline;
+                        padding: em(7)  0;
+                        padding-left: em(25);
+                        border: 1px solid $gray-100; 
+                        width: em(90);
+                        input{
+                            width: 100%;
+                        }
+                    }
+                    label{
+                        color: $gray-600;
+                    }
+                }
+            }
+        }
+
+
+        .filter-btns{
+            margin-top: em(214);
+            display: flex;
+            flex-direction: column;
+            gap: em(12);
+            .btn{
+                padding: em(10) em(26);
+            }
+            .clear-filter{
+                border: 1px solid black;
+                border-bottom: 4px solid black;
+            }
+        }
+    }
+}
+
+.filter-partial.mobile{
+    position: absolute;
+    width: em(360);
+    padding: em(46) em(30) em(28);
+    z-index: 5;
+    @include respond-to(xl){
+        display: none;
+    }
+}
