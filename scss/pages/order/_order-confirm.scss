@@ -1,0 +1,68 @@
+#order-confirm{
+    position: unset;
+    transform:unset;
+    box-shadow: 5px 4px 20px 0px rgba(107, 107, 107, 0.16);
+    margin: em(80) auto em(120);
+    width: 90%;
+    margin: em(80) auto em(120);
+    max-width: em(800);
+    @include respond-to(xl){
+        width: unset;
+    }
+    .order-confirm-wrapper.receipt-wrapper{
+        .header-section{
+            margin-bottom: em(20);
+            @include respond-to(lg){
+                margin-bottom: em(32);
+            }
+        }
+
+        .confirm-message{
+            padding-bottom: em(24);
+            border-bottom: 1px solid $gray-100;
+        }
+
+
+        .order-info-wrapper{
+            flex-direction: row;
+            gap: em(41);
+            flex-wrap: wrap;
+            @include respond-to(md){
+                gap: 0;
+                justify-content: space-between;
+            }
+            .shipping-address{
+                max-width: em(180);
+            }
+        }
+        .price-breakdown-wrapper{
+            gap: em(10);
+            .price-element{
+                .desc{
+                    color: #131313;
+                }
+            }
+        }
+        .total-price{
+            padding-top: 0;
+        }
+
+        .order-statement{
+            margin-top: em(42);
+            .order-thanks{
+                margin-top: em(19);
+            }
+        }
+
+        .contact-us{
+            margin-top: em(64);
+            max-width: em(256);
+            @include respond-to(md){
+                max-width: none;
+            }
+            a{
+                text-decoration: underline;
+            }
+        }
+    }
+}

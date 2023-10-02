@@ -48,6 +48,7 @@
 
 // about us / contact us pages
 @import './pages/about&contact-us/about-us';
+@import './pages/about&contact-us/contact-us';
 
 // my account pages
 @import './pages/my-account/my-account';
@@ -59,8 +60,11 @@
 @import './pages/my-account/add-payment';
 
 
-//cart pages
+// order confrim
+@import './pages/order/order-confirm';
 
+
+//cart pages
 @import './pages/cart/cart';
 
 

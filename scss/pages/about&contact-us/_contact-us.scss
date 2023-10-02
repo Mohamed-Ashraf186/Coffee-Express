@@ -1,0 +1,163 @@
+#contact-us{
+    margin-bottom: em(92);
+    
+    @include respond-to(xl){
+        display: flex;
+        gap: em(100);
+    }
+    
+    .req-star{
+        color: #E2574C;
+    }
+
+    .header-section{
+        @include respond-to(xl){
+            align-items: flex-start;
+        }
+        .frame-container{
+            width: em(50.012);
+            height: em(21.603);
+            margin: 0 auto;
+            @include respond-to(xl){
+                margin:0;
+                transform: rotate(-10deg);
+            }
+        }
+        h2{
+            position: relative;
+            text-align: center;
+            font-size:root(32);
+            line-height: 112.5%;
+            @include respond-to(xl){
+                font-size: root(48.8);
+                line-height: 100.061%;
+                margin-left: 10px;
+            }
+            &::after{
+                position: absolute;
+                content: '';
+                background-image: url('/assets/underline-2.svg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 9px;
+                left: 0%;
+                bottom: -22%;
+            }
+        }
+    }
+
+    .contact-us-wrapper{
+
+        margin-bottom: em(120);
+        @include respond-to(xl){
+            max-width: em(730);
+            flex-basis: calc((100% - 100px) /2);
+        }
+
+        .header-section{
+            margin-bottom: em(42);
+            @include respond-to(xl){
+                margin-bottom: em(27);
+            }
+        }
+        .contact-us-form{
+            gap: em(20);
+
+            .email-wrapper{
+                margin: 0;
+            }
+
+            .message-wrapper{
+                label{
+                    margin-bottom: 5px;
+                }
+                #message{
+                    border: 1px solid $gray-200;
+                }
+            }
+
+            .form-buttons-wrapper{
+                margin-top: em(6);
+                @include respond-to(xl){
+                    margin-top: em(22);
+                    display: flex;
+
+                }
+                button{
+                    padding: em(10,18) em(26,18);
+                    border-bottom:  5px solid $primary2;
+                    @include respond-to(xl){
+                        width: auto;
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact-details-wrapper{
+        max-width: em(580);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .header-section{
+            margin-bottom: em(52);
+            @include respond-to(xl){
+                align-self: flex-start; 
+            }
+        }
+        @include respond-to(xl){
+            max-width: em(882);
+            flex-basis: calc((100% - 100px) /2);
+        }
+
+        .details-wrapper{
+            width: 100%;
+            .img-wrapper{
+                width: 100%;
+                height: auto;
+                img{
+                    object-fit: cover;
+                }
+            }
+    
+            .details-content{
+                display: flex;
+                flex-direction: column;
+                gap: em(20);
+                margin-top: em(45);
+                
+                @include respond-to(xl){
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    column-gap: 0;
+                    row-gap: em(40);
+                }
+                .contact-info{
+                    @include respond-to(xl){
+                        flex-basis: calc((100% / 2));
+                    }
+                    @include respond-to(1650px){
+                        flex-basis: calc((100% / 3));
+                    }
+                    .contact-title{
+                        font-size: root(20);
+                        line-height: 125%;
+                    }
+                    .contact-value{
+                        color: $gray-400;
+                    }
+                }
+            }
+            .loctations-link{
+                margin-top: em(20);
+                @include respond-to(xl){
+                    margin-top: em(40);
+                }
+            }
+
+        }
+    }
+}
